@@ -1,1 +1,73 @@
+/* ==========================================
+   ESTILOS ESPECÍFICOS PARA OS CARDS DE SAÚDE
+   ========================================== */
 
+/* Organiza os cards em uma grade responsiva */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Estilo base do Card Conecta Idade */
+.card-conecta {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-left: 6px solid #0056b3; /* Detalhe lateral em azul */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.card-conecta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Variação para destacar o card de Alerta/Fake News */
+.card-alerta-especial {
+    border-left-color: #d97706; /* Borda laranja/amarelada para alerta */
+    background-color: #fffbeb;   /* Fundo levemente amarelado */
+}
+
+.card-alerta-especial h3 {
+    color: #b45309;
+}
+
+.card-conteudo h3 {
+    color: #0056b3;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-conteudo p {
+    color: #495057;
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Botão dentro do card */
+.btn-card {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-align: center;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.btn-card:hover {
+    background-color: #003d82;
+}

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,35 +10,177 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css ">
 </head>
+
 <body>
     <section class="header">
-        <nav> 
-            <a href="index.html"><img src="img/frase.png"></a>
-            <div class="nav-links">
+        <nav>
+            <a href="index.html">
+                <img src="img/frase.png" alt="Conecta+">
+            </a>
+
+            <div class="nav-links"  id="navLinks">
+                <i class="fa fa-times" onclick="closeMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li class="dropdown">
-                        <a href="#">APRENDA ▾</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="comunicacao.html">COMUNICAÇÃO</a></li>
-                            <li><a href="cidadania.html">CIDADANIA</a></li>
-                            <li><a href="saude.html">SAÚDE</a></li>
-                            <li><a href="financas.html">FINANÇAS</a></li>
-                            <li><a href="compras.html">COMPRAS ONLINE</a></li>
-                            <li><a href="mobilidade.html">MOBILIDADE</a></li>
-                            <li><a href="aprendizado.html">APRENDIZADO</a></li>
-                            <li><a href="convivencia.html">CONVIVÊNCIA</a></li>
-                            <li><a href="lazer.html">LAZER DIGITAL</a></li>
-                        </ul>
-                    </li>
                     <li><a href="acessibilidade.html">ACESSIBILIDADE</a></li>
                     <li><a href="sos.html">PRECISA DE AJUDA?</a></li>
                     <li><a href="sobre.html">SOBRE</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="openMenu()"></i>
         </nav>
+
+        <div class="text-box">
+            <h1>Um mundo digital para todos</h1>
+
+            <p>
+               Tornamos a tecnologia mais acessível, promovendo autonomia, segurança e inclusão digital.
+            </p>
+            <a href="" class="hero-btn">Acesse e saiba mais</a>
+        </div>
     </section>
+
+<!--primeira seção-->
+<section class="course">
+    <h1>Courses we offer</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Intermediate</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque vel volutpat felis, eu condimentum massa. In hac 
+                habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
+            </p>
+        </div>
+         <div class="course-col">
+            <h3>Degree</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque vel volutpat felis, eu condimentum massa. In hac 
+                habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
+            </p>
+        </div>
+         <div class="course-col">
+            <h3>Post Graduation</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque vel volutpat felis, eu condimentum massa. In hac 
+                habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--Segunda seção-->
+<section class="campus">
+    <h1>Our Campus</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <div class="row">
+        <div class="campus-col">
+            <img src="img/card2.jpg">
+            <div class="layer">
+                <h3>TEXT</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="img/card5.jpg">
+            <div class="layer">
+                <h3>TEXT</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="img/card6.jpg">
+            <div class="layer">
+                <h3>TEXT</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Terceira seção-->
+<section class="facilities">
+    <h1>Our Facilities</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <div class="row">
+        <div class="facilities-col">
+            <img src="/img/card1.jpg">
+            <h3> World Class Library</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque vel volutpat felis, eu condimentum massa. In hac 
+                habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
+            </p>
+        </div>
+         <div class="facilities-col">
+            <img src="/img/card3.jpg">
+            <h3> World Class Library</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque vel volutpat felis, eu condimentum massa. In hac 
+                habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
+            </p>
+        </div>
+         <div class="facilities-col">
+            <img src="/img/card4.jpg">
+            <h3> World Class Library</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque vel volutpat felis, eu condimentum massa. In hac 
+                habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--Quarta seção-->
+<section class="testimonials">
+    <h1>What Our Students Say</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <div class="row">
+        <div class="testimonial-col">
+            <img src="/img/card7.jpg">      
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Pellentesque vel volutpat felis, eu condimentum massa. In hac 
+                     habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
+                    ipsum dolor sit amet.</p>
+                    <h3>Peoples</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+            </div>
+        </div>
+        <div class="testimonial-col">
+            <img src="/img/card8.jpg">      
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Pellentesque vel volutpat felis, eu condimentum massa. In hac 
+                     habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
+                    ipsum dolor sit amet.</p>
+                    <h3>Peoples</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--JS para o menu responsivo-->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function openMenu(){
+            navLinks.style.right = "0";
+        }
+        function closeMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
 </body>
 </html>
-

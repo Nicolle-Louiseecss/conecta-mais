@@ -33,7 +33,7 @@ nav img {
 
 .nav-links {
     flex: 1;
-    text-align: right;
+    text-align: center;
 }
 
 .nav-links ul li {
@@ -104,7 +104,6 @@ nav img {
 nav .fa {
     display: none;
 }
-
 @media (max-width: 700px) {
    .text-box h1 {
         font-size: 25px;
@@ -182,7 +181,6 @@ h3 {
 .course-col:hover {
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
-
 @media (max-width: 700px) {
     .row {
         flex-direction: column;
@@ -241,7 +239,12 @@ h3 {
     bottom: 49%;
     opacity: 1;
 }
-
+@media (max-width: 700px) {
+    .campus {
+        width: 90%;
+        padding-top: 30px;
+    }
+}    
 /*---Terceira seção---*/
 .facilities {
     width: 80%;
@@ -289,6 +292,7 @@ h3 {
     padding: 25px;
     cursor: pointer;
     display: flex;
+    box-sizing: border-box;
 }
 
 .testimonial-col img {
@@ -305,4 +309,121 @@ h3 {
 .testimonial-col h3 {
     margin-top: 15px;
     text-align: left;
+}
+
+.testimonial-col .fa {
+    color:#4b0303
+}
+@media (max-width: 700px){
+    .testimonial-col img {
+        margin-left: 0px;
+        margin-right: 15px;
+}
+}
+
+/*---Quinta seção---*/
+.cta {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.377),rgba(0, 0, 0, 0.288)),url(../img/card9.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+
+}
+@media (max-width: 700px) {
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/*---Footer---*/
+footer {
+    width: 100%;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+   flex-basis: 25%;
+   padding: 10px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 30px;
+    
+}
+
+.col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+    color: #fff; 
+}
+
+.col p {
+    color: #fff;
+    padding: 0;
+}
+
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a {
+    text-decoration: none; 
+    color: #fff;
+}
+
+form {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+
+form .fa {
+    font-size: 18px;
+    margin-right: 10px;
+
+}
+
+form input {
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    border: 0;
+    outline: none;
 }

@@ -1,1 +1,41 @@
+/* ==========================================
+   ESTILOS PARA A GRADE DE CARDS (Acessibilidade)
+   ========================================== */
 
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card-conecta {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-left: 6px solid #0056b3; /* Cor principal em destaque */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-conecta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-conteudo h3 {
+    color: #0056b3;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-conteudo p {
+    color: #495057;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}

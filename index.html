@@ -10,218 +10,226 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
 </head>
-
 <body>
-    <section class="header">
-        <nav>
-            <div class="nav-links"  id="navLinks">
-                <i class="fa fa-times" onclick="closeMenu()"></i>
+
+<!--Barra de Navegação-->
+    <section class="header">   
+        <nav class="navbar">
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="menu-abrir" aria-label="Abrir menu">
+                <i class="fa fa-bars"></i>
+            </label>
+
+            <div class="nav-links">
+                <label for="menu-toggle" class="menu-fechar" aria-label="Fechar menu">
+                    <i class="fa fa-times"></i>
+                </label>
+
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="acessibilidade.html">ACESSIBILIDADE</a></li>
-                    <li><a href="sos.html">PRECISA DE AJUDA?</a></li>
-                    <li><a href="sobre.html">SOBRE</a></li>
+                    <li><a href="./index.html">INÍCIO</a></li>
+                    <li><a href="./paginas/acessibilidade.html">ACESSIBILIDADE</a></li>
+                    <li><a href="./paginas/sos.html">AJUDA</a></li>
+                    <li><a href="./paginas/sobre.html">SOBRE</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="openMenu()"></i>
         </nav>
-
         <div class="text-box">
             <h1>Um mundo digital para todos</h1>
-
             <p>
-               Tornamos a tecnologia mais acessível, promovendo autonomia, segurança e inclusão digital.
+                Aprenda a usar a tecnologia com mais autonomia e segurança. 
+                Encontre orientações práticas para se comunicar, acessar serviços 
+                e se proteger na internet.
             </p>
-            <a href="" class="hero-btn">Acesse e saiba mais</a>
+            <a href="./paginas/aprendizado.html" class="hero-btn">
+                Comece a Aprender
+            </a>
         </div>
     </section>
+    <main id="conteudo-principal">
 
-<!--primeira seção-->
-<section class="course">
-    <h1>Courses we offer</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
+<!--Seção: Recursos-->
+<section class="recursos">
+    <h2 class="recursos-h1">Aprenda a usar a tecnologia</h2>
+    <p class="recursos-p">Descubra como a tecnologia pode facilitar as atividades do dia a dia.</p>
+    
     <div class="row">
-        <div class="course-col">
-            <h3>Intermediate</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque vel volutpat felis, eu condimentum massa. In hac 
-                habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
-            </p>
+        <div class="tema-card">
+            <h3 class="recursos-h3">Comunicação e relacionamentos</h3>
+            <p class="recursos-p">Use mensagens, áudios e chamadas de vídeo para conversar com familiares e amigos, compartilhar fotos e participar de grupos com segurança.</p>
+            <a href="./paginas/comunicacao.html" class="hero-btn">ACESSAR</a>
         </div>
-         <div class="course-col">
-            <h3>Degree</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque vel volutpat felis, eu condimentum massa. In hac 
-                habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
-            </p>
+
+        <div class="tema-card">
+            <h3 class="recursos-h3">Aprendizado e novas oportunidades</h3>
+            <p class="recursos-p">Descubra cursos gratuitos, leia livros digitais e aprenda novas habilidades pela internet, no seu próprio ritmo.</p>
+            <a href="./paginas/aprendizado.html" class="hero-btn">ACESSAR</a>
         </div>
-         <div class="course-col">
-            <h3>Post Graduation</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque vel volutpat felis, eu condimentum massa. In hac 
-                habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
-            </p>
+
+        <div class="tema-card">
+            <h3 class="recursos-h3">Convivência e participação social</h3>
+            <p class="recursos-p">Conheça grupos, atividades culturais e eventos da comunidade para fazer amizades e manter-se ativo socialmente.</p>
+            <a href="./paginas/convivencia.html" class="hero-btn">ACESSAR</a>
+        </div>
+
+        <div class="tema-card">
+            <h3 class="recursos-h3">Criatividade e lazer digital</h3>
+            <p class="recursos-p">Ouça músicas, assista a filmes, leia livros, jogue jogos de raciocínio e explore atividades que promovam diversão e bem-estar.</p>
+            <a href="./paginas/lazer.html" class="hero-btn">ACESSAR</a>
         </div>
     </div>
 </section>
 
-<!--Segunda seção-->
-<section class="campus">
-    <h1>Our Campus</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
+<!--Seção: Pilares-->
+        <section class="pilares">
+    <h2 class="pilares-h1">Pilares do Conecta+</h2>
+    <p class="pilares-p">Representam os princípios que orientam nosso projeto e mostram como a tecnologia pode 
+       contribuir para uma vida mais conectada, independente e cheia de possibilidades após os 60 anos.</p>
     <div class="row">
-        <div class="campus-col">
-            <img src="img/card2.jpg">
+        <div class="pilares-col">
+            <img src="./img/conexao.png" alt="">
             <div class="layer">
-                <h3>TEXT</h3>
+                <h3>Conexão</h3>
             </div>
         </div>
-        <div class="campus-col">
-            <img src="img/card5.jpg">
+
+        <div class="pilares-col">
+            <img src="./img/conhecimento.png" alt="">
             <div class="layer">
-                <h3>TEXT</h3>
+                <h3>Conhecimento</h3>
             </div>
         </div>
-        <div class="campus-col">
-            <img src="img/card6.jpg">
+
+        <div class="pilares-col">
+            <img src="./img/autonomia.png" alt="">
             <div class="layer">
-                <h3>TEXT</h3>
+                <h3>Autonomia</h3>
             </div>
         </div>
     </div>
 </section>
 
-<!--Terceira seção-->
-<section class="facilities">
-    <h1>Our Facilities</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<!--Seção: Aprendizado-->
+<section class="aprendizado">
+    <h2 class="aprendizado-h1">O que você pode aprender</h2>
+    <p class="aprendizado-p">Descubra como utilizar a tecnologia nas atividades do dia a dia.</p>
 
     <div class="row">
-        <div class="facilities-col">
-            <img src="/img/card1.jpg">
-            <h3> World Class Library</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque vel volutpat felis, eu condimentum massa. In hac 
-                habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
-            </p>
+        <div class="aprendizado-col">
+            <img src="./img/saude.png" alt="">
+            <h3 class="aprendizado-h3">Saúde Digital</h3>
+            <p class="aprendizado-p">Aprenda a encontrar unidades de saúde, consultar informações confiáveis e utilizar serviços digitais de saúde.</p>
+            <a href="paginas/saude.html" class="hero-btn">ACESSAR</a>
         </div>
-         <div class="facilities-col">
-            <img src="/img/card3.jpg">
-            <h3> World Class Library</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque vel volutpat felis, eu condimentum massa. In hac 
-                habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
-            </p>
+
+        <div class="aprendizado-col">
+            <img src="./img/compras.png" alt="">
+            <h3 class="aprendizado-h3">Compras Online</h3>
+            <p class="aprendizado-p">Saiba como verificar lojas virtuais, comparar preços e reconhecer promoções falsas antes de comprar.</p>
+            <a href="paginas/compras.html" class="hero-btn">ACESSAR</a>
         </div>
-         <div class="facilities-col">
-            <img src="/img/card4.jpg">
-            <h3> World Class Library</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque vel volutpat felis, eu condimentum massa. In hac 
-                habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
-            </p>
+
+        <div class="aprendizado-col">
+            <img src="./img/mobilidade.png" alt="">
+            <h3 class="aprendizado-h3">Mobilidade </h3>
+            <p class="aprendizado-p">Aprenda a encontrar endereços, consultar trajetos e localizar estabelecimentos usando mapas digitais.</p>
+            <a href="paginas/mobilidade.html" class="hero-btn">ACESSAR</a>
         </div>
     </div>
 </section>
 
-<!--Quarta seção-->
-<section class="testimonials">
-    <h1>What Our Students Say</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<!--Seção: Informações -->
+<section class="informacao">
+    <h2 class="informacao-h1">Informação e segurança digital</h2>
+    <p class="informacao-p">Conheça seus direitos e aprenda a proteger suas informações na internet.</p>
 
     <div class="row">
-        <div class="testimonial-col">
-            <img src="/img/card7.jpg">      
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Pellentesque vel volutpat felis, eu condimentum massa. In hac 
-                     habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
-                    ipsum dolor sit amet.
-                </p>
-                    <h3>Peoples</h3>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-            </div>
+        <div class="informacao-col">
+            <h3 class="card-h3">Cidadania digital</h3>
+            <p class="card-p">Descubra onde consultar direitos da pessoa idosa, benefícios e serviços públicos em canais oficiais.</p>
+            <a href="./paginas/cidadania.html" class="hero-btn">ACESSAR</a>
         </div>
-        <div class="testimonial-col">
-            <img src="/img/card8.jpg">      
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Pellentesque vel volutpat felis, eu condimentum massa. In hac 
-                     habitasse platea dictumst. Maecenas a nisi id libero sodales convallis.
-                    ipsum dolor sit amet.
-                </p>
-                    <h3>Peoples</h3>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-            </div>
+
+        <div class="informacao-col">
+            <h3 class="card-h3">Segurança financeira</h3>
+            <p class="card-p">Aprenda a proteger seus dados bancários e identificar golpes envolvendo pagamentos, boletos e transferências.</p>
+            <a href="./paginas/financas.html" class="hero-btn">ACESSAR</a>
         </div>
     </div>
 </section>
 
-<!--Quinta seção-->
-<section class="cta">
-    <h1>Enroll foor our various online courses<br>Anywhere from The Worls</h1>
-    <a href="" class="hero-btn">CONTACT US</a>
+<!--Seção: Começo-->
+<section class="comeco">
+    <h2 class="comeco-h1">Por onde você quer começar?</h2>
+    <p>
+        Escolha o que você precisa e descubra como a tecnologia
+        pode ajudar no seu dia a dia.
+    </p>
+    <div class="comeco-links">
+        <a href="./paginas/aprendizado.html" class="hero-btn">
+            QUERO APRENDER
+        </a>
+        <a href="./paginas/financas.html" class="hero-btn">
+            QUERO MAIS SEGURANÇA
+        </a>
+        <a href="./paginas/sos.html" class="hero-btn">
+            PRECISO DE AJUDA
+        </a>
+    </div>
 </section>
 
 <!--Footer-->
-<footer>
-    <div class="row">
-        <div class="col">
-            <img src="img/logo.png" class="logo">
-            <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum.
-            </p>
-        </div>
-        <div class="col">
-            <h3>Office</h3>
-            <p>ITPL Road</p>
-            <p>Faculdade Senac, Brasília</p>
-            <p>Recife, Pernambuco, Brasil</p>
-            <p class="email-id">exemplo@gmail.com</p>
-            <h4>+55 - 81000000000</h4>
-        </div>
-        <div class="col">
-            <h3>Links</h3>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Features</a></li>
-                <li><a href="">Contacts</a></li>
-            </ul>
-        </div>
-        <div class="col">
-            <h3>Newsletter</h3>
-            <form>
-                <i class="fa fa-envelope"></i>
-                <input type="email" placeholder="Enter your email id" required>
-                <button type="submit"><i class="fa fa-arrow-right"></i></button>
-            </form>
-        </div>
-    </div>
-</footer>
+    <footer>
+        <div class="top">
+            <h2>Conectando pessoas ao mundo digital.</h2>
 
-<!--JS para o menu responsivo-->
-    <script>
-        var navLinks = document.getElementById("navLinks");
-        function openMenu(){
-            navLinks.style.right = "0";
-        }
-        function closeMenu(){
-            navLinks.style.right = "-200px";
-        }
-    </script>
-
+            <a href="./index.html" class="footer-logo">
+                <img src="./img/logo.png" alt="Conecta+ — Página inicial">
+            </a>
+        </div>
+        <div class="links">
+            <nav class="footer-nav" aria-label="Aprendizado">
+                <h4>Aprendizado</h4>
+                <ul>
+                    <li><a href="./paginas/comunicacao.html">Comunicação</a></li>
+                    <li><a href="./paginas/cidadania.html">Cidadania digital</a></li>
+                    <li><a href="./paginas/financas.html">Finanças</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-nav" aria-label="Projeto">
+                <h4>Projeto</h4>
+                <ul>
+                    <li><a href="./paginas/sobre.html">Sobre o Conecta+</a></li>
+                    <li><a href="./paginas/acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="./paginas/saude.html">Saúde</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-nav" aria-label="Ajuda">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="./paginas/sos.html">Precisa de ajuda?</a></li>
+                    <li><a href="./paginas/acessibilidade.html">Orientações</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-nav" aria-label="Informações">
+                <h4>Informações</h4>
+                <ul>
+                    <li><a href="./paginas/sobre.html">Sobre nós</a></li>
+                    <li><a href="./paginas/cidadania.html">Cidadania digital</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bottom">
+            <span>
+                © 2026 Conecta+ | Projeto acadêmico de ADS.
+            </span>
+            <div class="social">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais"
+                   target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

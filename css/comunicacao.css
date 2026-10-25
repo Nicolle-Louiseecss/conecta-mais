@@ -1,1 +1,145 @@
+/*-- Apresentação da comunicação --*/
+.comunicacao-banner {
+    padding: 80px 8%;
+    background-color: #F5E6D3;
+    text-align: center;
+}
+
+.comunicacao-intro {
+    max-width: 850px;
+    margin: auto;
+}
+
+.comunicacao-intro h1 {
+    color: #4B0303;
+    font-size: clamp(30px, 4vw, 46px);
+    margin-bottom: 20px;
+}
+
+.comunicacao-intro p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/*-- Formas de comunicação --*/
+.comunicacao-conteudo {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.comunicacao-conteudo h2,
+.comunicacao-grupos h2,
+.comunicacao-seguranca h2 {
+    color: #2B211C;
+    font-size: clamp(26px, 3vw, 36px);
+    margin-bottom: 20px;
+}
+
+.comunicacao-descricao {
+    margin-bottom: 35px;
+}
+
+.comunicacao-opcoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1050px;
+    margin: 35px auto 0;
+}
+
+.comunicacao-item {
+    background-color: #FFF8EF;
+    border: 1px solid #E6D5C1;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: left;
+}
+
+.comunicacao-item > i {
+    color: #4B0303;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.comunicacao-item h3 {
+    color: #4B0303;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.comunicacao-item h4 {
+    color: #2B211C;
+    margin: 20px 0 10px;
+}
+
+.comunicacao-item p,
+.comunicacao-item li {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.comunicacao-item ol {
+    padding-left: 23px;
+}
+
+/*-- Grupos e convivência --*/
+.comunicacao-grupos,
+.comunicacao-seguranca {
+    padding: 60px 10%;
+}
+
+.comunicacao-grupos {
+    background-color: #F5E6D3;
+}
+
+.comunicacao-grupos ul {
+    padding-left: 25px;
+    line-height: 2;
+}
+
+.comunicacao-seguranca {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.comunicacao-dica {
+    border-left: 4px solid #4B0303;
+    padding: 15px 20px;
+    margin: 20px 0;
+    background-color: #FFF8EF;
+}
+
+.comunicacao-dica h3 {
+    color: #4B0303;
+    margin-bottom: 10px;
+}
+
+.comunicacao-dica p {
+    line-height: 1.8;
+}
+
+/*-- Adaptação para celulares --*/
+@media (max-width: 700px) {
+    .comunicacao-banner {
+        padding: 55px 6%;
+    }
+
+    .comunicacao-conteudo {
+        padding: 50px 6%;
+    }
+
+    .comunicacao-opcoes {
+        grid-template-columns: 1fr;
+    }
+
+    .comunicacao-item {
+        padding: 24px;
+    }
+
+    .comunicacao-grupos,
+    .comunicacao-seguranca {
+        padding: 45px 7%;
+    }
+}
 

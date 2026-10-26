@@ -18,16 +18,13 @@
     <section class="header">   
         <nav class="navbar">
             <input type="checkbox" id="menu-toggle">
-
             <label for="menu-toggle" class="menu-abrir" aria-label="Abrir menu">
                 <i class="fa fa-bars"></i>
             </label>
-
             <div class="nav-links">
                 <label for="menu-toggle" class="menu-fechar" aria-label="Fechar menu">
                     <i class="fa fa-times"></i>
                 </label>
-
                 <ul>
                     <li><a href="./index.html">INÍCIO</a></li>
                     <li><a href="./paginas/acessibilidade.html">ACESSIBILIDADE</a></li>
@@ -36,6 +33,10 @@
                 </ul>
             </div>
         </nav>
+            <a href="./index.html" class="logo">
+                    <img src="./img/logo.png" alt="Logo">
+                    <span>Conecta+</span>
+                </a>
         <div class="text-box">
             <h1>Um mundo digital para todos</h1>
             <p>
@@ -82,64 +83,139 @@
     </div>
 </section>
 
+<br><br><br>
+
 <!--Seção: Pilares-->
-        <section class="pilares">
-    <h2 class="pilares-h1">Pilares do Conecta+</h2>
-    <p class="pilares-p">Representam os princípios que orientam nosso projeto e mostram como a tecnologia pode 
-       contribuir para uma vida mais conectada, independente e cheia de possibilidades após os 60 anos.</p>
-    <div class="row">
-        <div class="pilares-col">
-            <img src="./img/conexao.png" alt="">
-            <div class="layer">
-                <h3>Conexão</h3>
-            </div>
+<section class="pilares">
+    <div class="pilares-container">
+    <div class="pilares-logo">
+        <img src="./img/logo.png" alt="Logo Conecta+">
+        <h2>Os pilares do Conecta+</h2>
+        <p>
+            Tecnologia para todos, com mais autonomia,
+            segurança e conexão.
+        </p>
+    </div>
+    <div class="pilares-conteudo">
+        <div class="pilar-card">
+            <h3>Comunicação e relacionamentos</h3>
+            <p>
+                Use mensagens, áudios e chamadas de vídeo para
+                conversar com familiares e amigos, compartilhar
+                fotos e participar de grupos com segurança.
+            </p>
+            <a href="./paginas/comunicacao.html">Conheça mais →</a>
         </div>
-
-        <div class="pilares-col">
-            <img src="./img/conhecimento.png" alt="">
-            <div class="layer">
-                <h3>Conhecimento</h3>
-            </div>
+        <div class="pilar-card">
+            <h3>Aprendizado e novas oportunidades</h3>
+            <p>
+                Descubra cursos gratuitos, leia livros digitais
+                e aprenda novas habilidades pela internet,
+                respeitando seu próprio ritmo.
+            </p>
+            <a href="./paginas/aprendizado.html">Conheça mais →</a>
         </div>
-
-        <div class="pilares-col">
-            <img src="./img/autonomia.png" alt="">
-            <div class="layer">
-                <h3>Autonomia</h3>
-            </div>
+        <div class="pilar-card">
+            <h3>Convivência e participação social</h3>
+            <p>
+                Conheça grupos, atividades culturais e eventos
+                da comunidade para fazer amizades e fortalecer
+                os vínculos sociais.
+            </p>
+            <a href="./paginas/convivencia.html">Conheça mais →</a>
+        </div>
+        <div class="pilar-card">
+            <h3>Criatividade e lazer digital</h3>
+            <p>
+                Ouça músicas, assista a filmes, leia livros,
+                jogue e explore atividades digitais que
+                promovam diversão e bem-estar.
+            </p>
+            <a href="./paginas/lazer.html">Conheça mais →</a>
         </div>
     </div>
+</div>
 </section>
 
 <!--Seção: Aprendizado-->
-<section class="aprendizado">
-    <h2 class="aprendizado-h1">O que você pode aprender</h2>
-    <p class="aprendizado-p">Descubra como utilizar a tecnologia nas atividades do dia a dia.</p>
+<section class="comunicacao-conteudo modulos-aprendizado" id="modulos">
 
-    <div class="row">
-        <div class="aprendizado-col">
-            <img src="./img/saude.png" alt="">
-            <h3 class="aprendizado-h3">Saúde Digital</h3>
-            <p class="aprendizado-p">Aprenda a encontrar unidades de saúde, consultar informações confiáveis e utilizar serviços digitais de saúde.</p>
-            <a href="paginas/saude.html" class="hero-btn">ACESSAR</a>
-        </div>
+    <h2>O que você pode aprender</h2>
 
-        <div class="aprendizado-col">
-            <img src="./img/compras.png" alt="">
-            <h3 class="aprendizado-h3">Compras Online</h3>
-            <p class="aprendizado-p">Saiba como verificar lojas virtuais, comparar preços e reconhecer promoções falsas antes de comprar.</p>
-            <a href="paginas/compras.html" class="hero-btn">ACESSAR</a>
-        </div>
+    <p class="comunicacao-descricao">
+        Descubra como utilizar a tecnologia nas atividades do dia a dia.
+    </p>
 
-        <div class="aprendizado-col">
-            <img src="./img/mobilidade.png" alt="">
-            <h3 class="aprendizado-h3">Mobilidade </h3>
-            <p class="aprendizado-p">Aprenda a encontrar endereços, consultar trajetos e localizar estabelecimentos usando mapas digitais.</p>
-            <a href="paginas/mobilidade.html" class="hero-btn">ACESSAR</a>
-        </div>
+    <div class="comunicacao-opcoes">
+
+<!-- Saúde Digital -->
+<article class="comunicacao-item">
+    <div class="modulo-barra">
+        <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+        <h3>Saúde Digital</h3>
+    </div>
+
+    <p>
+        Aprenda a encontrar unidades de saúde, consultar
+        informações confiáveis e utilizar serviços digitais.
+    </p>
+
+    <h4>O que você vai aprender?</h4>
+    <ol>
+        <li>Como encontrar unidades de saúde.</li>
+        <li>Como acessar serviços de saúde online.</li>
+        <li>Como verificar informações confiáveis.</li>
+    </ol>
+
+    <a href="paginas/saude.html" class="modulo-btn">ACESSAR GUIA</a>
+</article>
+
+<!-- Compras Online -->
+<article class="comunicacao-item">
+    <div class="modulo-barra">
+        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        <h3>Compras Online</h3>
+    </div>
+
+    <p>
+        Saiba como comprar pela internet, comparar preços
+        e reconhecer lojas falsas e promoções enganosas.
+    </p>
+
+    <h4>O que você vai aprender?</h4>
+    <ol>
+        <li>Como verificar lojas virtuais.</li>
+        <li>Como comparar preços e condições.</li>
+        <li>Como reconhecer possíveis golpes.</li>
+    </ol>
+
+    <a href="paginas/compras.html" class="modulo-btn">ACESSAR GUIA</a>
+</article>
+
+<!-- Mobilidade -->
+<article class="comunicacao-item">
+    <div class="modulo-barra">
+        <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+        <h3>Mobilidade</h3>
+    </div>
+
+    <p>
+        Aprenda a encontrar endereços, consultar trajetos
+        e localizar estabelecimentos usando mapas digitais.
+    </p>
+
+    <h4>O que você vai aprender?</h4>
+    <ol>
+        <li>Como pesquisar endereços no mapa.</li>
+        <li>Como consultar trajetos e rotas.</li>
+        <li>Como localizar estabelecimentos.</li>
+    </ol>
+
+    <a href="paginas/mobilidade.html" class="modulo-btn">ACESSAR GUIA</a>
+</article>
+
     </div>
 </section>
-
 <!--Seção: Informações -->
 <section class="informacao">
     <h2 class="informacao-h1">Informação e segurança digital</h2>

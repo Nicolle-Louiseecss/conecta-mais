@@ -1,51 +1,641 @@
 /* ==========================================
-   ESTILOS PARA A GRADE DE CARDS (SOS Digital)
+   SOS DIGITAL — CONECTA+
    ========================================== */
 
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+/* CORES E ESTILO GERAL */
+
+:root {
+    --sos-marrom-escuro: #2B211C;
+    --sos-marrom: #5C4A40;
+    --sos-marrom-claro: #3A2A22;
+    --sos-laranja: #BF6B21;
+    --sos-creme: #FFF8F0;
+    --sos-bege: #F3E8DA;
+    --sos-bege-claro: #F3E4D3;
+    --sos-verde: #153F3F;
+    --sos-vinho: #680E0E;
+    --sos-vinho-escuro: #4B0303;
 }
 
-.card-conecta {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-left: 6px solid #0056b3; /* Detalhe lateral em azul */
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    padding: 1.5rem;
+/* CABEÇALHO */
+
+.sos-header {
+    min-height: 100vh;
+}
+
+.sos-header .text-box {
+    max-width: 1050px;
+}
+
+.sos-header .text-box h1 {
+    color: var(--sos-marrom-escuro);
+    font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.sos-header .text-box p {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    color: var(--sos-marrom);
+}
+
+.sos-header .hero-btn {
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* INTRODUÇÃO */
+
+.sos-introducao {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px 30px 45px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sos-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 18px;
+    padding: 9px 17px;
+    border-radius: 30px;
+    background: var(--sos-bege-claro);
+    color: var(--sos-marrom-escuro);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.sos-introducao h2 {
+    margin-bottom: 18px;
+    color: var(--sos-marrom-escuro);
+    font-size: clamp(24px, 3vw, 32px);
+    line-height: 1.35;
+}
+
+.sos-introducao > p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--sos-marrom);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* SEÇÃO DE GUIAS */
+
+.sos-guias {
+    padding: 60px 7%;
+    background: var(--sos-bege);
+    box-sizing: border-box;
+}
+
+.sos-titulo-secao {
+    max-width: 850px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.sos-titulo-secao h2 {
+    color: var(--sos-marrom-escuro);
+    font-size: clamp(24px, 3vw, 31px);
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+.sos-titulo-secao p {
+    color: var(--sos-marrom);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* GRADE DE CARDS */
+
+.sos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* CARDS */
+
+.sos-card {
+    min-width: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: var(--sos-creme);
+    border: 1px solid #E8D7C4;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(43, 33, 28, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-conecta:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+.sos-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 22px rgba(43, 33, 28, 0.12);
 }
 
-/* Variação para o card de Alerta / Segurança */
-.card-alerta-especial {
-    border-left-color: #d97706; /* Borda laranja/amarelada */
-    background-color: #fffbeb;   /* Fundo levemente amarelado */
+/* BARRA COM ÍCONE E TÍTULO */
+
+.sos-card-barra {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-height: 90px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    background: var(--sos-verde);
 }
 
-.card-alerta-especial h3 {
-    color: #b45309;
+.sos-card-barra i {
+    flex-shrink: 0;
+    color: #FFFFFF;
+    font-size: 25px;
 }
 
-.card-conteudo h3 {
-    color: #0056b3;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+.sos-card-barra h3 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: clamp(17px, 1.8vw, 21px);
+    font-weight: 600;
+    line-height: 1.4;
 }
 
-.card-conteudo p {
-    color: #495057;
-    font-size: 1.05rem;
+/* CONTEÚDO DOS CARDS */
+
+.sos-card-conteudo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.sos-card-conteudo > p {
+    margin: 0 0 22px;
+    color: var(--sos-marrom);
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.sos-card-conteudo h4 {
+    margin: 0 0 12px;
+    color: var(--sos-marrom-escuro);
+    font-size: 17px;
+    font-weight: 600;
     line-height: 1.5;
-    margin-bottom: 0;
+}
+
+.sos-card-conteudo ol {
+    margin: 0 0 24px;
+    padding-left: 24px;
+    color: var(--sos-marrom);
+}
+
+.sos-card-conteudo ol li {
+    margin-bottom: 11px;
+    padding-left: 5px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.sos-card-conteudo ol li::marker {
+    color: var(--sos-laranja);
+    font-weight: 700;
+}
+
+/* DICAS */
+
+.sos-dica {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: auto;
+    padding: 17px;
+    border-left: 4px solid var(--sos-laranja);
+    border-radius: 7px;
+    background: var(--sos-bege-claro);
+}
+
+.sos-dica > i {
+    flex-shrink: 0;
+    margin-top: 4px;
+    color: var(--sos-laranja);
+    font-size: 18px;
+}
+
+.sos-dica p {
+    margin: 0;
+    color: var(--sos-marrom-escuro);
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* CARD DE ALERTA */
+
+.sos-card-alerta {
+    border-color: #E8C7B9;
+    background: var(--sos-creme);
+}
+
+.sos-card-alerta .sos-card-barra {
+    background: var(--sos-verde);
+}
+
+.sos-card-alerta .sos-card-conteudo h4 {
+    color: var(--sos-marrom-escuro);
+}
+
+.sos-card-alerta .sos-card-conteudo ol li::marker {
+    color: var(--sos-vinho);
+}
+
+.sos-alerta {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: auto;
+    padding: 17px;
+    border-left: 4px solid var(--sos-vinho);
+    border-radius: 7px;
+    background: #F5E2DD;
+}
+
+.sos-alerta > i {
+    flex-shrink: 0;
+    margin-top: 4px;
+    color: var(--sos-vinho);
+    font-size: 18px;
+}
+
+.sos-alerta p {
+    margin: 0;
+    color: var(--sos-marrom-escuro);
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* SEÇÃO DE SEGURANÇA */
+
+.sos-seguranca {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    width: 86%;
+    max-width: 1150px;
+    margin: 70px auto;
+    padding: 35px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: var(--sos-verde);
+}
+
+.sos-seguranca-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: var(--sos-creme);
+}
+
+.sos-seguranca-icone i {
+    color: var(--sos-marrom-escuro);
+    font-size: 32px;
+}
+
+.sos-seguranca-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.sos-seguranca-texto h2 {
+    margin-bottom: 15px;
+    color: var(--sos-creme);
+    font-size: clamp(22px, 2.5vw, 28px);
+    line-height: 1.4;
+}
+
+.sos-seguranca-texto > p {
+    margin-bottom: 20px;
+    color: var(--sos-creme);
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.sos-seguranca-texto ul {
+    display: grid;
+    gap: 13px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sos-seguranca-texto ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--sos-creme);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.sos-seguranca-texto ul li i {
+    flex-shrink: 0;
+    margin-top: 5px;
+    color: #F7B66B;
+}
+
+/* LINKS NA SEÇÃO DE SEGURANÇA */
+
+.sos-seguranca-texto a {
+    color: #F7B66B;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.sos-seguranca-texto a:hover {
+    color: #FFFFFF;
+}
+
+/* SEÇÃO DE CONTATO / PRÓXIMOS PASSOS */
+
+.sos-contato {
+    padding: 60px 7% 80px;
+    background: var(--sos-bege);
+    text-align: center;
+}
+
+.sos-contato h2 {
+    margin-bottom: 18px;
+    color: var(--sos-marrom-escuro);
+    font-size: clamp(24px, 3vw, 31px);
+    line-height: 1.4;
+}
+
+.sos-contato > p {
+    max-width: 800px;
+    margin: 0 auto 28px;
+    color: var(--sos-marrom);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.sos-contato-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* BOTÕES */
+
+.sos-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 12px 22px;
+    border: 2px solid var(--sos-vinho);
+    border-radius: 7px;
+    background: var(--sos-vinho);
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sos-btn:hover {
+    background: var(--sos-vinho-escuro);
+    border-color: var(--sos-vinho-escuro);
+    color: #FFFFFF;
+}
+
+.sos-btn-secundario {
+    border-color: var(--sos-marrom);
+    background: transparent;
+    color: var(--sos-marrom-escuro);
+}
+
+.sos-btn-secundario:hover {
+    background: var(--sos-marrom-escuro);
+    border-color: var(--sos-marrom-escuro);
+    color: #FFFFFF;
+}
+
+/* ACESSIBILIDADE: FOCO DE TECLADO */
+
+.sos-card a:focus-visible,
+.sos-contato a:focus-visible,
+.sos-header a:focus-visible {
+    outline: 3px solid var(--sos-laranja);
+    outline-offset: 4px;
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+    .sos-guias {
+        padding: 55px 5%;
+    }
+
+    .sos-grid {
+        gap: 20px;
+    }
+
+    .sos-card-conteudo {
+        padding: 22px;
+    }
+
+    .sos-card-barra {
+        padding: 20px;
+    }
+
+    .sos-seguranca {
+        width: 90%;
+        padding: 28px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 700px) {
+    .sos-header {
+        min-height: 100vh;
+    }
+
+    .sos-header .text-box {
+        top: 62%;
+        width: 92%;
+    }
+
+    .sos-header .text-box h1 {
+        font-size: clamp(25px, 6vw, 32px);
+        line-height: 1.3;
+        margin-bottom: 17px;
+    }
+
+    .sos-header .text-box p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    .sos-header .hero-btn {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+
+    .sos-introducao {
+        padding: 50px 6% 35px;
+    }
+
+    .sos-introducao h2 {
+        font-size: 25px;
+    }
+
+    .sos-introducao > p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .sos-guias {
+        padding: 45px 5%;
+    }
+
+    .sos-titulo-secao {
+        margin-bottom: 28px;
+    }
+
+    .sos-titulo-secao h2 {
+        font-size: 24px;
+    }
+
+    .sos-titulo-secao p {
+        font-size: 15px;
+    }
+
+    .sos-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .sos-card-barra {
+        min-height: 80px;
+        padding: 18px;
+    }
+
+    .sos-card-barra i {
+        font-size: 23px;
+    }
+
+    .sos-card-barra h3 {
+        font-size: 18px;
+    }
+
+    .sos-card-conteudo {
+        padding: 20px;
+    }
+
+    .sos-card-conteudo > p {
+        font-size: 15px;
+    }
+
+    .sos-card-conteudo h4 {
+        font-size: 16px;
+    }
+
+    .sos-card-conteudo ol li {
+        font-size: 14px;
+    }
+
+    .sos-dica,
+    .sos-alerta {
+        padding: 14px;
+    }
+
+    .sos-seguranca {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 90%;
+        margin: 45px auto;
+        padding: 25px 20px;
+    }
+
+    .sos-seguranca-icone {
+        width: 65px;
+        height: 65px;
+    }
+
+    .sos-seguranca-icone i {
+        font-size: 28px;
+    }
+
+    .sos-seguranca-texto h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .sos-seguranca-texto > p {
+        font-size: 15px;
+    }
+
+    .sos-seguranca-texto ul li {
+        font-size: 14px;
+    }
+
+    .sos-contato {
+        padding: 45px 5% 55px;
+    }
+
+    .sos-contato h2 {
+        font-size: 24px;
+    }
+
+    .sos-contato > p {
+        font-size: 15px;
+    }
+
+    .sos-contato-botoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sos-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* REDUZ MOVIMENTO PARA QUEM PREFERE */
+
+@media (prefers-reduced-motion: reduce) {
+    .sos-card,
+    .sos-btn {
+        transition: none;
+    }
+
+    .sos-card:hover {
+        transform: none;
+    }
 }

@@ -1,175 +1,560 @@
 /* ==========================================
-   CONFIGURAÇÕES GERAIS E CORES
+   CIDADANIA DIGITAL — CONECTA+
+   Padrão visual da página inicial
    ========================================== */
+
 :root {
-    --cor-fundo: #f8f9fa;
-    --cor-principal: #0056b3;     /* Azul forte para destaque e confiança */
-    --cor-principal-hover: #003d82;
-    --cor-texto: #212529;         /* Texto escuro para facilitar a leitura */
-    --cor-texto-claro: #495057;
-    --cor-card: #ffffff;
-    --cor-alerta-bg: #fff3cd;     /* Amarelo suave para alertas */
-    --cor-alerta-texto: #856404;
-    --borda-raio: 12px;
+    --cidadania-verde: #153F3F;
+    --cidadania-laranja: #BF6B21;
+    --cidadania-creme: #FFF8EF;
+    --cidadania-branco: #FFFFFF;
+    --cidadania-texto: #2B211C;
+    --cidadania-texto-suave: #5C4A40;
+    --cidadania-borda: #E8D7C4;
+    --cidadania-alerta: #FFF0D5;
 }
 
-* {
-    margin: 0;
-    padding: 0;
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+   ========================================== */
+
+.cidadania-main {
+    width: 100%;
+    padding: 65px 8%;
+    background-color: var(--cidadania-creme);
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    line-height: 1.6;
-    font-size: 1.1rem; /* Fonte ligeiramente maior para melhor leitura */
+.cidadania-main > .cidadania-secao {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 38px;
+    background-color: var(--cidadania-branco);
+    border: 1px solid var(--cidadania-borda);
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(43, 33, 28, 0.06);
+    box-sizing: border-box;
 }
 
 /* ==========================================
-   CABEÇALHO (HEADER)
+   TÍTULOS DAS SEÇÕES
    ========================================== */
-header {
-    background-color: var(--cor-principal);
-    color: #ffffff;
-    padding: 2.5rem 1.5rem;
-    text-align: center;
+
+.cidadania-main .cidadania-titulo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 24px;
+    padding: 0 0 20px;
+    border-bottom: 2px solid #F0E5D9;
 }
 
-header nav {
-    max-width: 800px;
-    margin: 0 auto 1.5rem auto;
+.cidadania-main .cidadania-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    background-color: var(--cidadania-laranja);
+    border-radius: 10px;
+    font-size: 26px;
+}
+
+.titulo-h1 {
+    font-size: clamp(20px, 3vw, 32px);
+}
+.cidadania-main .cidadania-titulo h2 {
+    margin: 0;
+    color: var(--cidadania-verde);
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 600;
+    line-height: 1.4;
     text-align: left;
 }
 
-header nav a {
-    color: #ffffff;
-    text-decoration: none;
+.cidadania-main .cidadania-secao > p {
+    margin: 0 0 22px;
+    color: var(--cidadania-texto-suave);
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* ==========================================
+   SEÇÃO 1 — ESTATUTO DA PESSOA IDOSA
+   Fundo branco, seguindo o estilo dos cards
+   ========================================== */
+
+#direitos ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 0 0 25px;
+    margin: 20px 0 0;
+    list-style: disc;
+}
+
+#direitos li {
+    padding-left: 5px;
+    margin: 0;
+    color: var(--cidadania-texto-suave);
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+#direitos li::marker {
+    color: var(--cidadania-laranja);
+}
+
+#direitos li strong {
+    color: var(--cidadania-verde);
     font-weight: 600;
-    font-size: 1rem;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: background 0.3s;
-}
-
-header nav a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.8rem;
-}
-
-header p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto;
-    opacity: 0.95;
 }
 
 /* ==========================================
-   CONTEÚDO PRINCIPAL (MAIN)
+   SEÇÃO 2 — SERVIÇOS E BENEFÍCIOS
+   Fundo verde para destacar a seção
    ========================================== */
 
-section {
-    background-color: var(--cor-card);
-    margin-bottom: 2rem;
-    padding: 2rem;
-    border-radius: var(--borda-raio);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+.cidadania-main > #servicos {
+    padding: 38px;
+    background-color: var(--cidadania-verde);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(21, 63, 63, 0.14);
 }
 
-section h2 {
-    color: var(--cor-principal);
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #e9ecef;
-    padding-bottom: 0.5rem;
+#servicos .cidadania-titulo {
+    border-bottom-color: rgba(255, 255, 255, 0.22);
 }
 
-section p {
-    color: var(--cor-texto-claro);
-    margin-bottom: 1rem;
+#servicos .cidadania-titulo h2 {
+    color: var(--cidadania-branco);
 }
 
-section ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
+#servicos .cidadania-icone {
+    color: var(--cidadania-verde);
+    background-color: var(--cidadania-branco);
 }
 
-section li {
-    margin-bottom: 0.8rem;
-    color: var(--cor-texto-claro);
+#servicos > p {
+    color: var(--cidadania-branco);
 }
 
-/* ==========================================
-   COMPONENTES ESPECIAIS (Cards e Alertas)
-   ========================================== */
-.card {
-    background-color: #f1f3f5;
-    border-left: 5px solid var(--cor-principal);
-    padding: 1.2rem;
-    margin-top: 1rem;
-    border-radius: 6px;
+/* CARD DO MEU INSS */
+
+#servicos .card-conecta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 760px;
+    margin: 30px auto 0;
+    overflow: hidden;
+    background-color: var(--cidadania-creme);
+    border: 1px solid var(--cidadania-borda);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card h3 {
-    color: var(--cor-principal);
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
+#servicos .card-conecta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
 }
 
-.alerta-seguranca {
-    background-color: var(--cor-alerta-bg);
-    color: var(--cor-alerta-texto);
-    border: 1px solid #ffeeba;
-    padding: 1.2rem;
-    border-radius: var(--borda-raio);
-    margin-top: 1.5rem;
+/* BARRA COLORIDA DO CARD */
+
+#servicos .card-barra {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 95px;
+    padding: 20px 25px;
+    background-color: var(--cidadania-laranja);
 }
 
-.alerta-seguranca strong {
-    display: block;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+#servicos .card-barra > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    color: var(--cidadania-laranja);
+    background-color: var(--cidadania-branco);
+    border-radius: 10px;
+    font-size: 23px;
 }
 
-/* ==========================================
-   BOTÕES E LINKS DE DESTAQUE
-   ========================================== */
-.btn {
-    display: inline-block;
-    background-color: var(--cor-principal);
-    color: #ffffff;
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
+#servicos .card-barra h3 {
+    margin: 0;
+    color: var(--cidadania-branco);
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* CONTEÚDO DO CARD */
+
+#servicos .card-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+#servicos .card-conteudo p {
+    margin: 0 0 25px;
+    color: var(--cidadania-texto-suave);
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* BOTÃO DE ACESSO */
+
+#servicos .btn-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 12px 24px;
+    color: var(--cidadania-branco) !important;
+    background-color: #680E0E;
+    border: 1px solid #4B0303;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
     text-decoration: none;
-    font-weight: bold;
-    margin-top: 1rem;
-    transition: background-color 0.3s, transform 0.1s;
-    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: var(--cor-principal-hover);
+#servicos .btn-card:hover {
+    color: var(--cidadania-branco) !important;
+    background-color: #4B0303;
+    border-color: #4B0303;
 }
 
-.btn:active {
-    transform: scale(0.98);
+#servicos .btn-card:focus-visible {
+    outline: 3px solid var(--cidadania-laranja);
+    outline-offset: 4px;
 }
 
 /* ==========================================
-   RODAPÉ
+   SEÇÃO 3 — ALERTA DE SEGURANÇA
+   Fundo diferente para chamar atenção
    ========================================== */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #e9ecef;
-    color: var(--cor-texto-claro);
-    font-size: 1rem;
-    margin-top: 3rem;
+
+.cidadania-main > .cidadania-secao-seguranca {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.cidadania-main .alerta-seguranca {
+    padding: 30px 35px;
+    background-color: var(--cidadania-alerta);
+    border: 1px solid #E8C58D;
+    border-left: 7px solid var(--cidadania-laranja);
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(43, 33, 28, 0.06);
+}
+
+/* TÍTULO DO ALERTA */
+
+.alerta-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 18px;
+}
+
+.alerta-titulo > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    color: var(--cidadania-branco);
+    background-color: var(--cidadania-laranja);
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.alerta-titulo h2 {
+    margin: 0;
+    color: #70400F;
+    font-size: clamp(21px, 2.5vw, 27px);
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* TEXTO DO ALERTA */
+
+.cidadania-main .alerta-seguranca p {
+    margin: 0;
+    color: #624A30;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.alerta-seguranca p strong {
+    color: #70400F;
+    font-weight: 700;
+}
+
+/* ==========================================
+   TABLETS
+   ========================================== */
+
+@media (max-width: 900px) {
+    .cidadania-main {
+        padding: 55px 5%;
+    }
+
+    .cidadania-main > .cidadania-secao,
+    .cidadania-main > #servicos {
+        padding: 30px;
+    }
+
+    .cidadania-main > .cidadania-secao-seguranca {
+        padding: 0;
+    }
+
+    #servicos .card-conteudo {
+        padding: 25px;
+    }
+}
+
+/* ==========================================
+   CELULARES
+   ========================================== */
+
+@media (max-width: 700px) {
+    .cidadania-main {
+        padding: 40px 5%;
+    }
+
+    .cidadania-main > .cidadania-secao,
+    .cidadania-main > #servicos {
+        margin-bottom: 25px;
+        padding: 23px;
+        border-radius: 10px;
+    }
+
+    .cidadania-main > .cidadania-secao-seguranca {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .cidadania-main .cidadania-titulo {
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+    }
+
+    .cidadania-main .cidadania-icone {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .cidadania-main .cidadania-titulo h2 {
+        font-size: 23px;
+    }
+
+    .cidadania-main .cidadania-secao > p,
+    #direitos li,
+    #servicos .card-conteudo p,
+    .cidadania-main .alerta-seguranca p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    #direitos ul {
+        padding-left: 22px;
+        gap: 13px;
+    }
+
+    #servicos .card-barra {
+        min-height: 80px;
+        padding: 17px 20px;
+        gap: 12px;
+    }
+
+    #servicos .card-barra > i {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+    #servicos .card-barra h3 {
+        font-size: 22px;
+    }
+
+    #servicos .card-conteudo {
+        padding: 23px;
+    }
+
+    #servicos .btn-card {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 15px;
+    }
+
+    .cidadania-main .alerta-seguranca {
+        padding: 23px;
+    }
+
+    .alerta-titulo {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .alerta-titulo > i {
+        width: 42px;
+        height: 42px;
+        font-size: 19px;
+    }
+
+    .alerta-titulo h2 {
+        font-size: 21px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 480px) {
+    .cidadania-main {
+        padding: 30px 4%;
+    }
+
+    .cidadania-main > .cidadania-secao,
+    .cidadania-main > #servicos {
+        padding: 19px;
+    }
+
+    .cidadania-main > .cidadania-secao-seguranca {
+        padding: 0;
+    }
+
+    .cidadania-main .cidadania-titulo {
+        gap: 10px;
+    }
+
+    .cidadania-main .cidadania-titulo h2 {
+        font-size: 21px;
+    }
+
+    #servicos .card-barra {
+        padding: 16px;
+    }
+
+    #servicos .card-barra h3 {
+        font-size: 20px;
+    }
+
+    #servicos .card-conteudo {
+        padding: 19px;
+    }
+
+    .cidadania-main .alerta-seguranca {
+        padding: 19px;
+    }
+
+    .alerta-titulo {
+        gap: 10px;
+    }
+
+    .alerta-titulo h2 {
+        font-size: 19px;
+    }
+}
+
+/* Título principal do banner */
+.header .text-box h1.titulo-h1 {
+    font-size: clamp(28px, 3.5vw, 48px);
+    line-height: 1.2;
+}
+
+/* Títulos das seções */
+.cidadania-main .cidadania-titulo h2 {
+    font-size: clamp(24px, 2.5vw, 32px);
+    line-height: 1.3;
+}
+
+/* Título do card Meu INSS */
+.cidadania-main .card-barra h3 {
+    font-size: 24px;
+}
+
+/* Título do alerta de segurança */
+.cidadania-main .alerta-titulo h2 {
+    font-size: clamp(22px, 2.3vw, 30px);
+    line-height: 1.3;
+}
+
+/* Textos dos parágrafos */
+.cidadania-main p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    .header .text-box h1.titulo-h1 {
+        font-size: 30px;
+    }
+
+    .cidadania-main .cidadania-titulo h2 {
+        font-size: 25px;
+    }
+
+    .cidadania-main .card-barra h3 {
+        font-size: 22px;
+    }
+
+    .cidadania-main .alerta-titulo h2 {
+        font-size: 23px;
+    }
+
+    .cidadania-main p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .text-box h1.titulo-h1 {
+        font-size: 26px;
+    }
+
+    .cidadania-main .cidadania-titulo h2 {
+        font-size: 22px;
+    }
+
+    .cidadania-main .alerta-titulo h2 {
+        font-size: 21px;
+    }
+
+    .cidadania-main p {
+        font-size: 16px;
+    }
 }

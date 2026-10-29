@@ -3,64 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOS Digital | Conecta Idade</title>
-    <link rel="stylesheet" href="../css/sos">
+
+    <title>SOS Digital | Conecta+</title>
+
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- Cabeçalho Principal da Página -->
-    <header>
-        <nav>
-            <a href="index.html">← Voltar para a Página Inicial</a>
+    <!-- Cabeçalho e navegação -->
+    <header class="header sos-header">
+
+        <nav class="navbar">
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="menu-abrir" aria-label="Abrir menu">
+                <i class="fa fa-bars"></i>
+            </label>
+
+            <div class="nav-links">
+                <label for="menu-toggle" class="menu-fechar" aria-label="Fechar menu">
+                    <i class="fa fa-times"></i>
+                </label>
+
+                <ul>
+                    <li><a href="../index.html">INÍCIO</a></li>
+                    <li><a href="./acessibilidade.html">ACESSIBILIDADE</a></li>
+                    <li><a href="./sos.html" aria-current="page">AJUDA</a></li>
+                    <li><a href="./sobre.html">SOBRE</a></li>
+                </ul>
+            </div>
         </nav>
-        <h1>SOS Digital: Resolvendo Problemas</h1>
-        <p>Um guia prático para momentos de aperto na internet. Aprenda o que fazer diante de imprevistos, links suspeitos ou perda de acesso a contas.</p>
+
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="Logo Conecta+">
+            <span>Conecta+</span>
+        </a>
+
+        <div class="text-box">
+            <h1>SOS Digital: estamos aqui para ajudar!</h1>
+
+            <p>
+                Encontre orientações simples para resolver problemas com
+                senhas, contas, internet e mensagens suspeitas.
+                Aprenda a agir com mais segurança no mundo digital.
+            </p>
+
+            <a href="#guias-sos" class="hero-btn">
+                ENCONTRAR AJUDA
+            </a>
+        </div>
+
     </header>
 
-    <main>
-        <!-- Seção de Cards Informativos -->
-        <section id="topicos-sos">
-            <h2>Guia de Primeiros Socorros Digitais</h2>
-            
-            <div class="grid-cards">
-                <!-- Card 1: Esqueci a Senha -->
-                <div class="card-conecta">
-                    <div class="card-conteudo">
-                        <h3>🔑 Esqueci minha senha</h3>
-                        <p>Passo a passo simples de como utilizar a opção "Esqueci minha senha" para recuperar o acesso de forma segura ao e-mail ou aplicativos.</p>
-                    </div>
-                </div>
+    <main id="conteudo-principal">
 
-                <!-- Card 2: Perda de Acesso -->
-                <div class="card-conecta">
-                    <div class="card-conteudo">
-                        <h3>🔒 Perdi o acesso à conta</h3>
-                        <p>O que fazer caso perceba que alguém entrou na sua conta ou se ela foi bloqueada por segurança, acionando os canais de recuperação.</p>
-                    </div>
-                </div>
+        <!-- Introdução -->
+        <section class="sos-introducao">
+            <span class="sos-etiqueta">
+                <i class="fa-solid fa-life-ring" aria-hidden="true"></i>
+                CENTRAL DE AJUDA
+            </span>
 
-                <!-- Card 3: Sem Internet -->
-                <div class="card-conecta">
-                    <div class="card-conteudo">
-                        <h3>📶 Fiquei sem internet</h3>
-                        <p>Orientações básicas para verificar o Wi-Fi da sua casa, reiniciar o roteador ou conferir se os dados móveis do celular estão ativados.</p>
-                    </div>
-                </div>
+            <h2>O que aconteceu?</h2>
 
-                <!-- Card 4: Alerta de Link Suspeito (Destaque Especial) -->
-                <div class="card-conecta card-alerta-especial">
-                    <div class="card-conteudo">
-                        <h3>⚠️ Clicou em um link perigoso?</h3>
-                        <p>O que fazer imediatamente se recebeu uma mensagem suspeita ou clicou onde não devia: como desconectar a internet e onde buscar ajuda confiável.</p>
+            <p>
+                Não se preocupe se algo não funcionar como esperado.
+                Escolha a situação que mais se parece com o seu problema
+                e siga as orientações passo a passo.
+            </p>
+        </section>
+
+        <!-- Guias de ajuda -->
+        <section class="sos-guias" id="guias-sos">
+
+            <div class="sos-titulo-secao">
+                <h2>Guia de primeiros socorros digitais</h2>
+                <p>
+                    Instruções práticas para os problemas mais comuns
+                    do dia a dia.
+                </p>
+            </div>
+
+            <div class="sos-grid">
+
+                <!-- Card 1: Senha -->
+                <article class="sos-card">
+
+                    <div class="sos-card-barra">
+                        <i class="fa-solid fa-key" aria-hidden="true"></i>
+                        <h3>Esqueci minha senha</h3>
                     </div>
-                </div>
+
+                    <div class="sos-card-conteudo">
+
+                        <p>
+                            Se você não consegue entrar no e-mail ou em
+                            um aplicativo, pode tentar recuperar sua senha.
+                        </p>
+
+                        <h4>O que fazer?</h4>
+
+                        <ol>
+                            <li>Abra o aplicativo ou site oficial.</li>
+                            <li>Selecione “Esqueci minha senha”.</li>
+                            <li>Siga as instruções de recuperação.</li>
+                            <li>Crie uma senha nova e difícil de adivinhar.</li>
+                        </ol>
+
+                        <div class="sos-dica">
+                            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                            <p>
+                                <strong>Dica:</strong> nunca compartilhe
+                                sua senha ou códigos de recuperação com
+                                outras pessoas.
+                            </p>
+                        </div>
+
+                    </div>
+                </article>
+
+                <!-- Card 2: Conta invadida ou bloqueada -->
+                <article class="sos-card">
+
+                    <div class="sos-card-barra">
+                        <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                        <h3>Perdi o acesso à conta</h3>
+                    </div>
+
+                    <div class="sos-card-conteudo">
+
+                        <p>
+                            Se sua conta foi bloqueada ou você suspeita
+                            que outra pessoa esteja usando-a, tome
+                            algumas precauções.
+                        </p>
+
+                        <h4>O que fazer?</h4>
+
+                        <ol>
+                            <li>Acesse o site ou aplicativo oficial do serviço.</li>
+                            <li>Utilize a opção de recuperação de conta.</li>
+                            <li>Se conseguir entrar, troque sua senha.</li>
+                            <li>Verifique os dispositivos conectados e encerre sessões desconhecidas.</li>
+                            <li>Ative a verificação em duas etapas, se disponível.</li>
+                        </ol>
+
+                        <div class="sos-dica">
+                            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                            <p>
+                                <strong>Dica:</strong> se não conseguir
+                                recuperar a conta, procure o suporte oficial
+                                da plataforma.
+                            </p>
+                        </div>
+
+                    </div>
+                </article>
+
+                <!-- Card 3: Sem internet -->
+                <article class="sos-card">
+
+                    <div class="sos-card-barra">
+                        <i class="fa-solid fa-wifi" aria-hidden="true"></i>
+                        <h3>Fiquei sem internet</h3>
+                    </div>
+
+                    <div class="sos-card-conteudo">
+
+                        <p>
+                            Se os sites não abrem ou os aplicativos não
+                            carregam, verifique a conexão antes de procurar
+                            ajuda técnica.
+                        </p>
+
+                        <h4>O que fazer?</h4>
+
+                        <ol>
+                            <li>Confira se o Wi-Fi está ativado no celular ou computador.</li>
+                            <li>Veja se outros dispositivos conseguem se conectar.</li>
+                            <li>Desligue e ligue novamente o Wi-Fi do aparelho.</li>
+                            <li>Se necessário, reinicie o roteador seguindo as orientações do fabricante.</li>
+                            <li>Se o problema continuar, entre em contato com sua operadora.</li>
+                        </ol>
+
+                        <div class="sos-dica">
+                            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                            <p>
+                                <strong>Dica:</strong> confira se o problema
+                                é apenas em um aplicativo ou se toda a
+                                conexão está indisponível.
+                            </p>
+                        </div>
+
+                    </div>
+                </article>
+
+                <!-- Card 4: Link suspeito -->
+                <article class="sos-card sos-card-alerta">
+
+                    <div class="sos-card-barra">
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        <h3>Cliquei em um link suspeito</h3>
+                    </div>
+
+                    <div class="sos-card-conteudo">
+
+                        <p>
+                            Se você abriu um link estranho, recebeu uma
+                            mensagem suspeita ou informou dados pessoais,
+                            é importante agir com cuidado.
+                        </p>
+
+                        <h4>O que fazer?</h4>
+
+                        <ol>
+                            <li>Não informe mais dados nem digite senhas na página suspeita.</li>
+                            <li>Feche a página e não baixe arquivos desconhecidos.</li>
+                            <li>Se informou uma senha, altere-a pelo site ou aplicativo oficial.</li>
+                            <li>Se forneceu dados bancários, entre em contato com seu banco pelos canais oficiais.</li>
+                            <li>Se instalou um aplicativo desconhecido, peça ajuda para verificar o aparelho.</li>
+                        </ol>
+
+                        <div class="sos-alerta">
+                            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <p>
+                                <strong>Atenção:</strong> não envie dinheiro
+                                para supostos atendentes que prometem resolver
+                                o problema. Procure os canais oficiais.
+                            </p>
+                        </div>
+
+                    </div>
+                </article>
+
             </div>
         </section>
+
+        <!-- Cuidados importantes -->
+        <section class="sos-seguranca">
+
+            <div class="sos-seguranca-icone">
+                <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+            </div>
+
+            <div class="sos-seguranca-texto">
+                <h2>Antes de pedir ajuda, lembre-se</h2>
+
+                <p>
+                    Sua segurança vem em primeiro lugar. Desconfie de
+                    mensagens urgentes, ofertas inesperadas e pessoas
+                    que pedem informações pessoais.
+                </p>
+
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        Nunca compartilhe senhas ou códigos de verificação.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        Não faça pagamentos sem confirmar quem está solicitando.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check" aria-hidden="true"></i>
+                        Procure ajuda de alguém de confiança quando tiver dúvidas.
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Encaminhamento -->
+        <section class="sos-contato">
+
+            <h2>Ainda precisa de ajuda?</h2>
+
+            <p>
+                Você não precisa resolver tudo sozinho. Consulte nossos
+                outros guias ou procure alguém de confiança para acompanhar
+                você durante o processo.
+            </p>
+
+            <div class="sos-contato-botoes">
+                <a href="./seguranca.html" class="sos-btn">
+                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                    Segurança digital
+                </a>
+
+                <a href="./financas.html" class="sos-btn sos-btn-secundario">
+                    <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                    Segurança financeira
+                </a>
+
+                <a href="../index.html" class="sos-btn sos-btn-secundario">
+                    <i class="fa-solid fa-house" aria-hidden="true"></i>
+                    Página inicial
+                </a>
+            </div>
+
+        </section>
+
     </main>
 
-    <!-- Rodapé -->
+    <!-- Rodapé padrão Conecta+ -->
     <footer>
-        <p>Projeto Conecta Idade — Promovendo inclusão digital, segurança e autonomia.</p>
+
+        <div class="top">
+            <h2>Conectando pessoas ao mundo digital.</h2>
+
+            <a href="../index.html" class="footer-logo">
+                <img src="../img/logo.png" alt="Conecta+ — Página inicial">
+            </a>
+        </div>
+
+        <div class="links">
+
+            <nav class="footer-nav" aria-label="Aprendizado">
+                <h4>Aprendizado</h4>
+                <ul>
+                    <li><a href="./comunicacao.html">Comunicação</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                    <li><a href="./financas.html">Finanças</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-nav" aria-label="Projeto">
+                <h4>Projeto</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre o Conecta+</a></li>
+                    <li><a href="./acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="./saude.html">Saúde digital</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-nav" aria-label="Ajuda">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="./sos.html">SOS Digital</a></li>
+                    <li><a href="./seguranca.html">Segurança digital</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-nav" aria-label="Informações">
+                <h4>Informações</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="bottom">
+            <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
+
+            <div class="social">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais"
+                   target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+
     </footer>
 
 </body>

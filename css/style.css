@@ -705,18 +705,24 @@ border-radius: 2px;
     }
 }
 
-/*--Seção: Informações--*/
+/* Seção: Informações */
 .informacao {
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
+    width: 100%;
+    margin: 0;
+    padding: 80px 10%;
+    box-sizing: border-box;
     text-align: center;
+    background-color: #153f3f;
 }
 
 .informacao-h1 {
     text-align: center;
     font-size: clamp(1.8rem, 4vw, 2.6rem);
-    color: #2B211C;
+    color: #ffffff;
+}
+
+.informacao-p {
+    color: #ffffff;
 }
 
 .informacao .row {
@@ -739,9 +745,22 @@ border-radius: 2px;
     align-items: center;
 }
 
+/* Estilo dos cards */
+.informacao-col.card {
+    background-color: #FFF8F0;
+    border: 1px solid #E8D7C4;
+    border-left: 5px solid #BF6B21;
+    border-radius: 10px;
+    padding: 22px 25px;
+    box-shadow: 0 3px 12px rgba(43, 33, 28, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 105%;
+    box-sizing: border-box;
+}
+
 .card-h3 {
     margin: 0 0 12px;
-    color: #4b0303;
+    color: #2B211C;
     font-size: 30px;
     text-align: center;
 }
@@ -759,18 +778,19 @@ border-radius: 2px;
     margin-top: auto;
     padding: 10px 22px;
     color: #fff;
-    background: #4b0303;
-    border: 1px solid #4b0303;
+    background: #a62b1f;
+    border: 1px solid #a62b1f;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
     font-size: 14px;
 }
 
+/* Responsividade */
 @media (max-width: 700px) {
     .informacao {
-        width: 90%;
-        padding-top: 50px;
+        width: 100%;
+        padding: 50px 5%;
     }
 
     .informacao .row {
@@ -778,8 +798,8 @@ border-radius: 2px;
         gap: 18px;
     }
 
-    .informacao-col {
-        width: 100%;
+    .informacao-col.card {
+        width: 105%;
         padding: 25px;
     }
 

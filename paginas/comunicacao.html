@@ -1,501 +1,324 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Comunicação | Conecta+</title>
-
     <link rel="icon" type="image/png" href="../img/logo.png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/comunicacao.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <!-- Cabeçalho e navegação -->
-    <section class="header">
-
-        <nav class="navbar">
-
+    <!-- Botão de Acessibilidade -->
+    <div class="widget-acessibilidade">
+        <button class="btn-widget-acessibilidade" onclick="alternarMenuAcessibilidade()" aria-label="Abrir menu de acessibilidade">
+            <span class="material-symbols-outlined" style="font-size: 28px;">accessibility_new</span>
+        </button>
+        <div id="painel-acessibilidade" class="painel-acessibilidade">
+            <p>Opções de Acessibilidade</p>
+            <button onclick="alterarFonte('aumentar')">Aumentar Letra (A+)</button>
+            <button onclick="alterarFonte('diminuir')">Diminuir Letra (A-)</button>
+            <button onclick="alternarContraste()">Alto Contraste</button>
+        </div>
+    </div>
+    <!-- Barra de Navegação -->
+    <header class="topo">   
+        <nav class="menu">
             <input type="checkbox" id="menu-toggle">
-
-            <label for="menu-toggle" class="menu-abrir" aria-label="Abrir menu">
-                <i class="fa fa-bars"></i>
+            <label for="menu-toggle" class="btn-abrir-menu" aria-label="Abrir menu">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
             </label>
-
-            <div class="nav-links">
-
-                <label for="menu-toggle" class="menu-fechar" aria-label="Fechar menu">
-                    <i class="fa fa-times"></i>
+            <div class="menu-links">
+                <label for="menu-toggle" class="btn-fechar-menu" aria-label="Fechar menu">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">close</span>
                 </label>
-
                 <ul>
                     <li><a href="../index.html">INÍCIO</a></li>
                     <li><a href="./acessibilidade.html">ACESSIBILIDADE</a></li>
                     <li><a href="./sos.html">AJUDA</a></li>
                     <li><a href="./sobre.html">SOBRE</a></li>
                 </ul>
-
             </div>
-
         </nav>
-
         <a href="../index.html" class="logo">
             <img src="../img/logo.png" alt="Logo Conecta+">
             <span>Conecta+</span>
         </a>
-
-        <div class="text-box">
-
-            <span class="comunicacao-etiqueta">
-                <i class="fa-solid fa-comments" aria-hidden="true"></i>
-                COMUNICAÇÃO E RELACIONAMENTOS
-            </span>
-
+        <div class="banner-principal">
             <h1>Conexões que aproximam</h1>
-
             <p>
-                Mantenha contato com familiares e amigos mesmo à distância.
-                Aprenda a enviar mensagens, áudios, fotos e fazer chamadas
+                Mantenha contato com familiares e amigos mesmo à distância. 
+                Aprenda a enviar mensagens, áudios, fotos e fazer chamadas 
                 de vídeo com mais facilidade e segurança.
             </p>
-
-            <a href="#formas-comunicacao" class="hero-btn">
+            <a href="#formas-comunicacao" class="btn-principal">
                 Comece a aprender
             </a>
-
         </div>
-
-    </section>
-
+    </header>
     <main id="conteudo-principal">
-
-        <!-- Apresentação -->
+        <!-- Seção: Apresentação -->
         <section class="comunicacao-banner">
-
             <div class="comunicacao-intro">
-
                 <span class="comunicacao-tag">
                     CONEXÃO E AUTONOMIA
                 </span>
-
                 <h2>Perto de quem importa, mesmo de longe</h2>
-
                 <p>
-                    A tecnologia ajuda a diminuir distâncias e manter
-                    os vínculos com quem amamos. Com alguns passos simples,
-                    você pode conversar com familiares e amigos, compartilhar
+                    A tecnologia ajuda a diminuir distâncias e manter 
+                    os vínculos com quem amamos. Com alguns passos simples, 
+                    você pode conversar com familiares e amigos, compartilhar 
                     momentos especiais e participar de novas experiências.
                 </p>
-
             </div>
-
         </section>
-
-        <!-- Formas de comunicação -->
+        <!-- Seção: Formas de Comunicação -->
         <section class="comunicacao-conteudo" id="formas-comunicacao">
-
             <div class="comunicacao-titulo">
-
-                <h2>Descubra novas formas de se conectar</h2>
-
+                <h2>DESCUBRA NOVAS FORMAS DE SE CONECTAR</h2>
                 <p class="comunicacao-descricao">
-                    Conheça diferentes maneiras de conversar pela internet
+                    Conheça diferentes maneiras de conversar pela internet 
                     e aprenda como utilizar cada recurso.
                 </p>
-
             </div>
-
             <div class="comunicacao-opcoes">
-
-                <!-- Mensagens de texto -->
+                <!-- Card 1: Mensagens de texto -->
                 <article class="comunicacao-item">
-
                     <div class="comunicacao-item-topo">
                         <span class="comunicacao-icone">
-                            <i class="fa-solid fa-message" aria-hidden="true"></i>
+                            <span class="material-symbols-outlined">forum</span>
                         </span>
-
                         <span class="comunicacao-numero">01</span>
                     </div>
-
                     <h3>Mensagens de texto</h3>
-
                     <p>
-                        Escreva mensagens para contar novidades, fazer
+                        Escreva mensagens para contar novidades, fazer 
                         perguntas, compartilhar informações ou combinar encontros.
                     </p>
-
                     <h4>Como fazer?</h4>
-
                     <ol>
                         <li>Abra o aplicativo de mensagens.</li>
                         <li>Escolha o contato desejado.</li>
                         <li>Digite sua mensagem e toque em enviar.</li>
                     </ol>
-
                 </article>
-
-                <!-- Mensagens de áudio -->
+                <!-- Card 2: Mensagens de áudio -->
                 <article class="comunicacao-item">
-
                     <div class="comunicacao-item-topo">
                         <span class="comunicacao-icone">
-                            <i class="fa-solid fa-microphone" aria-hidden="true"></i>
+                            <span class="material-symbols-outlined">mic</span>
                         </span>
-
                         <span class="comunicacao-numero">02</span>
                     </div>
-
                     <h3>Mensagens de áudio</h3>
-
                     <p>
-                        Grave sua voz para conversar de maneira prática,
+                        Grave sua voz para conversar de maneira prática, 
                         sem precisar digitar tudo o que deseja dizer.
                     </p>
-
                     <h4>Como fazer?</h4>
-
                     <ol>
                         <li>Abra a conversa com a pessoa.</li>
                         <li>Localize o ícone do microfone.</li>
-                        <li>Grave sua mensagem e envie conforme as instruções do aplicativo.</li>
+                        <li>Grave sua mensagem e envie conforme as instruções.</li>
                     </ol>
-
                 </article>
-
-                <!-- Chamadas de vídeo -->
+                <!-- Card 3: Chamadas de vídeo -->
                 <article class="comunicacao-item">
-
                     <div class="comunicacao-item-topo">
                         <span class="comunicacao-icone">
-                            <i class="fa-solid fa-video" aria-hidden="true"></i>
+                            <span class="material-symbols-outlined">videocam</span>
                         </span>
-
                         <span class="comunicacao-numero">03</span>
                     </div>
-
                     <h3>Chamadas de vídeo</h3>
-
                     <p>
-                        Veja e escute pessoas queridas em tempo real,
+                        Veja e escute pessoas queridas em tempo real, 
                         mesmo quando vocês estão em cidades diferentes.
                     </p>
-
                     <h4>Como fazer?</h4>
-
                     <ol>
                         <li>Abra a conversa com a pessoa.</li>
                         <li>Procure o ícone de câmera.</li>
                         <li>Toque nele e aguarde a chamada ser atendida.</li>
                     </ol>
-
                 </article>
-
-                <!-- Compartilhamento de fotos -->
+                <!-- Card 4: Compartilhamento de fotos -->
                 <article class="comunicacao-item">
-
                     <div class="comunicacao-item-topo">
                         <span class="comunicacao-icone">
-                            <i class="fa-solid fa-images" aria-hidden="true"></i>
+                            <span class="material-symbols-outlined">photo_library</span>
                         </span>
-
                         <span class="comunicacao-numero">04</span>
                     </div>
-
                     <h3>Compartilhamento de fotos</h3>
-
                     <p>
-                        Compartilhe lembranças, fotos de passeios e
+                        Compartilhe lembranças, fotos de passeios e 
                         momentos especiais com familiares e amigos.
                     </p>
-
                     <h4>Como fazer?</h4>
-
                     <ol>
                         <li>Entre na conversa desejada.</li>
                         <li>Toque no ícone de anexo ou galeria.</li>
                         <li>Escolha a foto e envie.</li>
                     </ol>
-
                 </article>
-
             </div>
-
         </section>
-
-        <!-- Participação em grupos -->
+        <!-- Seção: Participação em Grupos -->
         <section class="comunicacao-grupos">
-
             <div class="comunicacao-grupos-container">
-
                 <div class="comunicacao-grupos-intro">
-
                     <span class="comunicacao-tag">
                         CONVIVÊNCIA DIGITAL
                     </span>
-
-                    <h2>Fazendo parte das conversas</h2>
-
+                    <h2>FAZENDO PARTE DAS CONVERSAS</h2>
                     <p>
-                        Os grupos de mensagens ajudam a compartilhar notícias,
-                        organizar encontros e manter contato com pessoas queridas.
+                        Os grupos de mensagens ajudam a compartilhar notícias, 
+                        organizar encontros e manter contato com pessoas queridas. 
                         Algumas atitudes tornam essa convivência mais agradável.
                     </p>
-
                 </div>
-
                 <div class="comunicacao-regras">
-
                     <article class="comunicacao-regra">
                         <span class="regra-icone">
-                            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                            <span class="material-symbols-outlined">groups</span>
                         </span>
-
                         <div>
                             <h3>Participe com tranquilidade</h3>
-                            <p>
-                                Leia as mensagens anteriores antes de responder
-                                e evite enviar muitas mensagens seguidas.
-                            </p>
+                            <p>Leia as mensagens anteriores antes de responder e evite enviar muitas mensagens seguidas.</p>
                         </div>
                     </article>
-
                     <article class="comunicacao-regra">
                         <span class="regra-icone">
-                            <i class="fa-solid fa-image" aria-hidden="true"></i>
+                            <span class="material-symbols-outlined">image</span>
                         </span>
-
                         <div>
                             <h3>Respeite a privacidade</h3>
-                            <p>
-                                Peça autorização antes de compartilhar fotos,
-                                vídeos ou informações de outras pessoas.
-                            </p>
+                            <p>Peça autorização antes de compartilhar fotos, vídeos ou informações de outras pessoas.</p>
                         </div>
                     </article>
-
                     <article class="comunicacao-regra">
                         <span class="regra-icone">
-                            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                            <span class="material-symbols-outlined">handshake</span>
                         </span>
-
                         <div>
                             <h3>Seja respeitoso</h3>
-                            <p>
-                                Respeite opiniões diferentes e evite participar
-                                de discussões ofensivas.
-                            </p>
+                            <p>Respeite opiniões diferentes e evite participar de discussões ofensivas.</p>
                         </div>
                     </article>
-
                 </div>
-
             </div>
-
         </section>
-
-        <!-- Segurança digital -->
+        <!-- Seção: Segurança Digital -->
         <section class="comunicacao-seguranca">
-
             <div class="comunicacao-seguranca-cabecalho">
-
                 <span class="comunicacao-tag">
                     SEGURANÇA DIGITAL
                 </span>
-
-                <h2>Converse com tranquilidade e segurança</h2>
-
+                <h2>CONVERSE COM TRANQUILIDADE E SEGURANÇA</h2>
                 <p>
-                    A internet aproxima pessoas, mas também exige alguns cuidados.
+                    A internet aproxima pessoas, mas também exige alguns cuidados. 
                     Aprenda a reconhecer situações suspeitas e proteger suas informações.
                 </p>
-
             </div>
-
             <div class="comunicacao-seguranca-grid">
-
                 <article class="comunicacao-dica">
-
                     <span class="dica-icone">
-                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        <span class="material-symbols-outlined">security</span>
                     </span>
-
                     <h3>Desconfie de mensagens suspeitas</h3>
-
-                    <p>
-                        Se alguém pedir dinheiro com urgência, confirme
-                        a identidade da pessoa por outro meio antes de
-                        fazer qualquer transferência.
-                    </p>
-
+                    <p>Se alguém pedir dinheiro com urgência, confirme a identidade da pessoa por outro meio antes de transferir.</p>
                 </article>
-
                 <article class="comunicacao-dica">
-
                     <span class="dica-icone">
-                        <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                        <span class="material-symbols-outlined">lock</span>
                     </span>
-
                     <h3>Proteja suas informações</h3>
-
-                    <p>
-                        Não compartilhe senhas, códigos de confirmação,
-                        dados bancários ou documentos com desconhecidos.
-                    </p>
-
+                    <p>Não compartilhe senhas, códigos de confirmação, dados bancários ou documentos com desconhecidos.</p>
                 </article>
-
                 <article class="comunicacao-dica">
-
                     <span class="dica-icone">
-                        <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+                        <span class="material-symbols-outlined">admin_panel_settings</span>
                     </span>
-
                     <h3>Estabeleça seus limites</h3>
-
-                    <p>
-                        Você não precisa responder imediatamente a todas
-                        as mensagens. Se alguém incomodar, silencie,
-                        bloqueie ou denuncie o contato quando necessário.
-                    </p>
-
+                    <p>Você não precisa responder imediatamente. Se alguém incomodar, silencie, bloqueie ou denuncie o contato.</p>
                 </article>
-
             </div>
-
             <div class="comunicacao-alerta">
-
-                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-
+                <span class="material-symbols-outlined" style="font-size: 28px; color: #F5C38D;">info</span>
                 <p>
-                    <strong>Na dúvida, pare e confirme.</strong>
-                    Nunca compartilhe códigos de segurança nem faça pagamentos
-                    antes de verificar se o pedido é verdadeiro.
+                    <strong>Na dúvida, pare e confirme.</strong> 
+                    Nunca compartilhe códigos de segurança nem faça pagamentos antes de verificar se o pedido é verdadeiro.
                 </p>
-
             </div>
-
         </section>
-
-        <!-- Encerramento -->
+<!-- Seção: Encerramento -->
         <section class="comunicacao-final">
-
             <div class="comunicacao-final-conteudo">
-
-                <span class="comunicacao-final-icone">
-                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
-                </span>
-
-                <h2>A tecnologia aproxima pessoas</h2>
-
+                <h2>A TECNOLOGIA APROXIMA PESSOAS</h2>
                 <p>
-                    Dê o primeiro passo, pratique no seu ritmo e descubra
+                    Dê o primeiro passo, pratique no seu ritmo e descubra 
                     novas maneiras de estar perto de quem você ama.
                 </p>
-
                 <a href="../index.html" class="comunicacao-final-btn">
-                    Voltar ao início
-                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    Voltar ao início 
+                    <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
                 </a>
-
             </div>
-
         </section>
-
     </main>
-
     <!-- Rodapé -->
-    <footer>
-
-        <div class="top">
-
+    <footer class="rodape">
+        <div class="rodape-topo">
             <h2>Conectando pessoas ao mundo digital.</h2>
-
-            <a href="../index.html" class="footer-logo">
+            <a href="../index.html" class="logo-rodape">
                 <img src="../img/logo.png" alt="Conecta+ — Página inicial">
             </a>
-
         </div>
-
-        <div class="links">
-
-            <nav class="footer-nav" aria-label="Aprendizado">
-
+        <div class="rodape-links">
+            <nav aria-label="Aprendizado">
                 <h4>Aprendizado</h4>
-
                 <ul>
                     <li><a href="./comunicacao.html">Comunicação</a></li>
                     <li><a href="./cidadania.html">Cidadania digital</a></li>
                     <li><a href="./financas.html">Finanças</a></li>
                 </ul>
-
             </nav>
-
-            <nav class="footer-nav" aria-label="Projeto">
-
+            <nav aria-label="Projeto">
                 <h4>Projeto</h4>
-
                 <ul>
                     <li><a href="./sobre.html">Sobre o Conecta+</a></li>
                     <li><a href="./acessibilidade.html">Acessibilidade</a></li>
                     <li><a href="./saude.html">Saúde</a></li>
                 </ul>
-
             </nav>
-
-            <nav class="footer-nav" aria-label="Ajuda">
-
+            <nav aria-label="Ajuda">
                 <h4>Ajuda</h4>
-
                 <ul>
                     <li><a href="./sos.html">Precisa de ajuda?</a></li>
                     <li><a href="./acessibilidade.html">Orientações</a></li>
                 </ul>
-
             </nav>
-
-            <nav class="footer-nav" aria-label="Informações">
-
+            <nav aria-label="Informações">
                 <h4>Informações</h4>
-
                 <ul>
                     <li><a href="./sobre.html">Sobre nós</a></li>
                     <li><a href="./cidadania.html">Cidadania digital</a></li>
                 </ul>
-
             </nav>
-
         </div>
-
-        <div class="bottom">
-
-            <span>
-                © 2026 Conecta+ | Projeto acadêmico de ADS.
-            </span>
-
-            <div class="social">
-                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    GitHub
-                </a>
+        <div class="rodape-direitos">
+            <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
+            <div class="redes-sociais">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-
         </div>
-
     </footer>
-
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

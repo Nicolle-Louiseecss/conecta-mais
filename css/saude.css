@@ -1,37 +1,115 @@
-/* ==========================================
-   PÁGINA SAÚDE DIGITAL — CONECTA+
-   Cores: verde, laranja, creme e vinho
-   ========================================== */
+/* Geral e reset de margens */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
 
-/* ÁREA PRINCIPAL */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #FFF8EF !important;
+}
 
+/* Área principal */
 .saude-main {
     width: 100%;
-    background-color: #FFF8EF;
+    background-color: #FFF8EF !important;
     color: #2B211C;
 }
 
-/* ==========================================
-   TÍTULO PRINCIPAL DO BANNER
-   ========================================== */
-
-.header .text-box h1.saude-titulo-principal {
-    font-size: clamp(30px, 4vw, 48px);
-    line-height: 1.25;
-    max-width: 1000px;
-    margin: 0 auto;
+/* Etiqueta dourada do topo */
+#conteudo-principal .comunicacao-etiqueta,
+.comunicacao-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    padding: 12px 22px;
+    border: 1px solid rgba(191, 107, 33, 0.6);
+    border-radius: 50px;
+    background: rgba(255, 248, 240, 0.9);
+    color: #4B0303;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-decoration-color: #BF6B21;
+    text-underline-offset: 4px;
 }
 
-.header .text-box p {
-    max-width: 900px;
-    margin: 20px auto 35px;
-    line-height: 1.7;
+/* Widget de acessibilidade */
+.widget-acessibilidade {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 999;
 }
 
-/* ==========================================
-   TÍTULOS DAS SEÇÕES
-   ========================================== */
+.btn-widget-acessibilidade {
+    background-color: #0e6831;
+    color: #ffffff;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
 
+.btn-widget-acessibilidade:hover {
+    background-color: #0e6834e0;
+    transform: scale(1.05);
+}
+
+.painel-acessibilidade {
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    width: 220px;
+}
+
+.painel-acessibilidade p {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #2B211C;
+    text-align: left;
+}
+
+.painel-acessibilidade button {
+    display: block;
+    width: 100%;
+    background: #0e6831;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.painel-acessibilidade button:hover {
+    background: #0e6834e0;
+}
+
+/* Títulos e seções */
 .saude-titulo-secao {
     display: flex;
     align-items: center;
@@ -59,13 +137,13 @@
     border-radius: 50%;
     background-color: #BF6B21;
     color: #FFFFFF;
-    font-size: 25px;
 }
 
-/* ==========================================
-   INTRODUÇÃO
-   ========================================== */
+.saude-icone .material-symbols-outlined {
+    font-size: 28px;
+}
 
+/* Introdução */
 .saude-introducao {
     width: 100%;
     padding: 75px 8%;
@@ -81,208 +159,190 @@
     line-height: 1.8;
 }
 
-/* ==========================================
-   SEÇÃO DE GUIAS
-   ========================================== */
+.saude-introducao .saude-titulo-secao h2 {
+    color: #2b231f;
+}
 
+/* Seção de guias com fundo amarelo/creme suave da paleta */
 .saude-guias {
     width: 100%;
-    padding: 75px 8%;
-    background-color: #153F3F;
+    padding: 80px 8%;
+    background-color: #f8f4cd !important;
     box-sizing: border-box;
 }
 
 .saude-guias .saude-titulo-secao h2 {
-    color: #FFFFFF;
+    color: #153F3F;
 }
 
 .saude-guias .saude-icone {
-    background-color: #BF6B21;
+    background-color: #149c6f;
     color: #FFFFFF;
 }
 
 .saude-descricao {
     max-width: 800px;
     margin: 0 auto;
-    color: #FFF8EF;
+    color: #5C4A40;
     font-size: 18px;
     line-height: 1.7;
     text-align: center;
 }
 
-/* ==========================================
-   GRADE DE CARDS
-   ========================================== */
-
+/* Grid de cartões modernos */
 .saude-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px;
+    gap: 32px;
     max-width: 1250px;
     margin: 45px auto 0;
     align-items: stretch;
 }
 
-/* ==========================================
-   CARDS
-   ========================================== */
-
+/* Cards modernos em verde-petróleo da paleta */
 .saude-card {
     display: flex;
     flex-direction: column;
-    min-width: 0;
-    background-color: #FFF8F0;
-    border: 1px solid #E8D7C4;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    background-color: #153F3F;
+    border-radius: 24px;
+    padding: 36px;
+    box-shadow: 0 10px 30px rgba(21, 63, 63, 0.18);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(245, 195, 141, 0.15);
 }
 
 .saude-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 9px 22px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(21, 63, 63, 0.28);
 }
 
-/* Barra superior com ícone e nome */
-
-.saude-card-barra {
+/* Cabeçalho interno do card */
+.saude-card-cabecalho {
     display: flex;
     align-items: center;
-    gap: 15px;
-    min-height: 100px;
-    padding: 22px 25px;
-    background-color: #BF6B21;
-    box-sizing: border-box;
+    justify-content: space-between;
+    margin-bottom: 24px;
 }
 
-.saude-card-barra > i {
-    flex-shrink: 0;
-    color: #FFFFFF;
-    font-size: 30px;
+.saude-card-icone-badge {
+    font-size: 32px;
+    background-color: rgba(245, 195, 141, 0.15);
+    color: #F5C38D;
+    padding: 14px;
+    border-radius: 16px;
 }
 
-.saude-card-barra h3 {
-    margin: 0;
-    color: #FFFFFF;
-    font-size: 23px;
-    font-weight: 600;
-    line-height: 1.4;
+.saude-card-tag {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFF8EF;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 50px;
+    letter-spacing: 1px;
 }
 
-/* Conteúdo interno */
-
-.saude-card-conteudo {
+/* Corpo do cartão */
+.saude-card-corpo {
     display: flex;
-    flex: 1;
     flex-direction: column;
-    align-items: stretch;
-    padding: 28px;
+    gap: 16px;
+    flex: 1;
 }
 
-.saude-card-conteudo > p {
-    margin: 0 0 22px;
-    color: #5C4A40;
-    font-size: 17px;
-    line-height: 1.8;
-    text-align: left;
+.saude-card-corpo h3 {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
-.saude-card-conteudo h4 {
-    margin: 0 0 12px;
-    color: #153F3F;
-    font-size: 17px;
-    font-weight: 600;
+.saude-card-corpo > p {
+    color: #FFF8EF;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Caixa interna para a lista de itens */
+.saude-card-lista-box {
+    background-color: rgba(16, 49, 49, 0.6);
+    border-radius: 14px;
+    padding: 20px;
+    margin-top: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.saude-card-lista-box h4 {
+    color: #F5C38D;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.saude-card-lista-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.saude-card-lista-box ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+    color: #FFF8EF;
+    font-size: 14px;
     line-height: 1.5;
 }
 
-/* Lista de orientações */
-
-.saude-card-conteudo ul {
-    display: block;
-    list-style: none;
-    margin: 0 0 28px;
-    padding: 0;
+.saude-card-lista-box ul li:last-child {
+    margin-bottom: 0;
 }
 
-.saude-card-conteudo ul li {
-    position: relative;
-    margin-bottom: 12px;
-    padding-left: 27px;
-    color: #5C4A40;
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-.saude-card-conteudo ul li::before {
-    content: "\f00c";
+.saude-card-lista-box ul li::before {
+    content: "•";
     position: absolute;
-    top: 2px;
     left: 0;
-    color: #BF6B21;
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+    color: #F5C38D;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1;
 }
 
-/* ==========================================
-   BOTÕES DOS CARDS
-   ========================================== */
+/* Rodapé do card com botão */
+.saude-card-rodape {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-.saude-btn {
+.saude-btn-moderno {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     width: 100%;
-    margin-top: auto;
-    padding: 14px 18px;
-    box-sizing: border-box;
-    border: 2px solid #4B0303;
-    border-radius: 7px;
-    background-color: #680E0E;
+    padding: 14px 22px;
+    background-color: #BF6B21;
     color: #FFFFFF;
+    border-radius: 50px;
     font-size: 16px;
     font-weight: 600;
-    line-height: 1.5;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.saude-btn:hover {
-    background-color: #4B0303;
-    color: #FFFFFF;
+.saude-btn-moderno:hover {
+    background-color: #9B5018;
 }
 
-.saude-btn:focus-visible {
-    outline: 3px solid #BF6B21;
+.saude-btn-moderno:focus-visible {
+    outline: 3px solid #F5C38D;
     outline-offset: 4px;
 }
 
-/* ==========================================
-   CARD DE INFORMAÇÕES CONFIÁVEIS
-   ========================================== */
-
-.saude-card-alerta {
-    border-color: #E8D7C4;
-}
-
-.saude-card-alerta .saude-card-barra {
-    background-color: #BF6B21;
-}
-
-.saude-card-alerta .saude-card-conteudo h4 {
-    color: #153F3F;
-}
-
-.saude-card-alerta .saude-card-conteudo ul li::before {
-    color: #BF6B21;
-}
-
-/* ==========================================
-   ALERTA DE SEGURANÇA
-   ========================================== */
-
+/* Alerta de segurança */
 .saude-seguranca {
     width: 100%;
     padding: 75px 8%;
@@ -307,12 +367,6 @@
     margin-bottom: 20px;
 }
 
-.saude-alerta-titulo > i {
-    flex-shrink: 0;
-    color: #680E0E;
-    font-size: 32px;
-}
-
 .saude-alerta-titulo h2 {
     margin: 0;
     color: #4B0303;
@@ -332,12 +386,8 @@
     margin-bottom: 0;
 }
 
-/* ==========================================
-   TABLETS
-   ========================================== */
-
+/* Responsividade para tablets */
 @media (max-width: 900px) {
-
     .saude-introducao,
     .saude-guias,
     .saude-seguranca {
@@ -348,46 +398,13 @@
         gap: 20px;
     }
 
-    .saude-card-barra {
-        min-height: 90px;
-        padding: 20px;
-    }
-
-    .saude-card-barra h3 {
-        font-size: 21px;
-    }
-
-    .saude-card-conteudo {
-        padding: 22px;
-    }
-
     .saude-alerta {
         padding: 30px;
     }
 }
 
-/* ==========================================
-   CELULARES
-   ========================================== */
-
+/* Responsividade para celulares */
 @media (max-width: 700px) {
-
-    .header .text-box h1.saude-titulo-principal {
-        font-size: clamp(26px, 6vw, 34px);
-        line-height: 1.25;
-    }
-
-    .header .text-box p {
-        font-size: 16px;
-        line-height: 1.6;
-        margin: 15px auto 25px;
-    }
-
-    .header .text-box .hero-btn {
-        padding: 12px 22px;
-        font-size: 17px;
-    }
-
     .saude-introducao,
     .saude-guias,
     .saude-seguranca {
@@ -407,7 +424,6 @@
     .saude-icone {
         width: 48px;
         height: 48px;
-        font-size: 22px;
     }
 
     .saude-introducao > p,
@@ -422,38 +438,8 @@
         margin-top: 30px;
     }
 
-    .saude-card-barra {
-        min-height: 85px;
-        padding: 20px;
-    }
-
-    .saude-card-barra > i {
-        font-size: 26px;
-    }
-
-    .saude-card-barra h3 {
-        font-size: 21px;
-    }
-
-    .saude-card-conteudo {
-        padding: 22px;
-    }
-
-    .saude-card-conteudo > p {
-        font-size: 16px;
-    }
-
-    .saude-card-conteudo h4 {
-        font-size: 16px;
-    }
-
-    .saude-card-conteudo ul li {
-        font-size: 15px;
-    }
-
-    .saude-btn {
-        font-size: 15px;
-        padding: 13px;
+    .saude-card {
+        padding: 24px;
     }
 
     .saude-alerta {
@@ -465,11 +451,6 @@
         gap: 12px;
     }
 
-    .saude-alerta-titulo > i {
-        font-size: 25px;
-        margin-top: 3px;
-    }
-
     .saude-alerta-titulo h2 {
         font-size: 23px;
     }
@@ -477,37 +458,5 @@
     .saude-alerta > p {
         font-size: 16px;
         line-height: 1.7;
-    }
-}
-
-/* ==========================================
-   CELULARES PEQUENOS
-   ========================================== */
-
-@media (max-width: 400px) {
-
-    .header .text-box h1.saude-titulo-principal {
-        font-size: 25px;
-    }
-
-    .saude-titulo-secao h2 {
-        font-size: 23px;
-    }
-
-    .saude-card-barra {
-        gap: 12px;
-        padding: 17px;
-    }
-
-    .saude-card-barra h3 {
-        font-size: 19px;
-    }
-
-    .saude-card-conteudo {
-        padding: 18px;
-    }
-
-    .saude-alerta-titulo h2 {
-        font-size: 21px;
     }
 }

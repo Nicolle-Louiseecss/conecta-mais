@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,23 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conecta+ | Tecnologia para todos</title>
     <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!--Barra de Navegação-->
-    <section class="header">   
-        <nav class="navbar">
+    <!-- Botão de Acessibilidade -->
+    <div class="widget-acessibilidade">
+        <button class="btn-widget-acessibilidade" onclick="alternarMenuAcessibilidade()" aria-label="Abrir menu de acessibilidade">
+            <i class="fa-solid fa-universal-access"></i>
+        </button>
+        <div id="painel-acessibilidade" class="painel-acessibilidade">
+            <p>Opções de Acessibilidade</p>
+            <button onclick="alterarFonte('aumentar')">Aumentar Letra (A+)</button>
+            <button onclick="alterarFonte('diminuir')">Diminuir Letra (A-)</button>
+            <button onclick="alternarContraste()">Alto Contraste</button>
+        </div>
+    </div>
+    <!-- Barra de Navegação -->
+    <header class="topo">   
+        <nav class="menu">
             <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-abrir" aria-label="Abrir menu">
+            <label for="menu-toggle" class="btn-abrir-menu" aria-label="Abrir menu">
                 <i class="fa fa-bars"></i>
             </label>
-            <div class="nav-links">
-                <label for="menu-toggle" class="menu-fechar" aria-label="Fechar menu">
+            <div class="menu-links">
+                <label for="menu-toggle" class="btn-fechar-menu" aria-label="Fechar menu">
                     <i class="fa fa-times"></i>
                 </label>
                 <ul>
@@ -33,247 +44,201 @@
                 </ul>
             </div>
         </nav>
-            <a href="./index.html" class="logo">
-                    <img src="./img/logo.png" alt="Logo">
-                    <span>Conecta+</span>
-                </a>
-        <div class="text-box">
+        <a href="./index.html" class="logo">
+            <img src="./img/logo.png" alt="Logo Conecta+">
+            <span>Conecta+</span>
+        </a>
+        <div class="banner-principal">
             <h1>Um mundo digital para todos</h1>
             <p>
                 Aprenda a usar a tecnologia com mais autonomia e segurança. 
                 Encontre orientações práticas para se comunicar, acessar serviços 
                 e se proteger na internet.
             </p>
-            <a href="./paginas/aprendizado.html" class="hero-btn">
+            <a href="./paginas/aprendizado.html" class="btn-principal">
                 Comece a Aprender
             </a>
         </div>
-    </section>
+    </header>
     <main id="conteudo-principal">
-
-<!--Seção: Recursos-->
-<section class="recursos">
-    <h2 class="recursos-h1">Aprenda a usar a tecnologia</h2>
-    <p class="recursos-p">Descubra como a tecnologia pode facilitar as atividades do dia a dia.</p>
-    
-    <div class="row">
-        <div class="tema-card">
-            <h3 class="recursos-h3">Comunicação e relacionamentos</h3>
-            <p class="recursos-p">Use mensagens, áudios e chamadas de vídeo para conversar com familiares e amigos, compartilhar fotos e participar de grupos com segurança.</p>
-            <a href="./paginas/comunicacao.html" class="hero-btn">ACESSAR</a>
-        </div>
-
-        <div class="tema-card">
-            <h3 class="recursos-h3">Aprendizado e novas oportunidades</h3>
-            <p class="recursos-p">Descubra cursos gratuitos, leia livros digitais e aprenda novas habilidades pela internet, no seu próprio ritmo.</p>
-            <a href="./paginas/aprendizado.html" class="hero-btn">ACESSAR</a>
-        </div>
-
-        <div class="tema-card">
-            <h3 class="recursos-h3">Convivência e participação social</h3>
-            <p class="recursos-p">Conheça grupos, atividades culturais e eventos da comunidade para fazer amizades e manter-se ativo socialmente.</p>
-            <a href="./paginas/convivencia.html" class="hero-btn">ACESSAR</a>
-        </div>
-
-        <div class="tema-card">
-            <h3 class="recursos-h3">Criatividade e lazer digital</h3>
-            <p class="recursos-p">Ouça músicas, assista a filmes, leia livros, jogue jogos de raciocínio e explore atividades que promovam diversão e bem-estar.</p>
-            <a href="./paginas/lazer.html" class="hero-btn">ACESSAR</a>
-        </div>
-    </div>
-</section>
-
-<br><br><br>
-
-<!--Seção: Pilares-->
-<section class="pilares">
-    <div class="pilares-container">
-    <div class="pilares-logo">
-        <img src="./img/logo.png" alt="Logo Conecta+">
-        <h2>Os pilares do Conecta+</h2>
-        <p>
-            Tecnologia para todos, com mais autonomia,
-            segurança e conexão.
-        </p>
-    </div>
-    <div class="pilares-conteudo">
-        <div class="pilar-card">
-            <h3>Comunicação e relacionamentos</h3>
-            <p>
-                Use mensagens, áudios e chamadas de vídeo para
-                conversar com familiares e amigos, compartilhar
-                fotos e participar de grupos com segurança.
-            </p>
-            <a href="./paginas/comunicacao.html">Conheça mais →</a>
-        </div>
-        <div class="pilar-card">
-            <h3>Aprendizado e novas oportunidades</h3>
-            <p>
-                Descubra cursos gratuitos, leia livros digitais
-                e aprenda novas habilidades pela internet,
-                respeitando seu próprio ritmo.
-            </p>
-            <a href="./paginas/aprendizado.html">Conheça mais →</a>
-        </div>
-        <div class="pilar-card">
-            <h3>Convivência e participação social</h3>
-            <p>
-                Conheça grupos, atividades culturais e eventos
-                da comunidade para fazer amizades e fortalecer
-                os vínculos sociais.
-            </p>
-            <a href="./paginas/convivencia.html">Conheça mais →</a>
-        </div>
-        <div class="pilar-card">
-            <h3>Criatividade e lazer digital</h3>
-            <p>
-                Ouça músicas, assista a filmes, leia livros,
-                jogue e explore atividades digitais que
-                promovam diversão e bem-estar.
-            </p>
-            <a href="./paginas/lazer.html">Conheça mais →</a>
-        </div>
-    </div>
-</div>
-</section>
-
-<!--Seção: Aprendizado-->
-<section class="comunicacao-conteudo modulos-aprendizado" id="modulos">
-
-    <h2>O que você pode aprender</h2>
-
-    <p class="comunicacao-descricao">
-        Descubra como utilizar a tecnologia nas atividades do dia a dia.
-    </p>
-
-    <div class="comunicacao-opcoes">
-
-<!-- Saúde Digital -->
-<article class="comunicacao-item">
-    <div class="modulo-barra">
-        <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
-        <h3>Saúde Digital</h3>
-    </div>
-
-    <p>
-        Aprenda a encontrar unidades de saúde, consultar
-        informações confiáveis e utilizar serviços digitais.
-    </p>
-
-    <h4>O que você vai aprender?</h4>
-    <ol>
-        <li>Como encontrar unidades de saúde.</li>
-        <li>Como acessar serviços de saúde online.</li>
-        <li>Como verificar informações confiáveis.</li>
-    </ol>
-
-    <a href="./paginas/saude.html" class="modulo-btn">ACESSAR GUIA</a>
-</article>
-
-<!-- Compras Online -->
-<article class="comunicacao-item">
-    <div class="modulo-barra">
-        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-        <h3>Compras Online</h3>
-    </div>
-
-    <p>
-        Saiba como comprar pela internet, comparar preços
-        e reconhecer lojas falsas e promoções enganosas.
-    </p>
-
-    <h4>O que você vai aprender?</h4>
-    <ol>
-        <li>Como verificar lojas virtuais.</li>
-        <li>Como comparar preços e condições.</li>
-        <li>Como reconhecer possíveis golpes.</li>
-    </ol>
-
-    <a href="./paginas/compras.html" class="modulo-btn">ACESSAR GUIA</a>
-</article>
-
-<!-- Mobilidade -->
-<article class="comunicacao-item">
-    <div class="modulo-barra">
-        <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
-        <h3>Mobilidade</h3>
-    </div>
-
-    <p>
-        Aprenda a encontrar endereços, consultar trajetos
-        e localizar estabelecimentos usando mapas digitais.
-    </p>
-
-    <h4>O que você vai aprender?</h4>
-    <ol>
-        <li>Como pesquisar endereços no mapa.</li>
-        <li>Como consultar trajetos e rotas.</li>
-        <li>Como localizar estabelecimentos.</li>
-    </ol>
-
-    <a href="./paginas/mobilidade.html" class="modulo-btn">ACESSAR GUIA</a>
-</article>
-
-    </div>
-</section>
-
-<!-- Seção: Informações -->
-<section class="informacao">
-    <h2 class="informacao-h1">Informação e segurança digital</h2>
-    <p class="informacao-p">
-        Conheça seus direitos e aprenda a proteger suas informações na internet.
-    </p>
-
-    <div class="row">
-        <div class="informacao-col card">
-            <h3 class="card-h3">Cidadania digital</h3>
-            <p class="card-p">
-                Descubra onde consultar direitos da pessoa idosa, benefícios e serviços públicos em canais oficiais.
-            </p>
-            <a href="./paginas/cidadania.html" class="hero-btn">ACESSAR</a>
-        </div>
-
-        <div class="informacao-col card">
-            <h3 class="card-h3">Segurança financeira</h3>
-            <p class="card-p">
-                Aprenda a proteger seus dados bancários e identificar golpes envolvendo pagamentos, boletos e transferências.
-            </p>
-            <a href="./paginas/financas.html" class="hero-btn">ACESSAR</a>
-        </div>
-    </div>
-</section>
-
-<!--Seção: Começo-->
-<section class="comeco">
-    <h2 class="comeco-h1">Por onde você quer começar?</h2>
-    <p>
-        Escolha o que você precisa e descubra como a tecnologia
-        pode ajudar no seu dia a dia.
-    </p>
-    <div class="comeco-links">
-        <a href="./paginas/aprendizado.html" class="hero-btn">
-            QUERO APRENDER
-        </a>
-        <a href="./paginas/financas.html" class="hero-btn">
-            QUERO MAIS SEGURANÇA
-        </a>
-        <a href="./paginas/sos.html" class="hero-btn">
-            PRECISO DE AJUDA
-        </a>
-    </div>
-</section>
-
-<!--Footer-->
-    <footer>
-        <div class="top">
+        <!-- Seção: Recursos -->
+        <section class="recursos">
+            <h2>APRENDA A USAR A TECNOLOGIA</h2>
+            <p class="subtitulo-recursos">Descubra como a tecnologia pode facilitar as atividades do dia a dia.</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Comunicação e relacionamentos</h3>
+                    <p>Use mensagens, áudios e chamadas de vídeo para conversar com familiares e amigos, compartilhar fotos e participar de grupos com segurança.</p>
+                    <div class="card-botoes">
+                        <button onclick="lerTexto(this.parentElement.previousElementSibling.previousElementSibling.innerText + '. ' + this.parentElement.previousElementSibling.innerText)" class="btn-ouvir">🔊 Ouvir</button>
+                        <a href="./paginas/comunicacao.html" class="btn-card">ACESSAR</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Aprendizado e novas oportunidades</h3>
+                    <p>Descubra cursos gratuitos, leia livros digitais e aprenda novas habilidades pela internet, no seu próprio ritmo.</p>
+                    <div class="card-botoes">
+                        <button onclick="lerTexto(this.parentElement.previousElementSibling.previousElementSibling.innerText + '. ' + this.parentElement.previousElementSibling.innerText)" class="btn-ouvir">🔊 Ouvir</button>
+                        <a href="./paginas/aprendizado.html" class="btn-card">ACESSAR</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Convivência e participação social</h3>
+                    <p>Conheça grupos, atividades culturais e eventos da comunidade para fazer amizades e manter-se ativo socialmente.</p>
+                    <div class="card-botoes">
+                        <button onclick="lerTexto(this.parentElement.previousElementSibling.previousElementSibling.innerText + '. ' + this.parentElement.previousElementSibling.innerText)" class="btn-ouvir">🔊 Ouvir</button>
+                        <a href="./paginas/convivencia.html" class="btn-card">ACESSAR</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Criatividade e lazer digital</h3>
+                    <p>Ouça músicas, assista a filmes, leia livros, jogue jogos de raciocínio e explore atividades que promovam diversão e bem-estar.</p>
+                    <div class="card-botoes">
+                        <button onclick="lerTexto(this.parentElement.previousElementSibling.previousElementSibling.innerText + '. ' + this.parentElement.previousElementSibling.innerText)" class="btn-ouvir">🔊 Ouvir</button>
+                        <a href="./paginas/lazer.html" class="btn-card">ACESSAR</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br><br><br>
+            <!-- Seção: Pilares -->
+            <section class="pilares">
+                <div class="pilares-container">
+                    <div class="pilares-info">
+                        <img src="./img/logo.png" alt="Logo Conecta+">
+                        <h2>OS PILARES DO CONECTA+</h2>
+                        <p>Nossa metodologia para transformar o aprendizado digital em uma experiência simples, segura e acolhedora.</p>
+                    </div>
+                    <div class="pilares-grid">
+                        <div class="pilar-item">
+                            <span class="pilar-icone">
+                                <span class="material-symbols-outlined">psychology</span>
+                            </span>
+                            <div class="pilar-conteudo">
+                                <h3>Aprendizado no seu ritmo</h3>
+                                <p>Explicações passo a passo, linguagem simples e sem pressa para você praticar cada recurso quantas vezes precisar.</p>
+                            </div>
+                        </div>
+                        <div class="pilar-item">
+                            <span class="pilar-icone">
+                                <span class="material-symbols-outlined">shield_person</span>
+                            </span>
+                            <div class="pilar-conteudo">
+                                <h3>Segurança em primeiro lugar</h3>
+                                <p>Orientações claras para navegar pela internet sem medo, protegendo seus dados e reconhecendo mensagens suspeitas.</p>
+                            </div>
+                        </div>
+                        <div class="pilar-item">
+                            <span class="pilar-icone">
+                                <span class="material-symbols-outlined">accessibility_new</span>
+                            </span>
+                            <div class="pilar-conteudo">
+                                <h3>Acessibilidade e conforto visual</h3>
+                                <p>Letras grandes, botões fáceis de clicar e recursos de contraste pensados para uma leitura confortável.</p>
+                            </div>
+                        </div>
+                        <div class="pilar-item">
+                            <span class="pilar-icone">
+                                <span class="material-symbols-outlined">diversity_3</span>
+                            </span>
+                            <div class="pilar-conteudo">
+                                <h3>Autonomia e pertencimento</h3>
+                                <p>Incentivo para você realizar suas próprias tarefas digitais, manter contatos e se sentir conectado ao mundo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- Seção: Módulos de Aprendizado -->
+        <section class="modulos" id="modulos">
+            <h2>O QUE VOCÊ PODE APRENDER</h2>
+            <p class="subtitulo-modulos">Descubra como utilizar a tecnologia nas atividades do dia a dia.</p>
+            <div class="modulos-grid">
+                <!-- Card: Saúde Digital -->
+                <article class="modulo-item">
+                    <div class="modulo-header">
+                        <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+                        <h3>Saúde Digital</h3>
+                    </div>
+                    <p>Aprenda a encontrar unidades de saúde, consultar informações confiáveis e utilizar serviços digitais.</p>
+                    <h4>O que você vai aprender?</h4>
+                    <ol>
+                        <li>Como encontrar unidades de saúde.</li>
+                        <li>Como acessar serviços de saúde online.</li>
+                        <li>Como verificar informações confiáveis.</li>
+                    </ol>
+                    <a href="./paginas/saude.html" class="btn-modulo">ACESSAR GUIA</a>
+                </article>
+                <!-- Card: Compras Online -->
+                <article class="modulo-item">
+                    <div class="modulo-header">
+                        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        <h3>Compras Online</h3>
+                    </div>
+                    <p>Saiba como comprar pela internet, comparar preços e reconhecer lojas falsas e promoções enganosas.</p>
+                    <h4>O que você vai aprender?</h4>
+                    <ol>
+                        <li>Como verificar lojas virtuais.</li>
+                        <li>Como comparar preços e condições.</li>
+                        <li>Como reconhecer possíveis golpes.</li>
+                    </ol>
+                    <a href="./paginas/compras.html" class="btn-modulo">ACESSAR GUIA</a>
+                </article>
+                <!-- Card: Mobilidade -->
+                <article class="modulo-item">
+                    <div class="modulo-header">
+                        <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                        <h3>Mobilidade</h3>
+                    </div>
+                    <p>Aprenda a encontrar endereços, consultar trajetos e localizar estabelecimentos usando mapas digitais.</p>
+                    <h4>O que você vai aprender?</h4>
+                    <ol>
+                        <li>Como pesquisar endereços no mapa.</li>
+                        <li>Como consultar trajetos e rotas.</li>
+                        <li>Como localizar estabelecimentos.</li>
+                    </ol>
+                    <a href="./paginas/mobilidade.html" class="btn-modulo">ACESSAR GUIA</a>
+                </article>
+            </div>
+        </section>
+        <!-- Seção: Segurança e Informação -->
+        <section class="seguranca">
+            <h2>INFORMAÇÃO E SEGURANÇA DIGITAL</h2>
+            <p class="subtitulo">Conheça seus direitos e aprenda a proteger suas informações na internet.</p>
+            <div class="seguranca-grid">
+                <div class="card-seguranca">
+                    <h3>Cidadania digital</h3>
+                    <p>Descubra onde consultar direitos da pessoa idosa, benefícios e serviços públicos em canais oficiais.</p>
+                    <a href="./paginas/cidadania.html" class="btn-card">ACESSAR</a>
+                </div>
+                <div class="card-seguranca">
+                    <h3>Segurança financeira</h3>
+                    <p>Aprenda a proteger seus dados bancários e identificar golpes envolvendo pagamentos, boletos e transferências.</p>
+                    <a href="./paginas/financas.html" class="btn-card">ACESSAR</a>
+                </div>
+            </div>
+        </section>
+        <!-- Seção: Por onde começar? -->
+        <section class="secao-comeco">
+            <h2>POR ONDE VOCÊ QUER COMEÇAR?</h2>
+            <p>Escolha o que você precisa e descubra como a tecnologia pode ajudar no seu dia a dia.</p>
+            <div class="botoes-inicio">
+                <a href="./paginas/aprendizado.html" class="btn-opcao">QUERO APRENDER</a>
+                <a href="./paginas/financas.html" class="btn-opcao">QUERO MAIS SEGURANÇA</a>
+                <a href="./paginas/sos.html" class="btn-opcao">PRECISO DE AJUDA</a>
+            </div>
+        </section>
+    </main>
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="rodape-topo">
             <h2>Conectando pessoas ao mundo digital.</h2>
-
-            <a href="./index.html" class="footer-logo">
+            <a href="./index.html" class="logo-rodape">
                 <img src="./img/logo.png" alt="Conecta+ — Página inicial">
             </a>
         </div>
-        <div class="links">
-            <nav class="footer-nav" aria-label="Aprendizado">
+        <div class="rodape-links">
+            <nav aria-label="Aprendizado">
                 <h4>Aprendizado</h4>
                 <ul>
                     <li><a href="./paginas/comunicacao.html">Comunicação</a></li>
@@ -281,7 +246,7 @@
                     <li><a href="./paginas/financas.html">Finanças</a></li>
                 </ul>
             </nav>
-            <nav class="footer-nav" aria-label="Projeto">
+            <nav aria-label="Projeto">
                 <h4>Projeto</h4>
                 <ul>
                     <li><a href="./paginas/sobre.html">Sobre o Conecta+</a></li>
@@ -289,14 +254,14 @@
                     <li><a href="./paginas/saude.html">Saúde</a></li>
                 </ul>
             </nav>
-            <nav class="footer-nav" aria-label="Ajuda">
+            <nav aria-label="Ajuda">
                 <h4>Ajuda</h4>
                 <ul>
                     <li><a href="./paginas/sos.html">Precisa de ajuda?</a></li>
                     <li><a href="./paginas/acessibilidade.html">Orientações</a></li>
                 </ul>
             </nav>
-            <nav class="footer-nav" aria-label="Informações">
+            <nav aria-label="Informações">
                 <h4>Informações</h4>
                 <ul>
                     <li><a href="./paginas/sobre.html">Sobre nós</a></li>
@@ -304,15 +269,14 @@
                 </ul>
             </nav>
         </div>
-        <div class="bottom">
-            <span>
-                © 2026 Conecta+ | Projeto acadêmico de ADS.
-            </span>
-            <div class="social">
-                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais"
-                   target="_blank" rel="noopener noreferrer">GitHub</a>
+        <div class="rodape-direitos">
+            <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
+            <div class="redes-sociais">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
     </footer>
+    <!-- JavaScript -->
+    <script src="./js/script.js"></script>
 </body>
 </html>

@@ -3,202 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Cidadania Digital | Conecta+</title>
-<link rel="icon" type="image/png" href="../img/logo.png">
-
-<!-- Estilos globais e estilos específicos da página -->
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/cidadania.css">
-
-<!-- Fontes e ícones -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <title>Cidadania Digital | Conecta+</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cidadania.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-<!-- Cabeçalho principal -->
-<section class="header">
-    <nav class="navbar">
-        <input type="checkbox" id="menu-toggle">
-
-        <label for="menu-toggle" class="menu-abrir" aria-label="Abrir menu">
-            <i class="fa fa-bars"></i>
-        </label>
-
-        <div class="nav-links">
-            <label for="menu-toggle" class="menu-fechar" aria-label="Fechar menu">
-                <i class="fa fa-times"></i>
-            </label>
-
-            <ul>
-                <li><a href="../index.html">INÍCIO</a></li>
-                <li><a href="./acessibilidade.html">ACESSIBILIDADE</a></li>
-                <li><a href="./sos.html">AJUDA</a></li>
-                <li><a href="./sobre.html">SOBRE</a></li>
-            </ul>
+    <!-- Botão de Acessibilidade -->
+    <div class="widget-acessibilidade">
+        <button class="btn-widget-acessibilidade" onclick="alternarMenuAcessibilidade()" aria-label="Abrir menu de acessibilidade">
+            <span class="material-symbols-outlined" style="font-size: 28px;">accessibility_new</span>
+        </button>
+        <div id="painel-acessibilidade" class="painel-acessibilidade">
+            <p>Opções de Acessibilidade</p>
+            <button onclick="alterarFonte('aumentar')">Aumentar Letra (A+)</button>
+            <button onclick="alterarFonte('diminuir')">Diminuir Letra (A-)</button>
+            <button onclick="alternarContraste()">Alto Contraste</button>
         </div>
-    </nav>
-
-    <a href="../index.html" class="logo">
-        <img src="../img/logo.png" alt="Logo Conecta+">
-        <span>Conecta+</span>
-    </a>
-
-    <div class="text-box">
-        <h1 class="titulo-h1">Cidadania Digital: Seus Direitos e Serviços</h1>
-        <p>
-            A tecnologia ajuda você a exercer seus direitos com autonomia,
-            rapidez e segurança, sem precisar sair de casa.
-        </p>
-        <a href="./aprendizado.html" class="hero-btn">Comece a Aprender</a>
     </div>
-</section>
-
-<main class="cidadania-main">
-
-    <!-- Seção 1: Conheça seus Direitos -->
-    <section id="direitos" class="cidadania-secao">
-        <div class="cidadania-titulo">
-            <span class="cidadania-icone" aria-hidden="true">📜</span>
-            <h2>Estatuto da Pessoa Idosa</h2>
-        </div>
-
-        <p>
-            A lei garante prioridade, proteção e direitos especiais em diversas
-            áreas do dia a dia.
-        </p>
-
-        <ul>
-            <li>
-                <strong>Onde vale:</strong>
-                Atendimento preferencial em bancos, saúde, transporte e órgãos públicos.
-            </li>
-            <li>
-                <strong>Saiba mais:</strong>
-                Você pode ler o documento completo ou artigos resumidos para
-                entender todas as suas garantias.
-            </li>
-        </ul>
-    </section>
-
-    <!-- Seção 2: Serviços Públicos e Benefícios -->
-    <section id="servicos" class="cidadania-secao">
-        <div class="cidadania-titulo">
-            <span class="cidadania-icone" aria-hidden="true">📱</span>
-            <h2>Serviços e Benefícios</h2>
-        </div>
-
-        <p>Plataformas oficiais do governo que facilitam o seu dia a dia:</p>
-
-        <!-- Card Meu INSS -->
-        <div class="card-conecta">
-            <div class="card-barra">
-                <i class="fa-solid fa-landmark" aria-hidden="true"></i>
-                <h3>Meu INSS</h3>
+    <!-- Navbar -->
+    <header class="topo">
+        <nav class="menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="btn-abrir-menu" aria-label="Abrir menu">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+            </label>
+            <div class="menu-links">
+                <label for="menu-toggle" class="btn-fechar-menu" aria-label="Fechar menu">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">close</span>
+                </label>
+                <ul>
+                    <li><a href="../index.html">INÍCIO</a></li>
+                    <li><a href="./acessibilidade.html">ACESSIBILIDADE</a></li>
+                    <li><a href="./sos.html">AJUDA</a></li>
+                    <li><a href="./sobre.html">SOBRE</a></li>
+                </ul>
             </div>
-
-            <div class="card-conteudo">
+        </nav>
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="Logo Conecta+">
+            <span>Conecta+</span>
+        </a>
+        <div class="banner-principal">
+            <h1>Conheça seus direitos</h1>
+            <p>
+                A tecnologia ajuda você a exercer seus direitos com autonomia,
+                rapidez e segurança, sem precisar sair de casa.
+            </p>
+            <a href="#direitos" class="btn-principal">
+                Explorar Direitos e Serviços
+            </a>
+        </div>
+    </header>
+    <main class="cidadania-main">
+        <!-- Seção 1: Direitos -->
+        <section id="direitos" class="cidadania-secao">
+            <div class="cidadania-titulo">
+                <span class="cidadania-icone" aria-hidden="true">
+                    <i class="fa-solid fa-scroll"></i>
+                </span>
+                <h2>Estatuto da Pessoa Idosa</h2>
+            </div>
+            <p>
+                A lei garante prioridade, proteção e direitos especiais em diversas
+                áreas do dia a dia.
+            </p>
+            <ul>
+                <li>
+                    <strong>Onde vale:</strong>
+                    Atendimento preferencial em bancos, saúde, transporte e órgãos públicos.
+                </li>
+                <li>
+                    <strong>Saiba mais:</strong>
+                    Você pode ler o documento completo ou artigos resumidos para
+                    entender todas as suas garantias legais.
+                </li>
+            </ul>
+        </section>
+        <!-- Seção 2: Serviços Digitais -->
+        <section id="servicos" class="cidadania-secao">
+            <div class="cidadania-titulo">
+                <span class="cidadania-icone" aria-hidden="true">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </span>
+                <h2>Serviços e Benefícios</h2>
+            </div>
+            <p>Plataformas oficiais do governo que facilitam o seu dia a dia:</p>
+            <div class="grid-cards-servicos">
+                <!-- Card 1: Meu INSS -->
+                <div class="card-conecta">
+                    <div class="card-barra">
+                        <i class="fa-solid fa-landmark" aria-hidden="true"></i>
+                        <h3>Meu INSS</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <p>
+                            Consulte extratos, comprovantes de pagamento e a situação
+                            dos seus benefícios com segurança e sem sair de casa.
+                        </p>
+                        <a href="https://meu.inss.gov.br/" target="_blank" rel="noopener noreferrer" class="btn-card">
+                            Acessar Meu INSS
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card 2: Carteira da Pessoa Idosa -->
+                <div class="card-conecta">
+                    <div class="card-barra">
+                        <i class="fa-solid fa-id-card" aria-hidden="true"></i>
+                        <h3>Carteira da Pessoa Idosa</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <p>
+                            Emita sua carteira digital para garantir gratuidade ou desconto 
+                            em passagens de ônibus interestaduais.
+                        </p>
+                        <a href="https://carteiraidoso.cidadania.gov.br/" target="_blank" rel="noopener noreferrer" class="btn-card">
+                            Emitir Carteira
+                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção 3: Telefones Úteis e Canais de Apoio -->
+        <section id="canais-ajuda" class="cidadania-secao">
+            <div class="cidadania-titulo">
+                <span class="cidadania-icone" aria-hidden="true">
+                    <i class="fa-solid fa-phone-volume"></i>
+                </span>
+                <h2>Canais de Atendimento Gratuito</h2>
+            </div>
+            <p>Telefones oficiais para tirar dúvidas e realizar denúncias com segurança:</p>
+            <div class="grid-telefones">
+                <div class="box-telefone">
+                    <strong>Central do INSS</strong>
+                    <span class="numero-tel">Ligue 135</span>
+                    <p>Consultas sobre aposentadoria e agendamentos.</p>
+                </div>
+                <div class="box-telefone">
+                    <strong>Direitos Humanos</strong>
+                    <span class="numero-tel">Ligue 100</span>
+                    <p>Denúncias de violação de direitos e maus-tratos.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Seção 4: Alerta de Segurança -->
+        <section id="seguranca" class="cidadania-secao cidadania-secao-seguranca">
+            <div class="alerta-seguranca">
+                <div class="alerta-titulo">
+                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                    <h2>Alerta Importante de Segurança</h2>
+                </div>
                 <p>
-                    Consulte extratos, comprovantes de pagamento e a situação
-                    dos seus benefícios com segurança e sem sair de casa.
+                    O INSS e os bancos oficiais <strong>nunca</strong> ligam pedindo
+                    senhas, enviando links por SMS para atualizar dados ou cobrando
+                    taxas para liberar benefícios.
                 </p>
-
-                <a
-                    href="https://meu.inss.gov.br/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-card"
-                >
-                    Acessar Meu INSS
-                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </div>
+        </section>
+    </main>
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="rodape-topo">
+            <h2>Conectando pessoas ao mundo digital.</h2>
+            <a href="../index.html" class="logo-rodape">
+                <img src="../img/logo.png" alt="Conecta+ — Página inicial">
+            </a>
+        </div>
+        <div class="rodape-links">
+            <nav aria-label="Aprendizado">
+                <h4>Aprendizado</h4>
+                <ul>
+                    <li><a href="./comunicacao.html">Comunicação</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                    <li><a href="./financas.html">Finanças</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Projeto">
+                <h4>Projeto</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre o Conecta+</a></li>
+                    <li><a href="./acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="./saude.html">Saúde</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ajuda">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="./sos.html">Precisa de ajuda?</a></li>
+                    <li><a href="./acessibilidade.html">Orientações</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Informações">
+                <h4>Informações</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="rodape-direitos">
+            <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
+            <div class="redes-sociais">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais" target="_blank" rel="noopener noreferrer">
+                    GitHub
                 </a>
             </div>
         </div>
-    </section>
-
-    <!-- Seção 3: Alerta de Segurança -->
-    <section id="seguranca" class="cidadania-secao cidadania-secao-seguranca">
-        <div class="alerta-seguranca">
-            <div class="alerta-titulo">
-                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-                <h2>Alerta Importante de Segurança</h2>
-            </div>
-
-            <p>
-                O INSS e os bancos oficiais <strong>nunca</strong> ligam pedindo
-                senhas, enviando links por SMS para atualizar dados ou cobrando
-                taxas para liberar benefícios.
-            </p>
-        </div>
-    </section>
-
-</main>
-
-<!-- Rodapé -->
-<footer>
-    <div class="top">
-        <h2>Conectando pessoas ao mundo digital.</h2>
-
-        <a href="../index.html" class="footer-logo">
-            <img src="../img/logo.png" alt="Conecta+ — Página inicial">
-        </a>
-    </div>
-
-    <div class="links">
-        <nav class="footer-nav" aria-label="Aprendizado">
-            <h4>Aprendizado</h4>
-            <ul>
-                <li><a href="./comunicacao.html">Comunicação</a></li>
-                <li><a href="./cidadania.html">Cidadania digital</a></li>
-                <li><a href="./financas.html">Finanças</a></li>
-            </ul>
-        </nav>
-
-        <nav class="footer-nav" aria-label="Projeto">
-            <h4>Projeto</h4>
-            <ul>
-                <li><a href="./sobre.html">Sobre o Conecta+</a></li>
-                <li><a href="./acessibilidade.html">Acessibilidade</a></li>
-                <li><a href="./saude.html">Saúde</a></li>
-            </ul>
-        </nav>
-
-        <nav class="footer-nav" aria-label="Ajuda">
-            <h4>Ajuda</h4>
-            <ul>
-                <li><a href="./sos.html">Precisa de ajuda?</a></li>
-                <li><a href="./acessibilidade.html">Orientações</a></li>
-            </ul>
-        </nav>
-
-        <nav class="footer-nav" aria-label="Informações">
-            <h4>Informações</h4>
-            <ul>
-                <li><a href="./sobre.html">Sobre nós</a></li>
-                <li><a href="./cidadania.html">Cidadania digital</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="bottom">
-        <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
-
-        <div class="social">
-            <a
-                href="https://github.com/Nicolle-Louiseecss/conecta-mais"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GitHub
-            </a>
-        </div>
-    </div>
-</footer>
-
+    </footer>
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

@@ -3,44 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Saúde Digital | Conecta+</title>
-
     <link rel="icon" type="image/png" href="../img/logo.png">
-
-    <!-- CSS global e específico -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/saude.css">
-
-    <!-- Fontes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
-
-    <!-- Ícones -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <!-- Cabeçalho principal -->
-    <section class="header">
-
+    <!-- Botão de Acessibilidade -->
+    <div class="widget-acessibilidade">
+        <button class="btn-widget-acessibilidade" onclick="alternarMenuAcessibilidade()" aria-label="Abrir menu de acessibilidade">
+            <span class="material-symbols-outlined" style="font-size: 28px;">accessibility_new</span>
+        </button>
+        <div id="painel-acessibilidade" class="painel-acessibilidade">
+            <p>Opções de Acessibilidade</p>
+            <button onclick="alterarFonte('aumentar')">Aumentar Letra (A+)</button>
+            <button onclick="alterarFonte('diminuir')">Diminuir Letra (A-)</button>
+            <button onclick="alternarContraste()">Alto Contraste</button>
+        </div>
+    </div>
+    <header class="topo">
         <!-- Barra de navegação -->
-        <nav class="navbar">
+        <nav class="menu">
             <input type="checkbox" id="menu-toggle">
-
-            <label for="menu-toggle" class="menu-abrir" aria-label="Abrir menu">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+            <label for="menu-toggle" class="btn-abrir-menu" aria-label="Abrir menu">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
             </label>
-
-            <div class="nav-links">
-                <label for="menu-toggle" class="menu-fechar" aria-label="Fechar menu">
-                    <i class="fa fa-times" aria-hidden="true"></i>
+            <div class="menu-links">
+                <label for="menu-toggle" class="btn-fechar-menu" aria-label="Fechar menu">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">close</span>
                 </label>
-
                 <ul>
                     <li><a href="../index.html">INÍCIO</a></li>
                     <li><a href="./acessibilidade.html">ACESSIBILIDADE</a></li>
@@ -49,215 +44,172 @@
                 </ul>
             </div>
         </nav>
-
-        <!-- Logo -->
         <a href="../index.html" class="logo">
             <img src="../img/logo.png" alt="Logo Conecta+">
             <span>Conecta+</span>
         </a>
-
-        <!-- Conteúdo do banner -->
-        <div class="text-box">
-            <h1 class="saude-titulo-principal">
-                Saúde Digital: cuide de você com a tecnologia
-            </h1>
-
+        <div class="banner-principal">
+            <h1>Cuidado que transforma vidas</h1>
             <p>
                 Aprenda a encontrar unidades de saúde, consultar serviços digitais
                 e reconhecer informações confiáveis para cuidar do seu bem-estar
                 com mais autonomia e segurança.
             </p>
-
-            <a href="#guias-saude" class="hero-btn">
+            <a href="#guias-saude" class="btn-principal">
                 Explorar os Guias
             </a>
         </div>
-
-    </section>
-
+    </header>
     <main class="saude-main" id="conteudo-principal">
-
         <!-- Introdução -->
         <section class="saude-introducao">
             <div class="saude-titulo-secao">
-                <span class="saude-icone" aria-hidden="true">
-                    <i class="fa-solid fa-heart-pulse"></i>
-                </span>
-
                 <h2>Tecnologia a favor da sua saúde</h2>
             </div>
-
             <p>
                 A internet e os aplicativos podem facilitar o acesso a serviços
                 de saúde e a informações importantes. Conheça recursos digitais
                 que ajudam você a cuidar melhor da sua rotina.
             </p>
         </section>
-
-        <!-- Guias de saúde -->
-        <section class="saude-guias" id="guias-saude">
-
-            <div class="saude-titulo-secao">
-                <span class="saude-icone" aria-hidden="true">
-                    <i class="fa-solid fa-book-medical"></i>
-                </span>
-
-                <h2>Como podemos ajudar você hoje?</h2>
+<!-- Guias de saúde -->
+<section class="saude-guias" id="guias-saude">
+    <div class="saude-titulo-secao">
+        <span class="saude-icone" aria-hidden="true">
+            <span class="material-symbols-outlined">medical_services</span>
+        </span>
+        <h2>Como podemos ajudar você hoje?</h2>
+    </div>
+    <p class="saude-descricao">
+        Escolha um dos guias abaixo para aprender a utilizar os
+        recursos digitais relacionados à saúde.
+    </p>
+    <div class="saude-grid">
+        <!-- Card 1: Unidades de saúde -->
+        <article class="saude-card">
+            <div class="saude-card-cabecalho">
+                <span class="material-symbols-outlined saude-card-icone-badge">local_hospital</span>
+                <span class="saude-card-tag">Guia 01</span>
             </div>
-
-            <p class="saude-descricao">
-                Escolha um dos guias abaixo para aprender a utilizar os
-                recursos digitais relacionados à saúde.
-            </p>
-
-            <div class="saude-grid">
-
-                <!-- Card 1: Unidades de saúde -->
-                <article class="saude-card">
-
-                    <div class="saude-card-barra">
-                        <i class="fa-solid fa-hospital" aria-hidden="true"></i>
-                        <h3>Onde encontrar atendimento</h3>
-                    </div>
-
-                    <div class="saude-card-conteudo">
-                        <p>
-                            Aprenda a localizar Unidades Básicas de Saúde (UBS),
-                            hospitais e farmácias utilizando mapas digitais
-                            e ferramentas de pesquisa.
-                        </p>
-
-                        <h4>O que você vai aprender?</h4>
-
-                        <ul>
-                            <li>Como pesquisar unidades de saúde.</li>
-                            <li>Como encontrar endereços no mapa.</li>
-                            <li>Como consultar rotas e trajetos.</li>
-                        </ul>
-
-                        <a href="./mobilidade.html" class="saude-btn">
-                            Ver Guia de Mapas
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                </article>
-
-                <!-- Card 2: Meu SUS Digital -->
-                <article class="saude-card">
-
-                    <div class="saude-card-barra">
-                        <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
-                        <h3>Meu SUS Digital</h3>
-                    </div>
-
-                    <div class="saude-card-conteudo">
-                        <p>
-                            Conheça o aplicativo oficial que permite consultar
-                            informações de saúde e acessar os serviços digitais
-                            disponibilizados pelo SUS.
-                        </p>
-
-                        <h4>O que você pode consultar?</h4>
-
-                        <ul>
-                            <li>Informações sobre vacinação.</li>
-                            <li>Dados e registros de saúde disponíveis.</li>
-                            <li>Serviços e informações oficiais do SUS.</li>
-                        </ul>
-
-                        <a href="https://meususdigital.saude.gov.br/"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="saude-btn">
-                            Acessar Meu SUS Digital
-                            <i class="fa-solid fa-arrow-up-right-from-square"
-                               aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                </article>
-
-                <!-- Card 3: Lembretes de medicamentos -->
-                <article class="saude-card">
-
-                    <div class="saude-card-barra">
-                        <i class="fa-solid fa-bell" aria-hidden="true"></i>
-                        <h3>Lembretes de medicamentos</h3>
-                    </div>
-
-                    <div class="saude-card-conteudo">
-                        <p>
-                            Utilize os recursos do celular para organizar
-                            lembretes e acompanhar as orientações recebidas
-                            dos profissionais de saúde.
-                        </p>
-
-                        <h4>Como a tecnologia pode ajudar?</h4>
-
-                        <ul>
-                            <li>Como criar alarmes no celular.</li>
-                            <li>Como registrar lembretes de consultas.</li>
-                            <li>Como organizar informações importantes.</li>
-                        </ul>
-
-                        <a href="#seguranca-saude" class="saude-btn">
-                            Ver orientações
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                </article>
-
-                <!-- Card 4: Informações confiáveis -->
-                <article class="saude-card saude-card-alerta">
-
-                    <div class="saude-card-barra">
-                        <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
-                        <h3>Informações confiáveis</h3>
-                    </div>
-
-                    <div class="saude-card-conteudo">
-                        <p>
-                            Aprenda a identificar notícias falsas sobre
-                            medicamentos, tratamentos milagrosos e dicas
-                            de saúde compartilhadas pela internet.
-                        </p>
-
-                        <h4>Antes de compartilhar, confira:</h4>
-
-                        <ul>
-                            <li>Quem publicou a informação.</li>
-                            <li>Se existem fontes oficiais.</li>
-                            <li>Se a notícia aparece em outros canais confiáveis.</li>
-                        </ul>
-
-                        <a href="https://www.gov.br/saude/pt-br"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="saude-btn">
-                            Consultar Ministério da Saúde
-                            <i class="fa-solid fa-arrow-up-right-from-square"
-                               aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                </article>
-
+            <div class="saude-card-corpo">
+                <h3>Onde encontrar atendimento</h3>
+                <p>
+                    Aprenda a localizar Unidades Básicas de Saúde (UBS),
+                    hospitais e farmácias utilizando mapas digitais
+                    e ferramentas de pesquisa.
+                </p>
+                <div class="saude-card-lista-box">
+                    <h4>O que você vai aprender?</h4>
+                    <ul>
+                        <li>Como pesquisar unidades de saúde.</li>
+                        <li>Como encontrar endereços no mapa.</li>
+                        <li>Como consultar rotas e trajetos.</li>
+                    </ul>
+                </div>
             </div>
-        </section>
-
+            <div class="saude-card-rodape">
+                <a href="./mobilidade.html" class="saude-btn-moderno">
+                    Ver Guia de Mapas
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </article>
+        <!-- Card 2: Meu SUS Digital -->
+        <article class="saude-card">
+            <div class="saude-card-cabecalho">
+                <span class="material-symbols-outlined saude-card-icone-badge">smartphone</span>
+                <span class="saude-card-tag">Guia 02</span>
+            </div>
+            <div class="saude-card-corpo">
+                <h3>Meu SUS Digital</h3>
+                <p>
+                    Conheça o aplicativo oficial que permite consultar
+                    informações de saúde e acessar os serviços digitais
+                    disponibilizados pelo SUS.
+                </p>
+                <div class="saude-card-lista-box">
+                    <h4>O que você pode consultar?</h4>
+                    <ul>
+                        <li>Informações sobre vacinação.</li>
+                        <li>Dados e registros de saúde disponíveis.</li>
+                        <li>Serviços e informações oficiais do SUS.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="saude-card-rodape">
+                <a href="https://meususdigital.saude.gov.br/" target="_blank" rel="noopener noreferrer" class="saude-btn-moderno">
+                    Acessar Meu SUS Digital
+                    <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+            </div>
+        </article>
+        <!-- Card 3: Lembretes de medicamentos -->
+        <article class="saude-card">
+            <div class="saude-card-cabecalho">
+                <span class="material-symbols-outlined saude-card-icone-badge">notifications_active</span>
+                <span class="saude-card-tag">Guia 03</span>
+            </div>
+            <div class="saude-card-corpo">
+                <h3>Lembretes de medicamentos</h3>
+                <p>
+                    Utilize os recursos do celular para organizar
+                    lembretes e acompanhar as orientações recebidas
+                    dos profissionais de saúde.
+                </p>
+                <div class="saude-card-lista-box">
+                    <h4>Como a tecnologia pode ajudar?</h4>
+                    <ul>
+                        <li>Como criar alarmes no celular.</li>
+                        <li>Como registrar lembretes de consultas.</li>
+                        <li>Como organizar informações importantes.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="saude-card-rodape">
+                <a href="#seguranca-saude" class="saude-btn-moderno">
+                    Ver orientações
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </article>
+        <!-- Card 4: Informações confiáveis -->
+        <article class="saude-card">
+            <div class="saude-card-cabecalho">
+                <span class="material-symbols-outlined saude-card-icone-badge">verified_user</span>
+                <span class="saude-card-tag">Guia 04</span>
+            </div>
+            <div class="saude-card-corpo">
+                <h3>Informações confiáveis</h3>
+                <p>
+                    Aprenda a identificar notícias falsas sobre
+                    medicamentos, tratamentos milagrosos e dicas
+                    de saúde compartilhadas pela internet.
+                </p>
+                <div class="saude-card-lista-box">
+                    <h4>Antes de compartilhar, confira:</h4>
+                    <ul>
+                        <li>Quem publicou a informação.</li>
+                        <li>Se existem fontes oficiais.</li>
+                        <li>Se a notícia aparece em outros canais confiáveis.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="saude-card-rodape">
+                <a href="https://www.gov.br/saude/pt-br" target="_blank" rel="noopener noreferrer" class="saude-btn-moderno">
+                    Consultar Ministério da Saúde
+                    <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+            </div>
+        </article>
+    </div>
+</section>
         <!-- Alerta de segurança -->
         <section class="saude-seguranca" id="seguranca-saude">
-
             <div class="saude-alerta">
                 <div class="saude-alerta-titulo">
-                    <i class="fa-solid fa-triangle-exclamation"
-                       aria-hidden="true"></i>
-
+                    <span class="material-symbols-outlined" style="font-size: 36px; color: #680E0E;">warning</span>
                     <h2>Cuide também da sua segurança digital</h2>
                 </div>
-
                 <p>
                     Desconfie de mensagens que prometem curas milagrosas,
                     solicitam pagamentos para liberar consultas ou benefícios,
@@ -265,31 +217,23 @@
                     altere tratamentos por causa de informações encontradas
                     na internet: converse com um profissional de saúde.
                 </p>
-
                 <p>
                     Para informações médicas, dê preferência a fontes oficiais
                     e profissionais qualificados.
                 </p>
             </div>
-
         </section>
-
     </main>
-
-    <!-- Rodapé padrão Conecta+ -->
-    <footer>
-
-        <div class="top">
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="rodape-topo">
             <h2>Conectando pessoas ao mundo digital.</h2>
-
-            <a href="../index.html" class="footer-logo">
+            <a href="../index.html" class="logo-rodape">
                 <img src="../img/logo.png" alt="Conecta+ — Página inicial">
             </a>
         </div>
-
-        <div class="links">
-
-            <nav class="footer-nav" aria-label="Aprendizado">
+        <div class="rodape-links">
+            <nav aria-label="Aprendizado">
                 <h4>Aprendizado</h4>
                 <ul>
                     <li><a href="./comunicacao.html">Comunicação</a></li>
@@ -297,8 +241,7 @@
                     <li><a href="./financas.html">Finanças</a></li>
                 </ul>
             </nav>
-
-            <nav class="footer-nav" aria-label="Projeto">
+            <nav aria-label="Projeto">
                 <h4>Projeto</h4>
                 <ul>
                     <li><a href="./sobre.html">Sobre o Conecta+</a></li>
@@ -306,38 +249,31 @@
                     <li><a href="./saude.html">Saúde</a></li>
                 </ul>
             </nav>
-
-            <nav class="footer-nav" aria-label="Ajuda">
+            <nav aria-label="Ajuda">
                 <h4>Ajuda</h4>
                 <ul>
                     <li><a href="./sos.html">Precisa de ajuda?</a></li>
                     <li><a href="./acessibilidade.html">Orientações</a></li>
                 </ul>
             </nav>
-
-            <nav class="footer-nav" aria-label="Informações">
+            <nav aria-label="Informações">
                 <h4>Informações</h4>
                 <ul>
                     <li><a href="./sobre.html">Sobre nós</a></li>
                     <li><a href="./cidadania.html">Cidadania digital</a></li>
                 </ul>
             </nav>
-
         </div>
-
-        <div class="bottom">
+        <div class="rodape-direitos">
             <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
-
-            <div class="social">
-                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais"
-                   target="_blank"
-                   rel="noopener noreferrer">
+            <div class="redes-sociais">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais" target="_blank" rel="noopener noreferrer">
                     GitHub
                 </a>
             </div>
         </div>
-
     </footer>
-
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

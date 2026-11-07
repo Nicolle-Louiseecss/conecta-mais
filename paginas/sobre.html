@@ -3,9 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecta+ | Tecnologia para todos</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Sobre Nós | Conecta+</title>
+    
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sobre.css">
+
+    <!-- Icones e Fontes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Botao de Acessibilidade -->
+    <div class="widget-acessibilidade">
+        <button class="btn-widget-acessibilidade" onclick="alternarMenuAcessibilidade()" aria-label="Abrir menu de acessibilidade">
+            <span class="material-symbols-outlined" style="font-size: 28px;">accessibility_new</span>
+        </button>
+        <div id="painel-acessibilidade" class="painel-acessibilidade">
+            <p>Opções de Acessibilidade</p>
+            <button onclick="alterarFonte('aumentar')">Aumentar Letra (A+)</button>
+            <button onclick="alterarFonte('diminuir')">Diminuir Letra (A-)</button>
+            <button onclick="alternarContraste()">Alto Contraste</button>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="topo">
+        <nav class="menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="btn-abrir-menu" aria-label="Abrir menu">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+            </label>
+            <div class="menu-links">
+                <label for="menu-toggle" class="btn-fechar-menu" aria-label="Fechar menu">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">close</span>
+                </label>
+                <ul>
+                    <li><a href="../index.html">INÍCIO</a></li>
+                    <li><a href="./acessibilidade.html">ACESSIBILIDADE</a></li>
+                    <li><a href="./sos.html">AJUDA</a></li>
+                    <li><a href="./sobre.html">SOBRE</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="Logo Conecta+">
+            <span>Conecta+</span>
+        </a>
+
+        <div class="banner-principal">
+            <h1>Nossa História & Propósito</h1>
+            <p>
+                Conheça a essência por trás do Conecta+ e como transformamos a inclusão digital 
+                em uma ferramenta prática de autonomia.
+            </p>
+            <a href="#proposito" class="btn-principal">
+                Explorar Projeto
+            </a>
+        </div>
+    </header>
+
+    <!-- Conteudo Principal -->
+    <main class="sobre-main">
+
+        <!-- Secao: Destaque Assimétrico -->
+        <section id="proposito" class="sobre-secao-destaque">
+            <div class="destaque-conteudo">
+                <span class="destaque-badge">Inclusão sem barreiras</span>
+                <h2>Tecnologia feita para aproximar pessoas</h2>
+                <p>
+                    O Conecta+ nasceu da necessidade de simplificar a internet para quem sente dificuldades com a tecnologia. 
+                    Unimos design acessível, guias práticos e foco total na autonomia de idosos e iniciantes.
+                </p>
+            </div>
+            <div class="destaque-caixa-lateral">
+                <i class="fa-solid fa-hands-holding-child" aria-hidden="true"></i>
+                <span>Acolhimento e facilidade em cada clique.</span>
+            </div>
+        </section>
+
+        <!-- Secao: Linha do Tempo (Trajetória) -->
+        <section class="sobre-secao" style="margin-top: 40px;">
+            <div class="sobre-titulo">
+                <span class="sobre-icone" aria-hidden="true">
+                    <i class="fa-solid fa-timeline"></i>
+                </span>
+                <h2>Como o projeto surgiu</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-ponto">1</div>
+                    <div class="timeline-conteudo">
+                        <h3>A Ideia Inicial</h3>
+                        <p>Identificamos que muitos idosos e iniciantes enfrentavam barreiras complexas ao tentar acessar serviços básicos e de saúde na internet.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-ponto">2</div>
+                    <div class="timeline-conteudo">
+                        <h3>Desenvolvimento em ADS</h3>
+                        <p>Como projeto acadêmico de Análise e Desenvolvimento de Sistemas, estruturamos uma plataforma focada em acessibilidade (WCAG) e experiência do usuário.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-ponto">3</div>
+                    <div class="timeline-conteudo">
+                        <h3>Expansão de Conteúdos</h3>
+                        <p>Criamos guias dedicados a cidadania digital, saúde, segurança contra golpes e ferramentas práticas de acessibilidade para o dia a dia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secao: Equipe / Idealizadores -->
+        <section class="sobre-secao" style="margin-top: 40px;">
+            <div class="sobre-titulo">
+                <span class="sobre-icone" aria-hidden="true">
+                    <i class="fa-solid fa-users"></i>
+                </span>
+                <h2>Quem faz o Conecta+ acontecer</h2>
+            </div>
+            <p class="sobre-descricao">
+                Uma iniciativa desenvolvida por estudantes comprometidos com a inovação social e a inclusão digital através da tecnologia.
+            </p>
+
+            <div class="grid-equipe">
+                <div class="card-membro">
+                    <div class="avatar-membro">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                    </div>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Foco na estruturação de páginas responsivas, limpas e altamente acessíveis.</p>
+                </div>
+
+                <div class="card-membro">
+                    <div class="avatar-membro">
+                        <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+                    </div>
+                    <h3>Experiência e Conteúdo</h3>
+                    <p>Pesquisa de linguagem clara, direta e voltada para o público iniciante.</p>
+                </div>
+
+                <div class="card-membro">
+                    <div class="avatar-membro">
+                        <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+                    </div>
+                    <h3>Acessibilidade & UX</h3>
+                    <p>Validação de contraste, ferramentas de zoom e navegação simplificada.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="rodape-topo">
+            <h2>Conectando pessoas ao mundo digital.</h2>
+            <a href="../index.html" class="logo-rodape">
+                <img src="../img/logo.png" alt="Conecta+ — Página inicial">
+            </a>
+        </div>
+        <div class="rodape-links">
+            <nav aria-label="Aprendizado">
+                <h4>Aprendizado</h4>
+                <ul>
+                    <li><a href="./comunicacao.html">Comunicação</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                    <li><a href="./financas.html">Finanças</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Projeto">
+                <h4>Projeto</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre o Conecta+</a></li>
+                    <li><a href="./acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="./saude.html">Saúde</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ajuda">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="./sos.html">Precisa de ajuda?</a></li>
+                    <li><a href="./acessibilidade.html">Orientações</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Informações">
+                <h4>Informações</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="rodape-direitos">
+            <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
+            <div class="redes-sociais">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

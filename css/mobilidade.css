@@ -1,1 +1,297 @@
+.mobilidade-main {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 60px 0;
+    font-family: 'Nunito', sans-serif;
+}
 
+.mobilidade-introducao {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.mobilidade-titulo-secao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.mobilidade-titulo-secao h2 {
+    font-size: 32px;
+    color: #222;
+}
+
+.mobilidade-introducao p,
+.mobilidade-descricao {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.mobilidade-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: #680E0E;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
+
+.mobilidade-icone .material-symbols-outlined {
+    font-size: 30px;
+}
+
+.mobilidade-guias {
+    margin-bottom: 60px;
+}
+
+.mobilidade-descricao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.mobilidade-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 35px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.mobilidade-card-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.mobilidade-card-icone {
+    font-size: 35px;
+    color: #680E0E;
+}
+
+.mobilidade-card-tag {
+    background-color: #f4e5e5;
+    color: #680E0E;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 800;
+}
+
+.mobilidade-card-corpo h3 {
+    font-size: 26px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.mobilidade-card-corpo h4 {
+    font-size: 21px;
+    color: #680E0E;
+    margin: 30px 0 20px;
+}
+
+.mobilidade-card-corpo p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #555;
+}
+
+
+/* =====================================
+   PASSOS E IMAGENS
+===================================== */
+
+.mobilidade-passos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.mobilidade-passo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #f8f8f8;
+    border-radius: 14px;
+    padding: 20px;
+    min-width: 0;
+}
+
+.mobilidade-numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #680E0E;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 18px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-bottom: 12px;
+}
+
+.mobilidade-passo p {
+    min-height: 55px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #333;
+}
+
+.mobilidade-passo img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background-color: #eeeeee;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.mobilidade-passo img:hover {
+    transform: scale(1.03);
+}
+
+
+
+.mobilidade-street-view {
+    margin-top: 45px;
+    padding-top: 25px;
+    border-top: 2px solid #eeeeee;
+}
+
+.mobilidade-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 25px 0;
+}
+
+.mobilidade-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 14px;
+}
+
+
+
+.mobilidade-lista {
+    padding-left: 30px;
+    margin-top: 15px;
+}
+
+.mobilidade-lista li {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.mobilidade-informacoes {
+    background-color: #f8f8f8;
+    padding: 20px 25px;
+    border-radius: 14px;
+    margin-top: 35px;
+}
+
+
+.mobilidade-seguranca {
+    margin-bottom: 40px;
+}
+
+.mobilidade-alerta {
+    background-color: #fff5e5;
+    border-left: 6px solid #d18b20;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.mobilidade-alerta-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.mobilidade-alerta-titulo .material-symbols-outlined {
+    font-size: 36px;
+    color: #9b5c00;
+}
+
+.mobilidade-alerta-titulo h2 {
+    color: #333;
+    font-size: 25px;
+}
+
+.mobilidade-alerta p {
+    color: #444;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+
+    .mobilidade-main {
+        width: 92%;
+        padding: 35px 0;
+    }
+
+    .mobilidade-titulo-secao {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mobilidade-titulo-secao h2 {
+        font-size: 25px;
+    }
+
+    .mobilidade-card {
+        padding: 22px;
+    }
+
+    .mobilidade-card-corpo h3 {
+        font-size: 22px;
+    }
+
+    .mobilidade-passos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mobilidade-passo img {
+        height: auto;
+        max-height: 350px;
+        object-fit: contain;
+    }
+
+    .mobilidade-passo p {
+        min-height: auto;
+    }
+
+    .mobilidade-alerta {
+        padding: 20px;
+    }
+
+    .mobilidade-alerta-titulo {
+        align-items: flex-start;
+    }
+
+    .mobilidade-alerta-titulo h2 {
+        font-size: 21px;
+    }
+
+}

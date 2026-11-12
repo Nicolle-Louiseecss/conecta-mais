@@ -1,1 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef5f8;
+    color: #243247;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #12304a;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    color: #a7f3d0;
+    font-size: 36px;
+}
+
+header p {
+    margin-bottom: 15px;
+}
+
+/* Menu */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #176b60;
+}
+
+/* Banner inicial */
+.banner {
+    background: linear-gradient(135deg, #12304a, #176b60);
+    color: white;
+    text-align: center;
+    padding: 60px 25px;
+}
+
+.banner h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+} 
+/* Seções */
+.secao {
+    background-color: white;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.secao h2 {
+    color: #176b60;
+    margin-bottom: 15px;
+    font-size: 27px;
+}
+
+.secao p {
+    margin-bottom: 15px;
+}
+
+.secao ul {
+    padding-left: 25px;
+}
+
+/* Cartões */
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.cartao {
+    background-color: #e5f3ee;
+    padding: 22px;
+    border-radius: 12px;
+    border-left: 6px solid #176b60;
+}
+
+.cartao h3 {
+    color: #12304a;
+    margin-bottom: 10px;
+}
+
+.alerta {
+    background-color: #fff1e8;
+    border-left-color: #d97736;
+}
+
+/* Seção de dicas */
+.dicas {
+    background-color: #f0f8f3;
+}
+
+/* Mensagem final */
+.mensagem {
+    background-color: #dff5ed;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 30px 0;
+}
+
+.mensagem h2 {
+    color: #176b60;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #12304a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* Adaptação para celulares */
+@media (max-width: 600px) {
+    body {
+        font-size: 17px;
+    }
+
+    header h1 {
+        font-size: 29px;
+    }
+
+    .banner h2 {
+        font-size: 27px;
+    }
+
+    .cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .secao {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+}

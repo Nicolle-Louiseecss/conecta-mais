@@ -1,36 +1,412 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mobilidade e Localização | Conecta+</title>
+
+    <link rel="icon" type="image/png" href="../img/logo.png">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobilidade.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <h1>Conecta+</h1>
-        <p>Tecnologia para uma vida mais independente.</p>
-        <a href="../index.html">Voltar à página inicial</a>
-    </header>
-    <main>
-        <h2>Mobilidade e Localização</h2>
-        <p>
-            Aprenda a usar ferramentas digitais para encontrar
-            endereços, consultar rotas e se deslocar com mais
-            autonomia e segurança.
-        </p>
-        <h2>Como a tecnologia pode ajudar?</h2>
-        <ul>
-            <li>Consultar endereços e trajetos no mapa.</li>
-            <li>Pesquisar linhas e horários de transporte público.</li>
-            <li>Compartilhar sua localização com pessoas de confiança.</li>
-            <li>Encontrar estabelecimentos e serviços próximos.</li>
-            <li>Conferir o trajeto antes de sair de casa.</li>
-        </ul>
-        <p>
-            Antes de sair, confira o destino e a rota. Evite
-            compartilhar sua localização com desconhecidos.
-        </p>
+
+    <main class="mobilidade-main" id="conteudo-principal">
+
+        <!-- Introdução -->
+        <section class="mobilidade-introducao">
+
+            <div class="mobilidade-titulo-secao">
+                <h2>Mobilidade e localização no seu dia a dia</h2>
+            </div>
+
+            <p>
+                Os mapas digitais facilitam a locomoção e ajudam
+                você a encontrar lugares, descobrir caminhos e
+                chegar ao seu destino com mais autonomia e segurança.
+            </p>
+
+        </section>
+
+
+        <!-- Guias -->
+        <section class="mobilidade-guias" id="guias-mobilidade">
+
+            <div class="mobilidade-titulo-secao">
+
+                <span class="mobilidade-icone" aria-hidden="true">
+                    <span class="material-symbols-outlined">map</span>
+                </span>
+
+                <h2>Aprenda a utilizar o Google Maps</h2>
+
+            </div>
+
+            <p class="mobilidade-descricao">
+                Confira os guias abaixo e aprenda a utilizar
+                os principais recursos dos mapas digitais.
+            </p>
+
+
+            <!-- GUIA 01 -->
+            <article class="mobilidade-card">
+
+                <div class="mobilidade-card-cabecalho">
+
+                    <span class="material-symbols-outlined mobilidade-card-icone">
+                        location_on
+                    </span>
+
+                    <span class="mobilidade-card-tag">Guia 01</span>
+
+                </div>
+
+                <div class="mobilidade-card-corpo">
+
+                    <h3>Como encontrar um endereço?</h3>
+
+                    <p>
+                        Com o Google Maps, você pode pesquisar qualquer
+                        endereço e visualizar sua localização no mapa.
+                        Mas como ter certeza de que encontrou o lugar correto?
+                    </p>
+
+                    <h4>Como pesquisar um endereço?</h4>
+
+                    <div class="mobilidade-passos-grid">
+
+                        <div class="mobilidade-passo">
+                            <span class="mobilidade-numero">1</span>
+
+                            <p>
+                                Toque na barra de pesquisa na parte superior da tela.
+                            </p>
+
+                            <img src="../img/enderecos/informeEndereco.jpg"
+                                 alt="Barra de pesquisa do Google Maps">
+                        </div>
+
+                        <div class="mobilidade-passo">
+                            <span class="mobilidade-numero">2</span>
+
+                            <p>
+                                Digite o endereço que deseja encontrar.
+                            </p>
+
+                            <img src="../img/enderecos/digitarEndereco.jpg"
+                                 alt="Pesquisa de endereço no Google Maps">
+                        </div>
+
+                        <div class="mobilidade-passo">
+                            <span class="mobilidade-numero">3</span>
+
+                            <p>
+                                Selecione o resultado correspondente.
+                            </p>
+
+                            <img src="../img/enderecos/vericarEndereco.jpg"
+                                 alt="Seleção de um endereço no mapa">
+                        </div>
+
+                        <div class="mobilidade-passo">
+                            <span class="mobilidade-numero">4</span>
+
+                            <p>
+                                Observe a localização indicada no mapa.
+                            </p>
+
+                            <img src="../img/enderecos/vericarEndereco.jpg"
+                                 alt="Localização indicada no Google Maps">
+                        </div>
+
+                    </div>
+
+
+                    <!-- Street View -->
+                    <div class="mobilidade-street-view">
+
+                        <h4>Conheça o Street View!</h4>
+
+                        <p>
+                            O Street View é uma ferramenta do Google Maps
+                            que permite visualizar imagens reais de ruas
+                            e fachadas de estabelecimentos.
+                        </p>
+
+                        <p>
+                            Com ele, você consegue observar a aparência
+                            do local antes de sair de casa e verificar
+                            se encontrou o endereço correto.
+                        </p>
+
+                        <div class="mobilidade-video">
+
+                            <iframe
+                                src="https://www.youtube.com/embed/b_3YKz0c2po?si=Hoy_qoGcq3cEzzYY"
+                                title="Tutorial sobre o Google Maps Street View"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+
+                        <h4>Como utilizar o Street View?</h4>
+
+                        <ol class="mobilidade-lista">
+                            <li>Pesquise o endereço desejado no Google Maps.</li>
+                            <li>Toque no local indicado no mapa.</li>
+                            <li>Procure a imagem de visualização do Street View.</li>
+                            <li>Toque na imagem para visualizar a rua.</li>
+                            <li>Observe as fachadas, placas, números e pontos de referência.</li>
+                        </ol>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- GUIA 02 -->
+            <article class="mobilidade-card">
+
+                <div class="mobilidade-card-cabecalho">
+
+                    <span class="material-symbols-outlined mobilidade-card-icone">
+                        directions
+                    </span>
+
+                    <span class="mobilidade-card-tag">Guia 02</span>
+
+                </div>
+
+                <div class="mobilidade-card-corpo">
+
+                    <h3>Como consultar rotas de ônibus e carro?</h3>
+
+                    <p>
+                        O Google Maps também ajuda você a descobrir
+                        como chegar a um destino, apresentando diferentes
+                        opções de trajetos e meios de transporte.
+                    </p>
+
+                    <h4>Como consultar uma rota?</h4>
+
+                    <div class="mobilidade-passos-grid">
+
+                        <div class="mobilidade-passo">
+                            <span class="mobilidade-numero">1</span>
+
+                            <p>
+                                Pesquise o endereço do seu destino.
+                            </p>
+
+                            <img src="../img/enderecos/digitarEndereco.jpg"
+                                 alt="Pesquisa do destino no Google Maps">
+                        </div>
+
+                        <div class="mobilidade-passo">
+                            <span class="mobilidade-numero">2</span>
+
+                            <p>
+                                Toque na opção "Rotas".
+                            </p>
+
+                            <img src="../img/enderecos/digitarEndereco.jpg"
+                                 alt="Opção de rotas do Google Maps">
+                        </div>
+
+                        <div class="mobilidade-passo">
+                            <span class="mobilidade-numero">3</span>
+
+                            <p>
+                                Escolha o meio de transporte desejado,
+                                como carro ou ônibus.
+                            </p>
+
+                            <img src="../img/enderecos/digitarEndereco.jpg"
+                                 alt="Seleção do meio de transporte">
+                        </div>
+
+                        <div class="mobilidade-passo">
+                            <span class="mobilidade-numero">4</span>
+
+                            <p>
+                                Escolha a rota que melhor atende
+                                à sua necessidade.
+                            </p>
+
+                            <img src="../img/enderecos/digitarEndereco.jpg"
+                                 alt="Opções de trajetos disponíveis">
+                        </div>
+
+                    </div>
+
+                    <div class="mobilidade-informacoes">
+
+                        <h4>Quais informações você pode consultar?</h4>
+
+                        <ul class="mobilidade-lista">
+                            <li>Distância entre sua localização e o destino.</li>
+                            <li>Tempo estimado para chegar ao local.</li>
+                            <li>Opções de caminhos diferentes.</li>
+                            <li>
+                                Informações sobre linhas e conexões de
+                                transporte público, quando disponíveis.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- GUIA 03 -->
+            <article class="mobilidade-card">
+
+                <div class="mobilidade-card-cabecalho">
+
+                    <span class="material-symbols-outlined mobilidade-card-icone">
+                        local_hospital
+                    </span>
+
+                    <span class="mobilidade-card-tag">Guia 03</span>
+
+                </div>
+
+                <div class="mobilidade-card-corpo">
+
+                    <h3>Como encontrar hospitais, farmácias e mercados?</h3>
+
+                    <p>
+                        Você não precisa conhecer todos os estabelecimentos
+                        de uma região. O Google Maps permite pesquisar
+                        lugares próximos ou em qualquer endereço desejado.
+                    </p>
+
+                    <h4>Como encontrar estabelecimentos?</h4>
+
+                    <div class="mobilidade-passos-grid">
+
+                        <div class="mobilidade-passo">
+                            <span class="mobilidade-numero">1</span>
+
+                            <p>
+                                Abra o Google Maps.
+                            </p>
+
+                            <img src="../img/enderecos/digitarEndereco.jpg"
+                                 alt="Tela inicial do Google Maps">
+                        </div>
+
+                        <div class="mobilidade-passo">
+                            <span class="mobilidade-numero">2</span>
+
+                            <p>
+                                Pesquise diretamente por hospitais,
+                                farmácias, mercados ou outros serviços.
+                            </p>
+
+                            <img src="../img/enderecos/digitarEndereco.jpg"
+                                 alt="Pesquisa de estabelecimentos próximos">
+                        </div>
+
+                        <div class="mobilidade-passo">
+                            <span class="mobilidade-numero">3</span>
+
+                            <p>
+                                Toque no estabelecimento desejado
+                                para consultar suas informações.
+                            </p>
+
+                            <img src="../img/enderecos/digitarEndereco.jpg"
+                                 alt="Informações de um estabelecimento">
+                        </div>
+
+                        <div class="mobilidade-passo">
+                            <span class="mobilidade-numero">4</span>
+
+                            <p>
+                                Observe os estabelecimentos indicados no mapa.
+                            </p>
+
+                            <img src="../img/enderecos/digitarEndereco.jpg"
+                                 alt="Estabelecimentos indicados no mapa">
+                        </div>
+
+                    </div>
+
+                    <div class="mobilidade-informacoes">
+
+                        <h4>Quais informações você pode encontrar?</h4>
+
+                        <ul class="mobilidade-lista">
+                            <li>Nome e endereço do estabelecimento.</li>
+                            <li>Distância em relação à sua localização.</li>
+                            <li>Horários de funcionamento, quando disponíveis.</li>
+                            <li>Avaliações de outros usuários.</li>
+                            <li>
+                                Telefone e outras informações de contato,
+                                quando disponíveis.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- Segurança -->
+        <section class="mobilidade-seguranca">
+
+            <div class="mobilidade-alerta">
+
+                <div class="mobilidade-alerta-titulo">
+
+                    <span class="material-symbols-outlined">
+                        warning
+                    </span>
+
+                    <h2>Cuide também da sua segurança</h2>
+
+                </div>
+
+                <p>
+                    Antes de sair, confira se o endereço e o trajeto
+                    estão corretos. Evite compartilhar sua localização
+                    com pessoas desconhecidas e tenha atenção ao utilizar
+                    o celular durante deslocamentos.
+                </p>
+
+                <p>
+                    Lembre-se de que os horários, trajetos e informações
+                    apresentados nos mapas podem mudar. Sempre observe
+                    as condições do caminho e utilize seu bom senso.
+                </p>
+
+            </div>
+
+        </section>
+
     </main>
+
 </body>
 </html>

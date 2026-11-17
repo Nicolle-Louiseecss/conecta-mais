@@ -3,39 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lazer e Criatividade | Conecta+</title>
+    <title> Criatividade e Lazer | Conecta+</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lazer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Conecta+</h1>
-        <p>Tecnologia para uma vida mais independente.</p>
-        <a href="../index.html">Voltar à página inicial</a>
+
+    <!-- Acessibilidade -->
+    <div class="widget-acessibilidade">
+        <button class="btn-widget-acessibilidade" onclick="alternarMenuAcessibilidade()" aria-label="Abrir menu de acessibilidade">
+            <span class="material-symbols-outlined" style="font-size: 28px;">accessibility_new</span>
+        </button>
+        <div id="painel-acessibilidade" class="painel-acessibilidade">
+            <p>Opções de Acessibilidade</p>
+            <button onclick="alterarFonte('aumentar')">Aumentar Letra (A+)</button>
+            <button onclick="alterarFonte('diminuir')">Diminuir Letra (A-)</button>
+            <button onclick="alternarContraste()">Alto Contraste</button>
+        </div>
+    </div>
+
+    <!-- Cabeçalho e navegação -->
+    <header class="topo">
+        <nav class="menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="btn-abrir-menu" aria-label="Abrir menu">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+            </label>
+            <div class="menu-links">
+                <label for="menu-toggle" class="btn-fechar-menu" aria-label="Fechar menu">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">close</span>
+                </label>
+                <ul>
+                    <li><a href="../index.html">INÍCIO</a></li>
+                    <li><a href="./acessibilidade.html">ACESSIBILIDADE</a></li>
+                    <li><a href="./sos.html">AJUDA</a></li>
+                    <li><a href="./sobre.html">SOBRE</a></li>
+                </ul>
+            </div>
+        </nav>
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="Logo Conecta+">
+            <span>Conecta+</span>
+        </a>
+        <div class="banner-principal" id="inicio">
+            <h1>Criatividade e Lazer Digital</h1>
+            <p>
+                Que tal ouvir uma música que marcou sua vida, descobrir um livro
+                ou registrar uma receita de família? Escolha uma atividade abaixo
+                para experimentar no celular ou no computador, no seu ritmo.
+            </p>
+        </div>
     </header>
-    <main>
-        <h2>Lazer e Criatividade</h2>
-        <p>
-            A internet oferece diversas formas de se divertir,
-            expressar talentos e descobrir novos passatempos.
-            Explore atividades digitais que tornam o dia a dia
-            mais criativo e agradável.
-        </p>
-        <h2>Ideias para aproveitar seu tempo livre</h2>
-        <ul>
-            <li>Ouvir músicas e conhecer novos artistas.</li>
-            <li>Assistir a filmes, documentários e vídeos educativos.</li>
-            <li>Aprender receitas e compartilhar dicas culinárias.</li>
-            <li>Ver fotografias, desenhar e criar cartões digitais.</li>
-            <li>Conhecer museus e lugares por meio de visitas virtuais.</li>
-            <li>Jogar jogos de memória, palavras e raciocínio.</li>
-        </ul>
-        <h2>Explore com segurança</h2>
-        <p>
-            Utilize plataformas confiáveis e tenha cuidado com
-            links que prometem prêmios ou vantagens exageradas.
-            O lazer digital deve ser uma experiência prazerosa
-            e segura.
-        </p>
+
+    <main class="lazer-main">
+        <section class="lazer-secao">
+            <div class="lazer-titulo">
+                <h2>O que você gostaria de fazer hoje?</h2>
+            </div>
+
+            <div class="grid-cards">
+                <article class="card-conecta">
+                    <div class="card-barra">
+                        <i class="fa-solid fa-music" aria-hidden="true"></i>
+                        <h3>Ouvir uma música</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <p>
+                            Abra o YouTube e selecione a <strong>lupa</strong> para
+                            pesquisar. Digite o nome de uma música e de quem canta.
+                            Escolha um resultado para ouvir. Se lembrar apenas de
+                            um trecho da letra, experimente pesquisar por esse trecho.
+                        </p>
+                    </div>
+                </article>
+                <article class="card-conecta">
+                    <div class="card-barra">
+                        <i class="fa-solid fa-film" aria-hidden="true"></i>
+                        <h3>Assistir a um filme</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <p>
+                            Abra o aplicativo ou site em que costuma assistir a vídeos.
+                            Procure o título de um filme ou explore uma categoria,
+                            como <strong>comédia</strong>. Escolha o filme e selecione
+                            <strong>Assistir</strong>. Se quiser acompanhar as falas
+                            por escrito, procure a opção <strong>Legendas</strong>.
+                        </p>
+                    </div>
+                </article>
+                <article class="card-conecta">
+                    <div class="card-barra">
+                        <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                        <h3>Ler um livro digital</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <p>
+                            No navegador, pesquise <strong>“Biblioteca Brasiliana USP”</strong>
+                            e abra o site da biblioteca. Use a busca do acervo para procurar
+                            um autor, como Machado de Assis. Escolha uma obra disponível
+                            para leitura e use o zoom se quiser ampliar a página.
+                        </p>
+                    </div>
+                </article>
+                <article class="card-conecta">
+                    <div class="card-barra">
+                        <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+                        <h3>Experimentar um jogo de raciocínio</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <p>
+                            Pesquise <strong>“jogo da memória online”</strong> e escolha
+                            uma versão para jogar no navegador. Comece com poucas cartas.
+                            Selecione duas por vez e tente lembrar onde estão as figuras
+                            iguais para formar os pares.
+                        </p>
+                    </div>
+                </article>
+                <article class="card-conecta">
+                    <div class="card-barra">
+                        <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                        <h3>Encontrar uma receita</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <p>
+                            Digite o nome do prato que deseja preparar, como
+                            <strong>“bolo de milho passo a passo”</strong>. Abra
+                            a receita e confira os ingredientes e as quantidades.
+                            Se escolher uma receita em vídeo, pause depois de cada
+                            etapa para cozinhar no seu ritmo.
+                        </p>
+                    </div>
+                </article>
+                <article class="card-conecta">
+                    <div class="card-barra">
+                        <i class="fa-solid fa-camera" aria-hidden="true"></i>
+                        <h3>Criar um álbum de lembranças</h3>
+                    </div>
+                    <div class="card-conteudo">
+                        <p>
+                            Abra <strong>Fotos</strong> ou <strong>Galeria</strong> no
+                            celular. Procure a área de álbuns e escolha a opção de criar
+                            um álbum. Dê um nome, como <strong>“Meu jardim”</strong>,
+                            e reúna suas fotos favoritas. Você pode acrescentar uma
+                            nova foto sempre que uma flor desabrochar.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="rodape-topo">
+            <h2>Conectando pessoas ao mundo digital.</h2>
+            <a href="../index.html" class="logo-rodape">
+                <img src="../img/logo.png" alt="Conecta+ — Página inicial">
+            </a>
+        </div>
+        <div class="rodape-links">
+            <nav aria-label="Aprendizado">
+                <h4>Aprendizado</h4>
+                <ul>
+                    <li><a href="./comunicacao.html">Comunicação</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                    <li><a href="./financas.html">Finanças</a></li>
+                    <li><a href="./compras.html">Compras online</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Projeto">
+                <h4>Projeto</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre o Conecta+</a></li>
+                    <li><a href="./acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="./saude.html">Saúde</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ajuda">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="./sos.html">Precisa de ajuda?</a></li>
+                    <li><a href="./acessibilidade.html">Orientações</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Informações">
+                <h4>Informações</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="rodape-direitos">
+            <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
+            <div class="redes-sociais">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

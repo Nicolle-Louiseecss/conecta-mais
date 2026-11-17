@@ -1,1 +1,230 @@
 
+/* Estrutura principal */
+.lazer-main {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 75px 0 90px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.lazer-secao {
+    width: 100%;
+}
+
+/* Título */
+.lazer-titulo {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 50px;
+    position: relative;
+}
+
+.lazer-titulo h2 {
+    color: #0D0D0D;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.lazer-titulo::after {
+    content: "";
+    display: block;
+    width: 85px;
+    height: 5px;
+    background: #BF6B21;
+    border-radius: 10px;
+    margin: 20px auto 0;
+}
+
+/* Grade de cards */
+.lazer-main .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+/* Cards */
+.lazer-main .card-conecta {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid #E8D7C4;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(13, 13, 13, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lazer-main .card-conecta::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: #BF6B21;
+    z-index: 2;
+}
+
+.lazer-main .card-conecta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(13, 13, 13, 0.13);
+}
+
+/* Cabeçalho dos cards */
+.lazer-main .card-barra {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 105px;
+    padding: 22px 28px 22px 32px;
+    background: #255959;
+    position: relative;
+    overflow: hidden;
+}
+
+.lazer-main .card-barra::after {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    right: -35px;
+    top: -65px;
+    border: 18px solid rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+}
+
+/* Ícones */
+.lazer-main .card-barra i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    border-radius: 15px;
+    background: #FFF8EF;
+    color: #BF6B21;
+    font-size: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Títulos dos cards */
+.lazer-main .card-barra h3 {
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1.35;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Conteúdo dos cards */
+.lazer-main .card-conteudo {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    padding: 28px 30px 28px 34px;
+    background: #FFF8EF;
+    border-top: 1px solid #E8D7C4;
+}
+
+.lazer-main .card-conteudo p {
+    color: #0D0D0D;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.85;
+    text-align: left;
+    margin: 0;
+}
+
+/* Destaques */
+.lazer-main .card-conteudo strong {
+    color: #A64914;
+    font-weight: 800;
+}
+
+/* Responsividade */
+@media (max-width: 950px) {
+    .lazer-main {
+        width: 92%;
+    }
+
+    .lazer-main .grid-cards {
+        gap: 22px;
+    }
+
+    .lazer-main .card-barra {
+        padding: 20px 22px 20px 28px;
+    }
+
+    .lazer-main .card-barra h3 {
+        font-size: 1.2rem;
+    }
+
+    .lazer-main .card-conteudo {
+        padding: 24px 24px 24px 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .lazer-main {
+        width: 90%;
+        padding: 55px 0 65px;
+    }
+
+    .lazer-titulo {
+        margin-bottom: 35px;
+    }
+
+    .lazer-titulo h2 {
+        font-size: 1.7rem;
+    }
+
+    .lazer-main .grid-cards {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .lazer-main .card-barra {
+        min-height: 90px;
+        padding: 18px 22px 18px 28px;
+        gap: 15px;
+    }
+
+    .lazer-main .card-barra i {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        font-size: 22px;
+    }
+
+    .lazer-main .card-barra h3 {
+        font-size: 1.15rem;
+    }
+
+    .lazer-main .card-conteudo {
+        padding: 22px 22px 22px 28px;
+    }
+
+    .lazer-main .card-conteudo p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+}
+
+@media (max-width: 400px) {
+    .lazer-titulo h2 {
+        font-size: 1.5rem;
+    }
+
+    .lazer-main .card-barra h3 {
+        font-size: 1.05rem;
+    }
+}

@@ -308,7 +308,7 @@ a:focus-visible {
     color: #ffffff;
 }
 
-/* Grupo de Botões Lado a Lado */
+/* Botões */
 .card-botoes {
     display: flex;
     gap: 10px;

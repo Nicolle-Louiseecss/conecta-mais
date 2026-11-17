@@ -93,7 +93,7 @@
     line-height: 1.7;
 }
 
-/* Grade de cards (fixada em 2 colunas) */
+/* Grade de cards */
 .sos-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -419,7 +419,7 @@
     outline-offset: 4px;
 }
 
-/* Tablets */
+/* Responsividade para tablets */
 @media (max-width: 900px) {
     .sos-guias {
         padding: 55px 5%;
@@ -443,7 +443,7 @@
     }
 }
 
-/* Celulares */
+/* Responsividade para celulares */
 @media (max-width: 700px) {
     .sos-header {
         min-height: 100vh;

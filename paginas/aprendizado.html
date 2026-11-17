@@ -1,43 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Aprendizado e Oportunidades | Conecta+</title>
-
+    <link rel="icon" type="image/png" href="../img/logo.png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/aprendizado.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <main class="aprendizado-main">
+    <!-- Acessibilidade -->
+    <div class="widget-acessibilidade">
+        <button class="btn-widget-acessibilidade" onclick="alternarMenuAcessibilidade()" aria-label="Abrir menu de acessibilidade">
+            <span class="material-symbols-outlined" style="font-size: 28px;">accessibility_new</span>
+        </button>
+        <div id="painel-acessibilidade" class="painel-acessibilidade">
+            <p>Opções de Acessibilidade</p>
+            <button onclick="alterarFonte('aumentar')">Aumentar Letra (A+)</button>
+            <button onclick="alterarFonte('diminuir')">Diminuir Letra (A-)</button>
+            <button onclick="alternarContraste()">Alto Contraste</button>
+        </div>
+    </div>
 
-        <!-- INTRODUÇÃO -->
-
-        <section class="aprendizado-introducao">
-
-            <h2>Aprendizado e Oportunidades</h2>
-
+    <!-- Cabeçalho e navegação -->
+    <header class="topo">
+        <nav class="menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="btn-abrir-menu" aria-label="Abrir menu">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+            </label>
+            <div class="menu-links">
+                <label for="menu-toggle" class="btn-fechar-menu" aria-label="Fechar menu">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">close</span>
+                </label>
+                <ul>
+                    <li><a href="../index.html">INÍCIO</a></li>
+                    <li><a href="./acessibilidade.html">ACESSIBILIDADE</a></li>
+                    <li><a href="./sos.html">AJUDA</a></li>
+                    <li><a href="./sobre.html">SOBRE</a></li>
+                </ul>
+            </div>
+        </nav>
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="Logo Conecta+">
+            <span>Conecta+</span>
+        </a>
+        <div class="banner-principal" id="inicio">
+            <h1>Aprendizado e Oportunidades</h1>
             <p>
-                Aprender não tem idade! A internet pode ajudar você
+                                Aprender não tem idade! A internet pode ajudar você
                 a estudar, conhecer coisas novas e encontrar
                 oportunidades de trabalho. Veja algumas formas
                 de aproveitar esses recursos.
             </p>
+        </div>
+    </header>
 
-        </section>
-
+    <main class="aprendizado-main">
 
         <!-- CURSOS GRATUITOS -->
 
@@ -305,5 +330,56 @@
 
     </main>
 
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="rodape-topo">
+            <h2>Conectando pessoas ao mundo digital.</h2>
+            <a href="../index.html" class="logo-rodape">
+                <img src="../img/logo.png" alt="Conecta+ — Página inicial">
+            </a>
+        </div>
+        <div class="rodape-links">
+            <nav aria-label="Aprendizado">
+                <h4>Aprendizado</h4>
+                <ul>
+                    <li><a href="./comunicacao.html">Comunicação</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                    <li><a href="./financas.html">Finanças</a></li>
+                    <li><a href="./compras.html">Compras online</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Projeto">
+                <h4>Projeto</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre o Conecta+</a></li>
+                    <li><a href="./acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="./saude.html">Saúde</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ajuda">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="./sos.html">Precisa de ajuda?</a></li>
+                    <li><a href="./acessibilidade.html">Orientações</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Informações">
+                <h4>Informações</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="rodape-direitos">
+            <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
+            <div class="redes-sociais">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

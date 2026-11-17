@@ -118,7 +118,6 @@
     color: #FFFFFF;
 }
 
-/* Grid de Cards de Servicos */
 .grid-cards-servicos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

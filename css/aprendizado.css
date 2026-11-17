@@ -1,203 +1,370 @@
-
-/* =====================================
-   CONTEÚDO PRINCIPAL
-===================================== */
-
+/* Estrutura principal */
 .aprendizado-main {
-    max-width: 1200px;
     width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 65px 0;
     font-family: 'Nunito', sans-serif;
 }
 
-
-/* =====================================
-   INTRODUÇÃO
-===================================== */
-
+/* Introdução */
 .aprendizado-introducao {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
+    padding: 15px 20px;
 }
 
-.aprendizado-titulo-secao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
+.aprendizado-introducao h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: #153F3F;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
-.aprendizado-titulo-secao h2 {
-    font-size: 32px;
-    color: #222;
+.aprendizado-introducao h2::after {
+    content: '';
+    display: block;
+    width: 65px;
+    height: 4px;
+    margin: 15px auto 0;
+    border-radius: 5px;
+    background-color: #BF6B21;
 }
 
-.aprendizado-introducao p,
-.aprendizado-descricao {
-    font-size: 18px;
+.aprendizado-introducao p {
+    font-size: 1.15rem;
     line-height: 1.7;
-    color: #555;
+    color: #5C4A40;
     max-width: 850px;
     margin: 0 auto;
 }
 
-
-/* =====================================
-   CONTEÚDO
-===================================== */
-
+/* Cards das seções */
 .aprendizado-conteudo {
-    margin-bottom: 60px;
-}
-
-.aprendizado-icone {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    background-color: #680E0E;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-}
-
-.aprendizado-icone .material-symbols-outlined {
-    font-size: 30px;
-}
-
-.aprendizado-descricao {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-
-/* =====================================
-   CARTÕES DE APRENDIZADO
-===================================== */
-
-.aprendizado-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-}
-
-.aprendizado-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    background-color: #ffffff;
-    border-radius: 18px;
-    padding: 35px 25px;
-    min-height: 220px;
-
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-
+    background-color: #F5E6D3;
+    border: 1px solid #E8D7C4;
+    border-radius: 16px;
+    padding: 38px 40px;
+    margin-bottom: 32px;
+    box-shadow: 0 5px 15px rgba(43, 33, 28, 0.09);
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.aprendizado-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+.aprendizado-conteudo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(43, 33, 28, 0.13);
 }
 
-.aprendizado-card-icone {
-    font-size: 45px;
-    color: #680E0E;
-    margin-bottom: 15px;
+/* Títulos das seções */
+.aprendizado-titulo-secao {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #153F3F;
+    margin: -38px -40px 28px;
+    padding: 25px 40px;
+    border-bottom: 5px solid #BF6B21;
 }
 
-.aprendizado-card h3 {
-    font-size: 21px;
-    color: #222;
-    margin-bottom: 12px;
-}
-
-.aprendizado-card p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: #555;
-}
-
-
-/* =====================================
-   DICA PARA COMEÇAR
-===================================== */
-
-.aprendizado-dica {
-    background-color: #fff5e5;
-    border-left: 6px solid #d18b20;
-    padding: 30px;
+.aprendizado-titulo-secao .material-symbols-outlined {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    background-color: #BF6B21;
+    color: #FFFFFF;
     border-radius: 12px;
-    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.aprendizado-titulo-secao h2 {
+    color: #FFFFFF;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.35;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Textos e subtítulos */
+.aprendizado-conteudo p {
+    color: #5C4A40;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.aprendizado-conteudo h3 {
+    color: #153F3F;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 28px 0 16px;
+    padding-left: 13px;
+    border-left: 4px solid #BF6B21;
+}
+
+.aprendizado-conteudo strong {
+    color: #153F3F;
+    font-weight: 700;
+}
+
+/* Listas numeradas */
+.aprendizado-conteudo ol {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 0;
+    margin: 15px 0 25px;
+    list-style: none;
+    counter-reset: etapas;
+}
+
+.aprendizado-conteudo ol li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    min-height: 35px;
+    padding: 7px 12px 7px 46px;
+    background-color: #FFF8EF;
+    border-radius: 9px;
+    color: #2B211C;
+    font-size: 1rem;
+    line-height: 1.7;
+    counter-increment: etapas;
+}
+
+.aprendizado-conteudo ol li::before {
+    content: counter(etapas);
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #153F3F;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+/* Listas de informações */
+.aprendizado-conteudo ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    margin: 15px 0 25px;
+    list-style: none;
+}
+
+.aprendizado-conteudo ul li {
+    position: relative;
+    padding: 13px 15px 13px 40px;
+    background-color: #E8D7C4;
+    border-left: 4px solid #BF6B21;
+    border-radius: 8px;
+    color: #2B211C;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.aprendizado-conteudo ul li::before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 23px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #153F3F;
+}
+
+/* Links externos */
+.aprendizado-conteudo a {
+    color: #153F3F;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #BF6B21;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.aprendizado-conteudo a:hover {
+    color: #A71E12;
+}
+
+/* Vídeo educativo */
+.aprendizado-conteudo iframe {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 30px auto 5px;
+    border: 4px solid #E8D7C4;
+    border-radius: 14px;
+    box-shadow: 0 5px 16px rgba(43, 33, 28, 0.12);
+}
+
+/* Dica final */
+.aprendizado-dica {
+    position: relative;
+    isolation: isolate;
+    max-width: 100%;
+    margin: 55px 0 0;
+    padding: 45px 40px;
+    border-radius: 16px;
+    background-color: #a64914;
 }
 
 .aprendizado-dica-titulo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 16px;
     margin-bottom: 20px;
 }
 
 .aprendizado-dica-titulo .material-symbols-outlined {
-    font-size: 36px;
-    color: #9b5c00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    background-color: #255959;
+    color: #FFFFFF;
+    border-radius: 12px;
+    font-size: 30px;
 }
 
 .aprendizado-dica-titulo h2 {
-    color: #333;
-    font-size: 25px;
+    color: #FFFFFF;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .aprendizado-dica p {
-    color: #444;
-    font-size: 17px;
-    line-height: 1.7;
+    color: #F5E6D3;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: left;
+    max-width: 900px;
+    margin: 0;
 }
 
-
-/* =====================================
-   RESPONSIVIDADE
-===================================== */
-
+/* Responsividade */
 @media (max-width: 768px) {
 
     .aprendizado-main {
         width: 92%;
-        padding: 35px 0;
+        padding: 40px 0;
+    }
+
+    .aprendizado-introducao {
+        margin-bottom: 40px;
+        padding: 10px;
+    }
+
+    .aprendizado-introducao p {
+        font-size: 1.05rem;
+    }
+
+    .aprendizado-conteudo {
+        padding: 28px 25px;
+        margin-bottom: 25px;
     }
 
     .aprendizado-titulo-secao {
-        flex-direction: column;
-        text-align: center;
+        margin: -28px -25px 25px;
+        padding: 22px 25px;
+        gap: 13px;
     }
 
     .aprendizado-titulo-secao h2 {
+        font-size: 1.5rem;
+    }
+
+    .aprendizado-titulo-secao .material-symbols-outlined {
+        width: 45px;
+        height: 45px;
         font-size: 25px;
     }
 
-    .aprendizado-grid {
-        grid-template-columns: 1fr;
+    .aprendizado-conteudo p {
+        font-size: 1rem;
     }
 
-    .aprendizado-card {
-        padding: 25px 20px;
+    .aprendizado-conteudo h3 {
+        font-size: 1.1rem;
+    }
+
+    .aprendizado-conteudo ol li,
+    .aprendizado-conteudo ul li {
+        font-size: 0.98rem;
     }
 
     .aprendizado-dica {
-        padding: 20px;
+        padding: 35px 25px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .aprendizado-main {
+        width: 92%;
+        padding: 30px 0;
+    }
+
+    .aprendizado-introducao h2 {
+        font-size: 1.8rem;
+    }
+
+    .aprendizado-titulo-secao {
+        align-items: flex-start;
+        margin: -24px -18px 22px;
+        padding: 20px 18px;
+    }
+
+    .aprendizado-titulo-secao h2 {
+        font-size: 1.3rem;
+    }
+
+    .aprendizado-conteudo {
+        padding: 24px 18px;
+    }
+
+    .aprendizado-conteudo ol li {
+        padding-left: 42px;
+    }
+
+    .aprendizado-conteudo ul li {
+        padding-left: 34px;
+    }
+
+    .aprendizado-conteudo iframe {
+        border-radius: 8px;
+    }
+
+    .aprendizado-dica {
+        padding: 30px 18px;
     }
 
     .aprendizado-dica-titulo {
         align-items: flex-start;
+        gap: 12px;
     }
 
     .aprendizado-dica-titulo h2 {
-        font-size: 21px;
+        font-size: 1.4rem;
     }
 
+    .aprendizado-dica p {
+        font-size: 1rem;
+    }
 }

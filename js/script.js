@@ -1,5 +1,5 @@
 // 1. Aumentar e Diminuir Fonte
-let tamanhoAtualFonte = 100; // Porcentagem base
+let tamanhoAtualFonte = 100; 
 
 function alterarFonte(operacao) {
     if (operacao === 'aumentar' && tamanhoAtualFonte < 150) {
@@ -39,3 +39,4 @@ function lerTexto(texto) {
         alert('Seu navegador não suporta recurso de leitura de voz.');
     }
 }
+

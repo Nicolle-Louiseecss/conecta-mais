@@ -3,157 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ConectarMais | Segurança Financeira</title>
-
-    <link rel="stylesheet" href="ind.css">
+    <title>Segurança Financeira | Conecta+</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/financas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <header>
-        <h1>🛡️ ConectarMais</h1>
+    <!-- Acessibilidade -->
+    <div class="widget-acessibilidade">
+        <button class="btn-widget-acessibilidade" onclick="alternarMenuAcessibilidade()" aria-label="Abrir menu de acessibilidade">
+            <span class="material-symbols-outlined" style="font-size: 28px;">accessibility_new</span>
+        </button>
+        <div id="painel-acessibilidade" class="painel-acessibilidade">
+            <p>Opções de Acessibilidade</p>
+            <button onclick="alterarFonte('aumentar')">Aumentar Letra (A+)</button>
+            <button onclick="alterarFonte('diminuir')">Diminuir Letra (A-)</button>
+            <button onclick="alternarContraste()">Alto Contraste</button>
+        </div>
+    </div>
 
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#seguranca">Segurança</a>
-            <a href="#golpes">Golpes</a>
-            <a href="#dicas">Dicas</a>
+    <!-- Cabeçalho e navegação -->
+    <header class="topo">
+        <nav class="menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="btn-abrir-menu" aria-label="Abrir menu">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+            </label>
+            <div class="menu-links">
+                <label for="menu-toggle" class="btn-fechar-menu" aria-label="Fechar menu">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">close</span>
+                </label>
+                <ul>
+                    <li><a href="../index.html">INÍCIO</a></li>
+                    <li><a href="./acessibilidade.html">ACESSIBILIDADE</a></li>
+                    <li><a href="./sos.html">AJUDA</a></li>
+                    <li><a href="./sobre.html">SOBRE</a></li>
+                </ul>
+            </div>
         </nav>
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="Logo Conecta+">
+            <span>Conecta+</span>
+        </a>
+        <div class="banner-principal">
+            <h1>Proteja seu dinheiro e seus dados</h1>
+            <p>
+                Segurança financeira começa com informação. 
+                Aprenda a proteger seu dinheiro, suas contas bancárias e evitar fraudes e golpes na internet.
+            </p>
+            <a href="#guias-financas" class="btn-principal">
+                CONHEÇA NOSSAS DICAS
+            </a>
+        </div>
     </header>
 
-    <section id="inicio" class="banner">
+    <!-- Conteúdo principal -->
+    <main class="financas-main">
 
-        <div class="banner-conteudo">
+        <!-- Orientações de segurança financeira -->
+        <section class="financas-guias" id="guias-financas">
+            <div class="financas-titulo-secao">
+                <h2>Segurança Financeira</h2>
+                <p>O objetivo é garantir proteção, evitar prejuízos financeiros e proporcionar tranquilidade.</p>
+            </div>
 
-            <h2>Proteja seu dinheiro e seus dados</h2>
+            <div class="financas-grid">
+                <article class="financas-card">
+                    <div class="financas-card-barra">
+                        <i class="fa-solid fa-key" aria-hidden="true"></i>
+                        <h3>Senhas Seguras</h3>
+                    </div>
+                    <div class="financas-card-conteudo">
+                        <p>Crie barreiras fortes para impedir o acesso não autorizado às suas contas.</p>
+                        <ul>
+                            <li><strong>Fortaleça:</strong> Utilize senhas fortes, exclusivas e difíceis de descobrir.</li>
+                            <li><strong>Proteja:</strong> Evite informações pessoais e sequências simples.</li>
+                            <li><strong>Privacidade:</strong> Nunca compartilhe suas senhas bancárias.</li>
+                        </ul>
+                        <div class="financas-dica">
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                            <p><strong>Dica:</strong> Ative a autenticação em duas etapas e utilize um gerenciador de senhas confiável.</p>
+                        </div>
+                    </div>
+                </article>
 
-            <p>
-                Segurança financeira começa com informação.
-                Aprenda a proteger seu dinheiro e evitar fraudes.
-            </p>
+                <article class="financas-card">
+                    <div class="financas-card-barra">
+                        <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                        <h3>Proteção Bancária</h3>
+                    </div>
+                    <div class="financas-card-conteudo">
+                        <p>Acompanhe suas movimentações e faça transações com segurança.</p>
+                        <ul>
+                            <li><strong>Pix e Pagamentos:</strong> Confira o nome completo e os dados do destinatário antes de confirmar.</li>
+                            <li><strong>Aplicativos:</strong> Faça operações somente pelos apps oficiais e ative notificações de movimentação.</li>
+                            <li><strong>Conexão:</strong> Não acesse sua conta bancária em redes de Wi-Fi públicas.</li>
+                            <li><strong>Emergências:</strong> Bloqueie o cartão e ligue para o banco se perdê-lo ou notar compras estranhas.</li>
+                        </ul>
+                    </div>
+                </article>
 
-            <a href="#seguranca" class="botao">
-                Conheça nossas dicas
+                <article class="financas-card">
+                    <div class="financas-card-barra">
+                        <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+                        <h3>Segurança Digital</h3>
+                    </div>
+                    <div class="financas-card-conteudo">
+                        <p>Mantenha a porta de entrada dos seus aplicativos sempre protegida.</p>
+                        <p>
+                            Utilize apenas <strong>aplicativos oficiais</strong> baixados diretamente nas lojas do seu celular (Play Store ou App Store) e mantenha os seus dispositivos e sistemas sempre <strong>atualizados</strong>.
+                        </p>
+                        <div class="financas-dica">
+                            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                            <p><strong>Dica:</strong> Não compartilhe seus dados bancários, cartões ou senhas por aplicativos de mensagens.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="financas-card financas-card-alerta">
+                    <div class="financas-card-barra">
+                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <h3>Cuidado com golpes!</h3>
+                    </div>
+                    <div class="financas-card-conteudo">
+                        <p>Desconfie de links suspeitos, mensagens urgentes, pedidos de dinheiro e promessas de lucro fácil.</p>
+                        <ul>
+                            <li><strong>Falsas ligações:</strong> Bancos não pedem sua senha ou código de segurança por telefone.</li>
+                            <li><strong>Urgências:</strong> Nunca informe senhas ou códigos para desconhecidos que entram em contato de surpresa.</li>
+                        </ul>
+                        <div class="financas-alerta">
+                            <i class="fa-solid fa-mask" aria-hidden="true"></i>
+                            <p><strong>Atenção:</strong> Na dúvida, encerre o contato e procure a central de atendimento oficial da sua instituição.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Lista de cuidados importantes -->
+        <section class="financas-seguranca">
+            <div class="financas-seguranca-texto">
+                <h2>5 dicas para se proteger</h2>
+                <p>Siga esta lista de verificação no seu dia a dia para garantir a sua segurança financeira:</p>
+                <ul>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Use senhas fortes e exclusivas.</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Ative a autenticação em duas etapas.</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Não clique em links desconhecidos.</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Confira o destinatário antes de fazer um Pix.</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Acompanhe regularmente suas movimentações bancárias.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Encaminhamento para ajuda -->
+        <section class="financas-contato">
+            <h2>Aconteceu algum problema?</h2>
+            <p>Se você suspeita que caiu em um golpe ou clicou em um link perigoso, acesse nossa página de emergência para saber como agir rapidamente.</p>
+            <div class="financas-contato-botoes">
+                <a href="./sos.html" class="financas-btn">
+                    <i class="fa-solid fa-life-ring" aria-hidden="true"></i> Pedir ajuda agora
+                </a>
+                <a href="./cidadania.html" class="financas-btn financas-btn-secundario">
+                    <i class="fa-solid fa-users" aria-hidden="true"></i> Cidadania digital
+                </a>
+                <a href="../index.html" class="financas-btn financas-btn-secundario">
+                    <i class="fa-solid fa-house" aria-hidden="true"></i> Página inicial
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="rodape-topo">
+            <h2>Conectando pessoas ao mundo digital.</h2>
+            <a href="../index.html" class="logo-rodape">
+                <img src="../img/logo.png" alt="Conecta+ — Página inicial">
             </a>
-
         </div>
-
-        <h2>
-        <img src="html/images.jfif" alt="Trulli" width="700" height="400"> 
-        </h2>
-
-    </section>
-
-    <section id="seguranca" class="secao">
-
-        <h2>Segurança Financeira</h2>
-
-        <p class="descricao">
-            A segurança financeira é o conjunto de cuidados e práticas utilizados para proteger seu dinheiro, suas contas bancárias e seus dados pessoais contra golpes, fraudes e acessos não autorizados. Ela envolve utilizar senhas seguras, conferir pagamentos, evitar links suspeitos e acompanhar suas movimentações bancárias.
-        </p>
-        <p>
-            O objetivo é: garantir mais proteção, evitar prejuízos financeiros e proporcionar tranquilidade ao realizar operações e compras pela internet.
-        </p>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>🔐 Senhas Seguras</h3>
-
-                <p>
-                   - Utilize senhas fortes, exclusivas e difíceis de descobrir. 
-                </p>
-                <p>
-                    - Evite informações pessoais e sequências simples.
-                 </p>
-                 <p>
-                    - Nunca compartilhe suas senhas bancárias.
-                 </p>
-                 <p>
-                    - Ative a autenticação em duas etapas e utilize um gerenciador de senhas confiável para proteger suas informações.
-                 </p>
-            </div>
-
-            <div class="card">
-                <h3>💳 Proteção Bancária</h3>
-
-                <p>
-                    -Confira os dados antes de realizar transferências e pagamentos.
-                </p>
-                <p>
-                    -Confira o destinatário do Pix: antes de confirmar, verifique o nome completo e os dados de quem receberá o dinheiro.
-                </p>
-                <p>
-                    -Desconfie de ligações suspeitas: bancos não devem solicitar sua senha ou código de segurança por telefone.
-                </p>
-                <p>
-                    -Não compartilhe seus dados bancários: evite enviar número de cartão, senhas ou informações da conta por mensagens.
-                </p>
-                <p>
-                    -Utilize aplicativos oficiais: faça operações bancárias somente pelos aplicativos oficiais dos bancos.
-                </p>
-                <p>
-                    -Ative notificacoes bancarias: acompanhe as movimentações da sua conta e identifique transações desconhecidas.
-                </p>
-                <p>
-                    -Evite Wi-Fi publico: nao acesse sua conta bancaria em redes desconhecidas ou desprotegidas.
-                </p>
-                <p>
-                    -Bloqueie o cartao em caso de perda: entre em contato com o banco imediatamente se perder seu cartão ou perceber uma movimentação suspeita.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>📱 Seguranca Digital</h3>
-
-                <p>
-                    Utilize aplicativos oficiais e mantenha
-                    seus dispositivos atualizados.
-                </p>
-            </div>
-
+        <div class="rodape-links">
+            <nav aria-label="Aprendizado">
+                <h4>Aprendizado</h4>
+                <ul>
+                    <li><a href="./comunicacao.html">Comunicação</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                    <li><a href="./financas.html">Finanças</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Projeto">
+                <h4>Projeto</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre o Conecta+</a></li>
+                    <li><a href="./acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="./saude.html">Saúde</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ajuda">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="./sos.html">Precisa de ajuda?</a></li>
+                    <li><a href="./acessibilidade.html">Orientações</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Informações">
+                <h4>Informações</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                </ul>
+            </nav>
         </div>
-
-    </section>
-
-    <section id="golpes" class="golpes">
-
-        <h2>⚠️ Cuidado com golpes financeiros!</h2>
-
-        <p>
-            Desconfie de links suspeitos, mensagens urgentes,
-            pedidos de dinheiro e promessas de lucro facil.
-        </p>
-
-        <p>
-            Nunca informe senhas ou codigos de seguranca
-            para desconhecidos.
-        </p>
-
-    </section>
-
-    <section id="dicas" class="secao">
-
-        <h2>5 dicas para se proteger</h2>
-
-        <ul>
-            <li>Use senhas fortes e exclusivas.</li>
-            <li>Ative a autenticacao em duas etapas.</li>
-            <li>Nao clique em links desconhecidos.</li>
-            <li>Confira o destinatario antes de fazer um Pix.</li>
-            <li>Acompanhe regularmente suas movimentacoes bancarias.</li>
-        </ul>
-
-    </section>
-
-    <footer>
-
-        <p>🛡️ ConectarMais | Projeto de Seguranca Financeira</p>
-
-        <p>Protegendo seu dinheiro com informacao.</p>
-
+        <div class="rodape-direitos">
+            <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
+            <div class="redes-sociais">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

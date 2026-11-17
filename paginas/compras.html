@@ -3,107 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compras Conscientes na Internet</title>
-    <link rel="stylesheet" href="ind.css">
+    <title>Compras Online | Conecta+</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/compras.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-        <h1>Conectar +</h1>
-        <p>Tecnologia, autonomia e segurança para todos.</p>
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#comprar">Como comprar</a>
-            <a href="#confiavel">Lojas confiáveis</a>
-            <a href="#precos">Comparar preços</a>
-            <a href="#golpes">Evitar golpes</a>
+
+    <!-- Acessibilidade -->
+    <div class="widget-acessibilidade">
+        <button class="btn-widget-acessibilidade" onclick="alternarMenuAcessibilidade()" aria-label="Abrir menu de acessibilidade">
+            <span class="material-symbols-outlined" style="font-size: 28px;">accessibility_new</span>
+        </button>
+        <div id="painel-acessibilidade" class="painel-acessibilidade">
+            <p>Opções de Acessibilidade</p>
+            <button onclick="alterarFonte('aumentar')">Aumentar Letra (A+)</button>
+            <button onclick="alterarFonte('diminuir')">Diminuir Letra (A-)</button>
+            <button onclick="alternarContraste()">Alto Contraste</button>
+        </div>
+    </div>
+
+    <!-- Cabeçalho e navegação -->
+    <header class="topo">
+        <nav class="menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="btn-abrir-menu" aria-label="Abrir menu">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+            </label>
+            <div class="menu-links">
+                <label for="menu-toggle" class="btn-fechar-menu" aria-label="Fechar menu">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">close</span>
+                </label>
+                <ul>
+                    <li><a href="../index.html">INÍCIO</a></li>
+                    <li><a href="./acessibilidade.html">ACESSIBILIDADE</a></li>
+                    <li><a href="./sos.html">AJUDA</a></li>
+                    <li><a href="./sobre.html">SOBRE</a></li>
+                </ul>
+            </div>
         </nav>
-    </header>
-    <main>
-        <section id="inicio" class="banner">
-            <h2>Compras Conscientes na Internet</h2>
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="Logo Conecta+">
+            <span>Conecta+</span>
+        </a>
+        <div class="banner-principal" id="inicio">
+            <h1>Compras conscientes na internet</h1>
             <p>
                 Aprenda a comprar pela internet com tranquilidade,
                 segurança e confiança. Conheça seus direitos e evite
                 cair em golpes durante suas compras online.
             </p>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="compras-main">
+
+        <!-- Navegação interna -->
+        <nav class="compras-navegacao" aria-label="Navegação desta página">
+            <a href="#comprar">Como comprar</a>
+            <a href="#confiavel">Lojas confiáveis</a>
+            <a href="#precos">Comparar preços</a>
+            <a href="#trocas">Trocas e devoluções</a>
+            <a href="#golpes">Evitar golpes</a>
+        </nav>
+
+        <!-- Como comprar em lojas virtuais -->
+        <section id="comprar" class="compras-secao compras-comprar">
+            <div class="compras-comprar-layout">
+                <img src="../img/compras.png" alt="Imagem ilustrativa sobre compras pela internet" class="compras-imagem">
+                <div class="compras-comprar-conteudo">
+                    <h2>1. Como comprar em lojas virtuais?</h2>
+                    <p>
+                        Comprar pela internet pode ser fácil e prático.
+                        Basta seguir alguns cuidados antes de finalizar
+                        uma compra.
+                    </p>
+                    <ul class="compras-lista">
+                        <li>Escolha o produto: procure o produto que deseja comprar e leia atentamente todas as informações disponíveis.</li>
+                        <li>Confira os detalhes: verifique o tamanho, modelo, cor, quantidade e descrição para ter certeza de que está escolhendo o produto correto.</li>
+                        <li>Verifique a loja: pesquise a reputação do estabelecimento, consulte avaliações de outros compradores e confirme se o site é verdadeiro.</li>
+                        <li>Confira o preço: observe o valor do produto, o frete e possíveis taxas adicionais. Compare os preços em outras lojas antes de decidir.</li>
+                        <li>Verifique a entrega: confira o prazo de entrega, o endereço cadastrado e as condições de recebimento do produto.</li>
+                        <li>Escolha o pagamento: utilize formas de pagamento confiáveis e confira todos os dados antes de confirmar a transação.</li>
+                        <li>Guarde o comprovante e o número do pedido.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section id="comprar" class="secao">
+        <!-- Como identificar lojas confiáveis -->
+        <section id="confiavel" class="compras-secao">
+            <div class="compras-titulo-secao">
+                <h2>2. Como identificar uma loja confiável?</h2>
+                <p>
+                    Antes de realizar uma compra pela internet, é fundamental verificar se a loja realmente existe, se possui boa reputação e se oferece segurança aos consumidores. Existem muitos sites falsos que imitam lojas conhecidas para enganar compradores, roubar dados pessoais e receber pagamentos sem entregar os produtos.
+                </p>
+                <p>
+                    Para evitar golpes e prejuízos financeiros, siga estas orientações:
+                </p>
+            </div>
 
-            <img src="html/b63df586-d51f-41c0-b6da-b78bc0f1ee5b.png" alt="centro" class="imegem"  height="590">
-
-            <h2>1. Como comprar em lojas virtuais?</h2>
-
-            <p>
-                Comprar pela internet pode ser fácil e prático.
-                Basta seguir alguns cuidados antes de finalizar
-                uma compra.
-            </p>
-
-            <ul>
-                <li>Escolha o produto: procure o produto que deseja comprar e leia atentamente todas as informações disponíveis.</li>
-                <li>Confira os detalhes: verifique o tamanho, modelo, cor, quantidade e descrição para ter certeza de que está escolhendo o produto correto.</li>
-                <li>Verifique a loja: pesquise a reputação do estabelecimento, consulte avaliações de outros compradores e confirme se o site é verdadeiro.</li>
-                <li>Confira o preço: observe o valor do produto, o frete e possíveis taxas adicionais. Compare os preços em outras lojas antes de decidir.</li>
-                <li>Verifique a entrega: confira o prazo de entrega, o endereço cadastrado e as condições de recebimento do produto.</li>
-                <li>Escolha o pagamento: utilize formas de pagamento confiáveis e confira todos os dados antes de confirmar a transação.</li>
-                <li>Guarde o comprovante e o número do pedido.</li>
-            </ul>
-            
-        </section>
-            
-        <section id="confiavel" class="secao">
-            <h2>2. Como identificar uma loja confiável?</h2>
-
-            <p>
-                Antes de realizar uma compra pela internet, é fundamental verificar se a loja realmente existe, se possui boa reputação e se oferece segurança aos consumidores. Existem muitos sites falsos que imitam lojas conhecidas para enganar compradores, roubar dados pessoais e receber pagamentos sem entregar os produtos.
-
-            </p>
-            <p>
-                Para evitar golpes e prejuízos financeiros, siga estas orientações:
-             </p>
-
-            <div class="cartoes">
-                <article class="cartao">
+            <div class="compras-cartoes">
+                <article class="compras-cartao">
+                    <div class="compras-cartao-icone">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    </div>
                     <h3>Confira o endereço do site</h3>
                     <p>
                         Observe se o endereço está escrito corretamente e se utiliza conexão segura (https).
                     </p>
-
                 </article>
 
-                <article class="cartao">
+                <article class="compras-cartao">
+                    <div class="compras-cartao-icone">
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    </div>
                     <h3>Pesquise a reputação</h3>
                     <p>
                         Procure avaliações de outros consumidores e reclamações sobre a loja.
                     </p>
                 </article>
 
-                <article class="cartao">
+                <article class="compras-cartao">
+                    <div class="compras-cartao-icone">
+                        <i class="fa-solid fa-headset" aria-hidden="true"></i>
+                    </div>
                     <h3>Verifique os contatos</h3>
                     <p>
                         Uma loja confiável deve apresentar informações de atendimento, endereço e identificação da empresa.
                     </p>
                 </article>
-            
 
-                <article class="cartao">
-                    <h3> Leia as políticas</h3>
+                <article class="compras-cartao">
+                    <div class="compras-cartao-icone">
+                        <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+                    </div>
+                    <h3>Leia as políticas</h3>
                     <p>
-                         Confira as condições de troca, devolução, reembolso, cancelamento e prazo de entrega antes de finalizar sua compra.
+                        Confira as condições de troca, devolução, reembolso, cancelamento e prazo de entrega antes de finalizar sua compra.
                     </p>
                 </article>
             </div>
+        </section>
 
-        <section id="precos" class="secao">
+        <!-- Comparação de preços -->
+        <section id="precos" class="compras-secao">
             <h2>3. Como comparar preços?</h2>
-
             <p>
                 Não compre o primeiro produto que encontrar.
                 Pesquisar em diferentes lojas ajuda a economizar dinheiro.
             </p>
-
-            <ul>
+            <ul class="compras-lista compras-lista-precos">
                 <li>Compare o preço do mesmo produto em várias lojas.</li>
                 <li>Observe o valor do frete.</li>
                 <li>Confira se o produto é novo ou usado.</li>
@@ -112,33 +168,42 @@
             </ul>
         </section>
 
-        <section class="secao">
-            <h2>4. Consulte as políticas de troca e devolução</h2>
-
-            <p>
-                Antes de finalizar uma compra, leia as regras da loja.
-                Em compras feitas pela internet, o consumidor geralmente
-                tem até 7 dias, contados do recebimento do produto ou da
-                assinatura do contrato, para exercer o direito de
-                arrependimento, conforme o Código de Defesa do Consumidor.
-            </p>
-
-            <p>
-                Verifique também como solicitar a troca, a devolução
-                e o reembolso.
-            </p>
+        <!-- Políticas de troca e devolução -->
+        <section id="trocas" class="compras-secao compras-trocas">
+            <div class="compras-trocas-icone">
+                <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+            </div>
+            <div class="compras-trocas-conteudo">
+                <h2>4. Consulte as políticas de troca e devolução</h2>
+                <p>
+                    Antes de finalizar uma compra, leia as regras da loja.
+                    Em compras feitas pela internet, o consumidor geralmente
+                    tem até 7 dias, contados do recebimento do produto ou da
+                    assinatura do contrato, para exercer o direito de
+                    arrependimento, conforme o Código de Defesa do Consumidor.
+                </p>
+                <p>
+                    Verifique também como solicitar a troca, a devolução
+                    e o reembolso.
+                </p>
+            </div>
         </section>
 
-        <section id="golpes" class="secao">
-            <h2>5. Como identificar promoções fraudulentas?</h2>
+        <!-- Identificação de golpes -->
+        <section id="golpes" class="compras-secao">
+            <div class="compras-titulo-secao">
+                <h2>5. Como identificar promoções fraudulentas?</h2>
+                <p>
+                    Golpistas podem criar ofertas falsas para enganar
+                    consumidores e roubar dinheiro ou dados pessoais.
+                </p>
+            </div>
 
-            <p>
-                Golpistas podem criar ofertas falsas para enganar
-                consumidores e roubar dinheiro ou dados pessoais.
-            </p>
-
-            <div class="cartoes">
-                <article class="cartao alerta">
+            <div class="compras-cartoes">
+                <article class="compras-cartao compras-cartao-alerta">
+                    <div class="compras-cartao-icone">
+                        <i class="fa-solid fa-tags" aria-hidden="true"></i>
+                    </div>
                     <h3>Preços muito baixos</h3>
                     <p>
                         Desconfie de produtos vendidos por valores
@@ -146,7 +211,10 @@
                     </p>
                 </article>
 
-                <article class="cartao alerta">
+                <article class="compras-cartao compras-cartao-alerta">
+                    <div class="compras-cartao-icone">
+                        <i class="fa-solid fa-link" aria-hidden="true"></i>
+                    </div>
                     <h3>Links suspeitos</h3>
                     <p>
                         Evite clicar em links recebidos por mensagens
@@ -154,7 +222,10 @@
                     </p>
                 </article>
 
-                <article class="cartao alerta">
+                <article class="compras-cartao compras-cartao-alerta">
+                    <div class="compras-cartao-icone">
+                        <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                    </div>
                     <h3>Pressa para pagar</h3>
                     <p>
                         Desconfie de mensagens que dizem que a oferta
@@ -162,7 +233,10 @@
                     </p>
                 </article>
 
-                <article class="cartao alerta">
+                <article class="compras-cartao compras-cartao-alerta">
+                    <div class="compras-cartao-icone">
+                        <i class="fa-solid fa-user-secret" aria-hidden="true"></i>
+                    </div>
                     <h3>Perfis falsos</h3>
                     <p>
                         Confira se o perfil da loja é oficial antes
@@ -172,20 +246,23 @@
             </div>
         </section>
 
-        <section class="secao dicas">
-            <h2>6. Dicas para comprar com segurança</h2>
-
-            <ul>
-                <li>Não compartilhe senhas ou códigos de segurança.</li>
-                <li>Evite fazer compras usando redes Wi-Fi públicas.</li>
-                <li>Prefira aplicativos e sites oficiais.</li>
-                <li>Não faça pagamentos antes de verificar a loja.</li>
-                <li>Peça ajuda a alguém de confiança se tiver dúvidas.</li>
-                <li>Guarde notas fiscais e comprovantes.</li>
-            </ul>
+        <!-- Dicas para comprar com segurança -->
+        <section class="compras-dicas">
+            <div class="compras-dicas-conteudo">
+                <h2>6. Dicas para comprar com segurança</h2>
+                <ul>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Não compartilhe senhas ou códigos de segurança.</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Evite fazer compras usando redes Wi-Fi públicas.</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Prefira aplicativos e sites oficiais.</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Não faça pagamentos antes de verificar a loja.</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Peça ajuda a alguém de confiança se tiver dúvidas.</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Guarde notas fiscais e comprovantes.</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="mensagem">
+        <!-- Mensagem final -->
+        <section class="compras-mensagem">
             <h2>Comprar com segurança é um direito!</h2>
             <p>
                 A internet pode facilitar sua vida. Com informação
@@ -193,13 +270,58 @@
                 com mais autonomia, confiança e independência.
             </p>
         </section>
-
     </main>
 
-    <footer>
-        <p>Conecta + | Projeto de Inclusão Digital</p>
-        <p>Aprender tecnologia é conquistar independência!</p>
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="rodape-topo">
+            <h2>Conectando pessoas ao mundo digital.</h2>
+            <a href="../index.html" class="logo-rodape">
+                <img src="../img/logo.png" alt="Conecta+ — Página inicial">
+            </a>
+        </div>
+        <div class="rodape-links">
+            <nav aria-label="Aprendizado">
+                <h4>Aprendizado</h4>
+                <ul>
+                    <li><a href="./comunicacao.html">Comunicação</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                    <li><a href="./financas.html">Finanças</a></li>
+                    <li><a href="./compras.html">Compras online</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Projeto">
+                <h4>Projeto</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre o Conecta+</a></li>
+                    <li><a href="./acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="./saude.html">Saúde</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ajuda">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="./sos.html">Precisa de ajuda?</a></li>
+                    <li><a href="./acessibilidade.html">Orientações</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Informações">
+                <h4>Informações</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="rodape-direitos">
+            <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
+            <div class="redes-sociais">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

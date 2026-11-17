@@ -1,3 +1,5 @@
+
+/* Estrutura principal */
 .mobilidade-main {
     max-width: 1200px;
     width: 90%;
@@ -6,12 +8,38 @@
     font-family: 'Nunito', sans-serif;
 }
 
+/* Introdução */
 .mobilidade-introducao {
     text-align: center;
     margin-bottom: 60px;
+    padding: 15px 20px;
 }
 
-.mobilidade-titulo-secao {
+.mobilidade-introducao .mobilidade-titulo-secao {
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mobilidade-introducao .mobilidade-titulo-secao h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #153F3F;
+}
+
+.mobilidade-introducao p,
+.mobilidade-descricao {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #5C4A40;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Seção de guias */
+.mobilidade-guias {
+    margin-bottom: 60px;
+}
+
+.mobilidade-guias > .mobilidade-titulo-secao {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,37 +47,25 @@
     margin-bottom: 20px;
 }
 
-.mobilidade-titulo-secao h2 {
-    font-size: 32px;
-    color: #222;
-}
-
-.mobilidade-introducao p,
-.mobilidade-descricao {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #555;
-    max-width: 850px;
-    margin: 0 auto;
+.mobilidade-guias > .mobilidade-titulo-secao h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: #153F3F;
 }
 
 .mobilidade-icone {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-    background-color: #680E0E;
-    border-radius: 50%;
+    color: #FFFFFF;
+    background-color: #153F3F;
+    border-radius: 12px;
     width: 55px;
     height: 55px;
+    flex-shrink: 0;
 }
 
 .mobilidade-icone .material-symbols-outlined {
     font-size: 30px;
-}
-
-.mobilidade-guias {
-    margin-bottom: 60px;
 }
 
 .mobilidade-descricao {
@@ -57,63 +73,76 @@
     margin-bottom: 35px;
 }
 
+/* Cards dos guias */
 .mobilidade-card {
-    background-color: #ffffff;
-    border-radius: 18px;
+    background-color: #F5E6D3;
+    border: 1px solid #E8D7C4;
+    border-radius: 16px;
     padding: 35px;
     margin-bottom: 35px;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(43, 33, 28, 0.09);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.mobilidade-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(43, 33, 28, 0.13);
+}
+
+/* Cabeçalho dos guias */
 .mobilidade-card-cabecalho {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid #eeeeee;
-    padding-bottom: 20px;
-    margin-bottom: 25px;
+    background-color: #153F3F;
+    margin: -35px -35px 28px;
+    padding: 22px 35px;
+    border-bottom: 5px solid #BF6B21;
 }
 
 .mobilidade-card-icone {
     font-size: 35px;
-    color: #680E0E;
+    color: #F5E6D3;
 }
 
 .mobilidade-card-tag {
-    background-color: #f4e5e5;
-    color: #680E0E;
-    padding: 8px 16px;
+    background-color: #BF6B21;
+    color: #FFFFFF;
+    padding: 8px 17px;
     border-radius: 20px;
+    font-size: 0.9rem;
     font-weight: 800;
 }
 
+/* Textos dos guias */
 .mobilidade-card-corpo h3 {
-    font-size: 26px;
-    color: #222;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    color: #153F3F;
     margin-bottom: 15px;
 }
 
 .mobilidade-card-corpo h4 {
-    font-size: 21px;
-    color: #680E0E;
+    font-size: 1.2rem;
+    color: #153F3F;
     margin: 30px 0 20px;
+    padding-left: 13px;
+    border-left: 4px solid #BF6B21;
 }
 
 .mobilidade-card-corpo p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #5C4A40;
+    text-align: left;
+    margin-bottom: 15px;
 }
 
-
-/* =====================================
-   PASSOS E IMAGENS
-===================================== */
-
+/* Passos e imagens */
 .mobilidade-passos-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
+    gap: 22px;
     margin-top: 25px;
 }
 
@@ -121,32 +150,39 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #f8f8f8;
+    background-color: #E8D7C4;
+    border: 1px solid #D6C3AA;
     border-radius: 14px;
-    padding: 20px;
+    padding: 22px;
     min-width: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobilidade-passo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 14px rgba(43, 33, 28, 0.10);
 }
 
 .mobilidade-numero {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #680E0E;
-    color: #ffffff;
+    background-color: #153F3F;
+    color: #FFFFFF;
     font-weight: 800;
     font-size: 18px;
     width: 38px;
     height: 38px;
     border-radius: 50%;
     flex-shrink: 0;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .mobilidade-passo p {
     min-height: 55px;
     margin-bottom: 15px;
     font-weight: 700;
-    color: #333;
+    color: #2B211C;
 }
 
 .mobilidade-passo img {
@@ -154,23 +190,22 @@
     width: 100%;
     height: 280px;
     object-fit: contain;
-    background-color: #eeeeee;
-    border: 2px solid #ddd;
+    background-color: #FFF8EF;
+    border: 2px solid #D6C3AA;
     border-radius: 10px;
     cursor: zoom-in;
     transition: transform 0.3s ease;
 }
 
 .mobilidade-passo img:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
-
-
+/* Street View */
 .mobilidade-street-view {
     margin-top: 45px;
-    padding-top: 25px;
-    border-top: 2px solid #eeeeee;
+    padding-top: 30px;
+    border-top: 2px solid #D6C3AA;
 }
 
 .mobilidade-video {
@@ -178,46 +213,70 @@
     width: 100%;
     aspect-ratio: 16 / 9;
     margin: 25px 0;
+    background-color: #153F3F;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(43, 33, 28, 0.12);
 }
 
 .mobilidade-video iframe {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 14px;
 }
 
-
-
+/* Listas de informações */
 .mobilidade-lista {
-    padding-left: 30px;
+    padding: 0;
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
 }
 
 .mobilidade-lista li {
-    font-size: 17px;
+    position: relative;
+    font-size: 1rem;
     line-height: 1.8;
-    color: #444;
-    margin-bottom: 8px;
+    color: #2B211C;
+    background-color: #FFF8EF;
+    border-left: 4px solid #BF6B21;
+    border-radius: 8px;
+    padding: 12px 15px 12px 40px;
 }
 
+.mobilidade-lista li::before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 22px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #153F3F;
+}
+
+/* Blocos de informações */
 .mobilidade-informacoes {
-    background-color: #f8f8f8;
-    padding: 20px 25px;
-    border-radius: 14px;
+    background-color: #E8D7C4;
+    border-left: 5px solid #153F3F;
+    padding: 22px 25px;
+    border-radius: 12px;
     margin-top: 35px;
 }
 
-
+/* Segurança */
 .mobilidade-seguranca {
     margin-bottom: 40px;
 }
 
 .mobilidade-alerta {
-    background-color: #fff5e5;
-    border-left: 6px solid #d18b20;
-    padding: 30px;
-    border-radius: 12px;
+    background-color: #153F3F;
+    border-left: 7px solid #BF6B21;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(43, 33, 28, 0.10);
 }
 
 .mobilidade-alerta-titulo {
@@ -228,48 +287,66 @@
 }
 
 .mobilidade-alerta-titulo .material-symbols-outlined {
-    font-size: 36px;
-    color: #9b5c00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    background-color: #BF6B21;
+    color: #FFFFFF;
+    border-radius: 12px;
+    font-size: 30px;
 }
 
 .mobilidade-alerta-titulo h2 {
-    color: #333;
-    font-size: 25px;
+    color: #FFFFFF;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
 }
 
 .mobilidade-alerta p {
-    color: #444;
-    font-size: 17px;
-    line-height: 1.7;
+    color: #F5E6D3;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: left;
     margin-bottom: 12px;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
 
     .mobilidade-main {
         width: 92%;
-        padding: 35px 0;
+        padding: 40px 0;
     }
 
-    .mobilidade-titulo-secao {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .mobilidade-titulo-secao h2 {
-        font-size: 25px;
+    .mobilidade-introducao {
+        margin-bottom: 40px;
     }
 
     .mobilidade-card {
-        padding: 22px;
+        padding: 28px 25px;
+    }
+
+    .mobilidade-card-cabecalho {
+        margin: -28px -25px 25px;
+        padding: 22px 25px;
     }
 
     .mobilidade-card-corpo h3 {
-        font-size: 22px;
+        font-size: 1.4rem;
+    }
+
+    .mobilidade-card-corpo p {
+        font-size: 1rem;
     }
 
     .mobilidade-passos-grid {
-        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .mobilidade-passo {
+        padding: 18px;
     }
 
     .mobilidade-passo img {
@@ -283,15 +360,78 @@
     }
 
     .mobilidade-alerta {
-        padding: 20px;
+        padding: 28px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .mobilidade-main {
+        width: 92%;
+        padding: 30px 0;
+    }
+
+    .mobilidade-guias > .mobilidade-titulo-secao {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mobilidade-guias > .mobilidade-titulo-secao h2 {
+        font-size: 1.5rem;
+    }
+
+    .mobilidade-card {
+        padding: 24px 18px;
+    }
+
+    .mobilidade-card-cabecalho {
+        margin: -24px -18px 22px;
+        padding: 20px 18px;
+    }
+
+    .mobilidade-card-icone {
+        font-size: 30px;
+    }
+
+    .mobilidade-card-tag {
+        font-size: 0.8rem;
+        padding: 7px 13px;
+    }
+
+    .mobilidade-card-corpo h3 {
+        font-size: 1.3rem;
+    }
+
+    .mobilidade-card-corpo h4 {
+        font-size: 1.1rem;
+    }
+
+    .mobilidade-passos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mobilidade-passo img {
+        max-height: 320px;
+    }
+
+    .mobilidade-informacoes {
+        padding: 20px 16px;
+    }
+
+    .mobilidade-alerta {
+        padding: 24px 18px;
     }
 
     .mobilidade-alerta-titulo {
         align-items: flex-start;
+        gap: 12px;
     }
 
     .mobilidade-alerta-titulo h2 {
-        font-size: 21px;
+        font-size: 1.3rem;
     }
 
+    .mobilidade-alerta p {
+        font-size: 1rem;
+    }
 }

@@ -3,38 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convivência e Participação Social | Conecta+</title>
+    <title> Convivência Social | Conecta+</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/convivencia.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Conecta+</h1>
-        <p>Tecnologia para uma vida mais independente.</p>
-        <a href="../index.html">Voltar à página inicial</a>
+
+    <!-- Acessibilidade -->
+    <div class="widget-acessibilidade">
+        <button class="btn-widget-acessibilidade" onclick="alternarMenuAcessibilidade()" aria-label="Abrir menu de acessibilidade">
+            <span class="material-symbols-outlined" style="font-size: 28px;">accessibility_new</span>
+        </button>
+        <div id="painel-acessibilidade" class="painel-acessibilidade">
+            <p>Opções de Acessibilidade</p>
+            <button onclick="alterarFonte('aumentar')">Aumentar Letra (A+)</button>
+            <button onclick="alterarFonte('diminuir')">Diminuir Letra (A-)</button>
+            <button onclick="alternarContraste()">Alto Contraste</button>
+        </div>
+    </div>
+
+    <!-- Cabeçalho e navegação -->
+    <header class="topo">
+        <nav class="menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="btn-abrir-menu" aria-label="Abrir menu">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+            </label>
+            <div class="menu-links">
+                <label for="menu-toggle" class="btn-fechar-menu" aria-label="Fechar menu">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">close</span>
+                </label>
+                <ul>
+                    <li><a href="../index.html">INÍCIO</a></li>
+                    <li><a href="./acessibilidade.html">ACESSIBILIDADE</a></li>
+                    <li><a href="./sos.html">AJUDA</a></li>
+                    <li><a href="./sobre.html">SOBRE</a></li>
+                </ul>
+            </div>
+        </nav>
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="Logo Conecta+">
+            <span>Conecta+</span>
+        </a>
+        <div class="banner-principal" id="inicio">
+            <h1>Convivência e participação social</h1>
+            <p>
+                Que tal conhecer pessoas que gostam das mesmas coisas que você?
+                Pelo celular ou computador, você pode descobrir grupos no seu bairro,
+                escolher um passeio e combinar sua participação antes de sair de casa.
+            </p>
+        </div>
     </header>
-    <main>
-        <h2>Convivência e Participação Social</h2>
-        <p>
-            A tecnologia também pode aproximar pessoas.
-            Descubra como participar de comunidades, conhecer
-            iniciativas sociais e manter contato com pessoas
-            que compartilham seus interesses.
-        </p>
-        <h2>Como participar?</h2>
-        <ul>
-            <li>Participar de grupos sobre assuntos de seu interesse.</li>
-            <li>Acompanhar eventos e atividades da sua comunidade.</li>
-            <li>Conhecer projetos sociais e oportunidades de voluntariado.</li>
-            <li>Compartilhar experiências e conhecimentos com outras pessoas.</li>
-            <li>Participar de encontros virtuais com familiares e amigos.</li>
-        </ul>
-        <h2>Convivência segura</h2>
-        <p>
-            Seja respeitoso nas conversas, proteja suas informações
-            pessoais e tenha cuidado ao interagir com desconhecidos.
-            Você não precisa compartilhar dados privados para fazer
-            parte de uma comunidade.
-        </p>
+
+    <main class="convivencia-main">
+
+        <!-- Atividades e possibilidades -->
+        <section class="convivencia-secao">
+
+            <div class="acessibilidade-titulo">
+                <span class="acessibilidade-icone" aria-hidden="true">
+                    <i class="fa-solid fa-location-dot"></i>
+                </span>
+
+                <h2>O que você gostaria de fazer?</h2>
+            </div>
+
+            <p class="acessibilidade-descricao">
+                Comece por uma atividade de que você já gosta ou por algo que sempre quis experimentar.
+            </p>
+
+            <div class="grid-cards">
+
+                <!-- Card 1 -->
+                <article class="card-conecta">
+                    <div class="card-barra">
+                        <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                        <h3>Encontrar um grupo</h3>
+                    </div>
+
+                    <div class="card-conteudo">
+                        <p>
+                            Gosta de caminhar, jogar xadrez ou fazer crochê?
+                            Pesquise no Google o nome da atividade junto com o seu bairro.
+                            Por exemplo, <strong>“grupo de caminhada em Taguatinga”</strong>.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card-conecta">
+                    <div class="card-barra">
+                        <i class="fa-solid fa-masks-theater" aria-hidden="true"></i>
+                        <h3>Fazer um passeio cultural</h3>
+                    </div>
+
+                    <div class="card-conteudo">
+                        <p>
+                            Procure a página de uma biblioteca, teatro ou centro cultural
+                            da sua cidade. Abra a seção <strong>Agenda</strong> ou
+                            <strong>Programação</strong> para ver as próximas rodas de
+                            leitura, peças e exposições.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card-conecta">
+                    <div class="card-barra">
+                        <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                        <h3>Participar de eventos do bairro</h3>
+                    </div>
+
+                    <div class="card-conteudo">
+                        <p>
+                            Consulte a página da associação de moradores, da prefeitura
+                            ou da administração regional. Procure feiras, festas e
+                            encontros comunitários. Confira a data e o ano do anúncio
+                            para saber se o evento ainda vai acontecer.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card-conecta">
+                    <div class="card-barra">
+                        <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+                        <h3>Colaborar com a comunidade</h3>
+                    </div>
+
+                    <div class="card-conteudo">
+                        <p>
+                            Você pode cuidar de uma horta comunitária, ajudar em uma
+                            campanha de doações ou ensinar um ofício que conhece.
+                            Entre em contato com quem organiza o projeto e pergunte
+                            como participar e quanto tempo a atividade costuma durar.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Como participar -->
+        <section class="convivencia-secao">
+
+            <div class="acessibilidade-titulo">
+                <span class="acessibilidade-icone" aria-hidden="true">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </span>
+
+                <h2>Como participar pela primeira vez</h2>
+            </div>
+
+            <p class="acessibilidade-descricao">
+                Depois de escolher uma atividade, alguns cuidados simples ajudam
+                a organizar sua participação.
+            </p>
+
+            <div class="grid-atalhos">
+
+                <article class="box-atalho">
+                    <span class="atalho-numero">01</span>
+
+                    <h3>Confira os detalhes</h3>
+
+                    <p>
+                        Veja o dia, o horário e o endereço. Confira se a atividade
+                        é gratuita e se você precisa se inscrever com antecedência.
+                    </p>
+                </article>
+
+                <article class="box-atalho">
+                    <span class="atalho-numero">02</span>
+
+                    <h3>Fale com quem organiza</h3>
+
+                    <p>
+                        Use o telefone ou envie uma mensagem pelo contato publicado
+                        na página da organização. Se precisar, pergunte sobre bancos
+                        para sentar, banheiros ou acesso por rampa.
+                    </p>
+                </article>
+
+                <article class="box-atalho">
+                    <span class="atalho-numero">03</span>
+
+                    <h3>Combine sua ida</h3>
+
+                    <p>
+                        Anote o endereço e o horário em um lugar fácil de consultar.
+                        Se quiser companhia no primeiro encontro, convide alguém para ir
+                        com você.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Mensagem para contato -->
+        <section class="convivencia-secao convivencia-mensagem">
+
+            <div class="acessibilidade-titulo">
+                <span class="acessibilidade-icone" aria-hidden="true">
+                    <i class="fa-solid fa-message"></i>
+                </span>
+
+                <h2>Uma mensagem para começar a conversa</h2>
+            </div>
+
+            <p class="acessibilidade-descricao">
+                Você pode copiar esta mensagem e trocar “roda de leitura” pelo
+                nome da atividade que escolheu.
+            </p>
+
+            <blockquote class="box-mensagem">
+
+                <p id="mensagem-convivencia">
+                    Olá! Vi o convite para a roda de leitura e gostaria de participar
+                    pela primeira vez. Quando e onde será o próximo encontro?
+                    Preciso fazer inscrição ou levar alguma coisa?
+                </p>
+
+                <button
+                    type="button"
+                    class="botao-copiar"
+                    onclick="copiarMensagem()"
+                >
+                    <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                    Copiar mensagem
+                </button>
+
+                <span id="aviso-copia" class="aviso-copia" role="status" aria-live="polite"></span>
+
+            </blockquote>
+        </section>
+
     </main>
+<!-- Rodapé -->
+    <footer class="rodape">
+        <div class="rodape-topo">
+            <h2>Conectando pessoas ao mundo digital.</h2>
+            <a href="../index.html" class="logo-rodape">
+                <img src="../img/logo.png" alt="Conecta+ — Página inicial">
+            </a>
+        </div>
+        <div class="rodape-links">
+            <nav aria-label="Aprendizado">
+                <h4>Aprendizado</h4>
+                <ul>
+                    <li><a href="./comunicacao.html">Comunicação</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                    <li><a href="./financas.html">Finanças</a></li>
+                    <li><a href="./compras.html">Compras online</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Projeto">
+                <h4>Projeto</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre o Conecta+</a></li>
+                    <li><a href="./acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="./saude.html">Saúde</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ajuda">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="./sos.html">Precisa de ajuda?</a></li>
+                    <li><a href="./acessibilidade.html">Orientações</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Informações">
+                <h4>Informações</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="rodape-direitos">
+            <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
+            <div class="redes-sociais">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para copiar a mensagem -->
+    <script>
+        function copiarMensagem() {
+            const mensagem = document.getElementById("mensagem-convivencia").innerText;
+            const aviso = document.getElementById("aviso-copia");
+
+            navigator.clipboard.writeText(mensagem).then(() => {
+                aviso.textContent = "Mensagem copiada com sucesso!";
+            }).catch(() => {
+                aviso.textContent = "Não foi possível copiar a mensagem.";
+            });
+        }
+    </script>
+
+    <script src="../js/script.js"></script>
+
 </body>
 </html>

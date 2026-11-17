@@ -18,7 +18,7 @@
     box-sizing: border-box;
 }
 
-/* Titulo da secao */
+/* Secao: Titulo */
 .sobre-titulo {
     display: flex;
     align-items: center;
@@ -59,7 +59,7 @@
     text-align: left;
 }
 
-/* Secao Destaque Assimetrico */
+/* Secao: Destaque */
 .sobre-secao-destaque {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -130,7 +130,7 @@
     line-height: 1.5;
 }
 
-/* Linha do Tempo (Timeline) */
+/* Secao: Linha do Tempo */
 .timeline {
     position: relative;
     padding-left: 35px;
@@ -197,7 +197,7 @@
     text-align: left;
 }
 
-/* Grid Equipe / Membros */
+/* Secao: Grid Equipe */
 .grid-equipe {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

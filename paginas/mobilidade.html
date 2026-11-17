@@ -1,44 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mobilidade e Localização | Conecta+</title>
-
+    <title>Mobilidade | Conecta+</title>
     <link rel="icon" type="image/png" href="../img/logo.png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/mobilidade.css">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <main class="mobilidade-main" id="conteudo-principal">
+    <!-- Acessibilidade -->
+    <div class="widget-acessibilidade">
+        <button class="btn-widget-acessibilidade" onclick="alternarMenuAcessibilidade()" aria-label="Abrir menu de acessibilidade">
+            <span class="material-symbols-outlined" style="font-size: 28px;">accessibility_new</span>
+        </button>
+        <div id="painel-acessibilidade" class="painel-acessibilidade">
+            <p>Opções de Acessibilidade</p>
+            <button onclick="alterarFonte('aumentar')">Aumentar Letra (A+)</button>
+            <button onclick="alterarFonte('diminuir')">Diminuir Letra (A-)</button>
+            <button onclick="alternarContraste()">Alto Contraste</button>
+        </div>
+    </div>
 
-        <!-- Introdução -->
-        <section class="mobilidade-introducao">
-
-            <div class="mobilidade-titulo-secao">
-                <h2>Mobilidade e localização no seu dia a dia</h2>
+    <!-- Cabeçalho e navegação -->
+    <header class="topo">
+        <nav class="menu">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="btn-abrir-menu" aria-label="Abrir menu">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+            </label>
+            <div class="menu-links">
+                <label for="menu-toggle" class="btn-fechar-menu" aria-label="Fechar menu">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">close</span>
+                </label>
+                <ul>
+                    <li><a href="../index.html">INÍCIO</a></li>
+                    <li><a href="./acessibilidade.html">ACESSIBILIDADE</a></li>
+                    <li><a href="./sos.html">AJUDA</a></li>
+                    <li><a href="./sobre.html">SOBRE</a></li>
+                </ul>
             </div>
-
+        </nav>
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="Logo Conecta+">
+            <span>Conecta+</span>
+        </a>
+        <div class="banner-principal" id="inicio">
+            <h1>Mobilidade e localização diária</h1>
             <p>
                 Os mapas digitais facilitam a locomoção e ajudam
                 você a encontrar lugares, descobrir caminhos e
                 chegar ao seu destino com mais autonomia e segurança.
             </p>
+        </div>
+    </header>
 
-        </section>
-
+    <main class="mobilidade-main" id="conteudo-principal">
 
         <!-- Guias -->
         <section class="mobilidade-guias" id="guias-mobilidade">
@@ -93,7 +116,7 @@
                                 Toque na barra de pesquisa na parte superior da tela.
                             </p>
 
-                            <img src="img/barraDePesquisa.png"
+                            <img src="../img/barraDePesquisa.png"
                                  alt="Barra de pesquisa do Google Maps">
                         </div>
 
@@ -104,7 +127,7 @@
                                 Digite o endereço que deseja encontrar.
                             </p>
 
-                            <img src="img/digiteEndereco.png"
+                            <img src="../img/digiteEndereco.png"
                                  alt="Pesquisa de endereço no Google Maps">
                         </div>
 
@@ -115,7 +138,7 @@
                                 Selecione o resultado correspondente.
                             </p>
 
-                            <img src="img/selecioneEnderecoEspecifico.png"
+                            <img src="../img/selecioneEnderecoEspecifico.png"
                                  alt="Seleção de um endereço no mapa">
                         </div>
 
@@ -126,7 +149,7 @@
                                 Observe a localização indicada no mapa.
                             </p>
 
-                            <img src="img/selecioneResultadoCorrespodente.png"
+                            <img src="../img/selecioneResultadoCorrespodente.png"
                                  alt="Localização indicada no Google Maps">
                         </div>
 
@@ -213,7 +236,7 @@
                                 Pesquise o endereço do seu destino.
                             </p>
 
-                            <img src="img/escolherEstabelecimentoSenac.png"
+                            <img src="../img/escolherEstabelecimentoSenac.png"
                                  alt="Pesquisa do destino no Google Maps">
                         </div>
 
@@ -224,7 +247,7 @@
                                 Toque na opção "Rotas".
                             </p>
 
-                            <img src="img/clicarEmRotasMaps.png"
+                            <img src="../img/clicarEmRotasMaps.png"
                                  alt="Opção de rotas do Google Maps">
                         </div>
 
@@ -236,7 +259,7 @@
                                 como carro ou ônibus.
                             </p>
 
-                            <img src="img/selecioneMeiodeTransprote.png"
+                            <img src="../img/selecioneMeiodeTransprote.png"
                                  alt="Seleção do meio de transporte">
                         </div>
 
@@ -248,7 +271,7 @@
                                 à sua necessidade.
                             </p>
 
-                            <img src="img/escolhaMelhorRota.png"
+                            <img src="../img/escolhaMelhorRota.png"
                                  alt="Opções de trajetos disponíveis">
                         </div>
 
@@ -309,7 +332,7 @@
                                 Abra o Google Maps.
                             </p>
 
-                            <img src="img/barraDePesquisa.png"
+                            <img src="../img/barraDePesquisa.png"
                                  alt="Tela inicial do Google Maps">
                         </div>
 
@@ -321,7 +344,7 @@
                                 farmácias, mercados ou outros serviços.
                             </p>
 
-                            <img src="img/pesquisePorEstabelecimentos.png"
+                            <img src="../img/pesquisePorEstabelecimentos.png"
                                  alt="Pesquisa de estabelecimentos próximos">
                         </div>
 
@@ -333,7 +356,7 @@
                                 para consultar suas informações.
                             </p>
 
-                            <img src="img/selecionarEstabelecimento.png"
+                            <img src="../img/selecionarEstabelecimento.png"
                                  alt="Informações de um estabelecimento">
                         </div>
 
@@ -344,7 +367,7 @@
                                 Observe os estabelecimentos indicados no mapa.
                             </p>
 
-                            <img src="img/escolherEstabelecimentoEspecifico.png"
+                            <img src="../img/escolherEstabelecimentoEspecifico.png"
                                  alt="Estabelecimentos indicados no mapa">
                         </div>
 
@@ -407,6 +430,56 @@
         </section>
 
     </main>
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="rodape-topo">
+            <h2>Conectando pessoas ao mundo digital.</h2>
+            <a href="../index.html" class="logo-rodape">
+                <img src="../img/logo.png" alt="Conecta+ — Página inicial">
+            </a>
+        </div>
+        <div class="rodape-links">
+            <nav aria-label="Aprendizado">
+                <h4>Aprendizado</h4>
+                <ul>
+                    <li><a href="./comunicacao.html">Comunicação</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                    <li><a href="./financas.html">Finanças</a></li>
+                    <li><a href="./compras.html">Compras online</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Projeto">
+                <h4>Projeto</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre o Conecta+</a></li>
+                    <li><a href="./acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="./saude.html">Saúde</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ajuda">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="./sos.html">Precisa de ajuda?</a></li>
+                    <li><a href="./acessibilidade.html">Orientações</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Informações">
+                <h4>Informações</h4>
+                <ul>
+                    <li><a href="./sobre.html">Sobre nós</a></li>
+                    <li><a href="./cidadania.html">Cidadania digital</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="rodape-direitos">
+            <span>© 2026 Conecta+ | Projeto acadêmico de ADS.</span>
+            <div class="redes-sociais">
+                <a href="https://github.com/Nicolle-Louiseecss/conecta-mais" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
 
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

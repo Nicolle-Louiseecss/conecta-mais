@@ -213,10 +213,6 @@
     text-align: left;
 }
 
-/* ========================================= */
-/* --- COMPORTAMENTOS DE ACESSIBILIDADE --- */
-/* ========================================= */
-
 /* Contorno de Foco Visível para Navegação por Teclado (Tab) */
 :focus-visible {
     outline: 3px solid #BF6B21 !important;

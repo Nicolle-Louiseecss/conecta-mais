@@ -93,7 +93,7 @@ html, body {
     color: #2b231f;
 }
 
-/* Seção de guias com fundo amarelo/creme suave da paleta */
+/* Seção de guias */
 .saude-guias {
     width: 100%;
     padding: 80px 8%;
@@ -119,7 +119,7 @@ html, body {
     text-align: center;
 }
 
-/* Grid de cartões modernos */
+/* Grid de cartões */
 .saude-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -129,7 +129,7 @@ html, body {
     align-items: stretch;
 }
 
-/* Cards modernos em verde-petróleo da paleta */
+/* Cards modernos */
 .saude-card {
     display: flex;
     flex-direction: column;
